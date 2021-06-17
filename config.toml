@@ -1,0 +1,62 @@
+baseURL = "https://fhvirus.github.io"
+title = "FHVirus' 隨筆"
+author = "FHVirus"
+# canonifyurls = true
+languagecode = "zh-TW"
+theme = "astoneek"
+
+enableEmoji = true
+hasCJKLanguage = true
+
+pygmentsUseClasses = true
+pygmentsCodefences = true
+
+# put files to ignore here, like "\\.md"
+ignoreFiles = []
+
+[sitemap]
+  changefreq = "always"
+  filename = "sitemap.xml"
+  priority = 0.5
+
+[params]
+  progressively = true
+  commentsrepo = "fhvirus/fhvirus.github.io"
+  faviconfile = "images/favicon.png"
+
+[markup]
+  # defaultMarkdownHandler = "blackfriday"
+  # [markup.blackfriday]
+    # extensions = ["hardLineBreak"]
+  # defaultMarkdownHandler = "goldmark"
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    lineNos = true
+
+
+[[menu.primary]]
+    name = "Home"
+    url = "/"
+    weight = 1
+[[menu.primary]]
+    name = "About"
+    url = "/about/"
+    weight = 2
+[[menu.primary]]
+    name = "GitHub"
+    url = "https://github.com/FHVirus"
+    weight = 3
+[[menu.primary]]
+    name = "IG"
+	url = "https://www.instagram.com/fh.virus/"
+    weight = 4
+[[menu.primary]]
+    name = "Youtube"
+    url = "https://www.youtube.com/channel/UCHJlyX44nyE_nYv5zMP4r4Q"
+    weight = 5
+[[menu.primary]]
+    name = "RSS"
+    url = "/index.xml"
+    weight = 6
