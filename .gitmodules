@@ -1,0 +1,3 @@
+[submodule "theme/astoneek"]
+	path = theme/astoneek
+	url = git@github.com:fhvirus/astoneek.git
