@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="zh-TW"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title> pb_ds tree - FHVirus&#39; 隨筆 </title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="referrer" content="no-referrer">
+    <meta name="description" content="一篇關於平板電視樹的教學" />
+    <meta property="og:site_name" content="FHVirus&#39; 隨筆" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://fhvirus.github.io/blog/2021/pbds-tree/" />
+    <meta property="og:title" content="pb_ds tree" />
+    <meta property="og:image" content="https://fhvirus.github.io" />
+    <meta property="og:description" content="一篇關於平板電視樹的教學" />
+
+    <link rel="canonical" href="https://fhvirus.github.io/blog/2021/pbds-tree/">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="https://fhvirus.github.iocss/custom.css" rel="stylesheet" type="text/css"/>
+    <link href="https://fhvirus.github.iocss/syntax.css" rel="stylesheet" type="text/css"/>
+    <link href="https://fhvirus.github.iocss/anchor.css" rel="stylesheet" type="text/css"/>
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/progressively/1.2.5/progressively.min.css" integrity="sha512-TdJkMXwjtS9Gb8rN919K1JVdUv2+q5YHsKXPtJGDP79t1Nd5oCZy5mFA6Nr85Dsp6wJ1SUQgOyHPDulLzTjDcQ==" crossorigin="anonymous" />
+    
+
+    <link rel="shortcut icon"
+        href="https://fhvirus.github.io/images/favicon.png">
+
+    
+    <link href="https://fhvirus.github.io/index.xml" rel="alternate" type="application/rss+xml" title="FHVirus&#39; 隨筆" />
+    
+</head>
+<body>
+    
+<div class="mt-xl header">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-auto">
+                <a href="https://fhvirus.github.io">
+                    <h1 class="name">FHVirus&#39; 隨筆</h1>
+                </a>
+            </div>
+        </div>
+
+        <div class="row">
+            <ul class="nav nav-primary justify-content-center">
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="/">
+                        
+                        Home
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="/about/">
+                        
+                        About
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/FHVirus">
+                        
+                        GitHub
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.instagram.com/fh.virus/">
+                        
+                        IG
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.youtube.com/channel/UCHJlyX44nyE_nYv5zMP4r4Q">
+                        
+                        Youtube
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="/index.xml">
+                        
+                        RSS
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<div class="content">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-lg-8">
+                <h1 class="mx-0 mx-md-4 blog-post-title">pb_ds tree</h1>
+
+                <div class="mb-md-4 meta">
+                    
+                    
+                    
+
+                    <span class="date" title='Sun Feb 7 2021 17:58:21 CST'>
+                        2021-02-07
+                    </span>
+
+                    <div class="d-none d-md-inline tags">
+                        <ul class="list-unstyled d-inline">
+                            
+                            <li class="d-inline middot">
+                                <a href="/tags/%E9%9A%A8%E7%AD%86">隨筆</a>
+                            </li>
+                            
+                            <li class="d-inline middot">
+                                <a href="/tags/%E6%A8%A1%E6%9D%BF">模板</a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="markdown blog-post-content">
+                    
+    
+    <p>因為寫題會用到就順便寫一篇吧。</p>
+<h2 id="什麼是平板電視樹pb_ds-tree">什麼是平板電視樹（pb_ds tree）？</h2>
+<p>黑魔法。</p>
+<h2 id="它可以幹嘛">它可以幹嘛？</h2>
+<p>大致上，平板電視樹可以當作 <code>std::set</code> 或 <code>std::map</code> 使用（以下以當作 <code>std::set</code> 用為主），但同時又支援兩種實作很麻煩的操作：</p>
+<ul>
+<li><code>find_by_order(k)</code> ：像陣列一樣回傳第 k 個值。</li>
+<li><code>order_of_key(k)</code> ：回傳 k 是集合裡第幾大。</li>
+</ul>
+<h2 id="怎麼用">怎麼用？</h2>
+<h3 id="宣告">宣告</h3>
+<p>首先是標頭檔：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#include</span><span class="cpf">&lt;bits/extc++.h&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">__gnu_pbds</span><span class="p">;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>再來是型別宣告：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">tree</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="n">null_type</span><span class="p">,</span> <span class="n">less</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">rb_tree_tag</span><span class="p">,</span> <span class="n">tree_order_statistics_node_update</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="c1">// 好長對吧？分開來看看
+</span><span class="c1"></span><span class="n">tree</span><span class="o">&lt;</span>
+  <span class="kt">int</span><span class="p">,</span>				<span class="c1">// 資料型別
+</span><span class="c1"></span>	<span class="n">null_type</span><span class="p">,</span>	<span class="c1">// 當作 map 使用的時候要對應什麼資料型態，
+</span><span class="c1"></span>							<span class="c1">// 要當作 set 就用 null_type
+</span><span class="c1"></span>	<span class="n">less</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">,</span>	<span class="c1">// key value 要用什麼方式比較
+</span><span class="c1"></span>							<span class="c1">// 類似 priority_queue 的用法
+</span><span class="c1"></span>	<span class="n">rb_tree_tag</span><span class="p">,</span><span class="c1">// 這顆 tree 要用哪種結構
+</span><span class="c1"></span>							<span class="c1">// 大多時候會用紅黑樹（rb_tree）
+</span><span class="c1"></span>	<span class="n">tree_order_statistics_node_update</span>
+    					<span class="c1">// 神秘的黑魔法，待補
+</span><span class="c1"></span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="使用">使用</h3>
+<p>直接看<a href="https://www.luogu.com.cn/problem/P3369">模板題</a>的扣的吧。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="c1">// Knapsack DP is harder than FFT.
+</span><span class="c1"></span><span class="cp">#include</span><span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
+</span><span class="cp">#include</span><span class="cpf">&lt;bits/extc++.h&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">__gnu_pbds</span><span class="p">;</span>
+<span class="k">typedef</span> <span class="kt">int64_t</span> <span class="n">ll</span><span class="p">;</span>
+<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span> <span class="k">using</span> <span class="n">rbt</span> <span class="o">=</span> <span class="n">tree</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="n">null_type</span><span class="p">,</span> <span class="n">less</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">rb_tree_tag</span><span class="p">,</span> <span class="n">tree_order_statistics_node_update</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="kt">int32_t</span> <span class="nf">main</span><span class="p">(){</span>
+	<span class="n">ios_base</span><span class="o">::</span><span class="n">sync_with_stdio</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="n">cout</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+	<span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
+	<span class="n">rbt</span><span class="o">&lt;</span><span class="n">ll</span><span class="o">&gt;</span> <span class="n">eek</span><span class="p">;</span>
+	<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span><span class="p">;</span>
+	<span class="k">for</span><span class="p">(</span><span class="n">ll</span> <span class="n">opt</span><span class="p">,</span> <span class="n">x</span><span class="p">;</span> <span class="n">n</span><span class="p">;</span> <span class="o">--</span><span class="n">n</span><span class="p">){</span>
+		<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">opt</span> <span class="o">&gt;&gt;</span> <span class="n">x</span><span class="p">;</span>
+		<span class="k">if</span><span class="p">(</span><span class="n">opt</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="n">eek</span><span class="p">.</span><span class="n">insert</span><span class="p">((</span><span class="n">x</span><span class="o">&lt;&lt;</span><span class="mi">20</span><span class="p">)</span> <span class="o">+</span> <span class="n">n</span><span class="p">);</span>
+		<span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">opt</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span> <span class="n">eek</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">eek</span><span class="p">.</span><span class="n">lower_bound</span><span class="p">(</span><span class="n">x</span><span class="o">&lt;&lt;</span><span class="mi">20</span><span class="p">));</span>
+		<span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">opt</span> <span class="o">==</span> <span class="mi">3</span><span class="p">)</span> <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">eek</span><span class="p">.</span><span class="n">order_of_key</span><span class="p">(</span><span class="n">x</span><span class="o">&lt;&lt;</span><span class="mi">20</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+		<span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">opt</span> <span class="o">==</span> <span class="mi">4</span><span class="p">)</span> <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="o">*</span><span class="n">eek</span><span class="p">.</span><span class="n">find_by_order</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">&gt;&gt;</span> <span class="mi">20</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+		<span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">opt</span> <span class="o">==</span> <span class="mi">5</span><span class="p">)</span> <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="o">*--</span><span class="n">eek</span><span class="p">.</span><span class="n">lower_bound</span><span class="p">(</span><span class="n">x</span><span class="o">&lt;&lt;</span><span class="mi">20</span><span class="p">)</span> <span class="o">&gt;&gt;</span> <span class="mi">20</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+		<span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">opt</span> <span class="o">==</span> <span class="mi">6</span><span class="p">)</span> <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="o">*</span><span class="n">eek</span><span class="p">.</span><span class="n">lower_bound</span><span class="p">((</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">&lt;&lt;</span><span class="mi">20</span><span class="p">)</span> <span class="o">&gt;&gt;</span> <span class="mi">20</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="參考資料">參考資料</h3>
+<ul>
+<li><a href="https://codeforces.com/blog/entry/11080">C++ STL: Policy based data structures by adamant</a></li>
+<li><a href="https://blog.csdn.net/weixin_30593443/article/details/99322952">某篇 CSDN</a></li>
+</ul>
+
+
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+<script>
+  anchors.options = {
+    placement: 'left',
+    visible: 'hover',
+    icon: '#'
+  };
+  anchors.add('h1, h2, h3');
+</script>
+
+<section id="comments">
+    <div class="py-3 content">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-sm-12 col-lg-8">
+                    <div class="comments">
+                        <script src="https://utteranc.es/client.js" repo="fhvirus/fhvirus.github.io"
+                            issue-term="pathname" label="comment" theme="github-light" crossorigin="anonymous" async>
+                            </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer></footer>
+
+
+
+
+    
+        <script src="https://cdn.jsdelivr.net/npm/progressively/dist/progressively.min.js"></script>
+        <script>
+            window.addEventListener('load', function() {
+                progressively.init({delay: 30, throttle: 50});
+            }, true);
+        </script>
+    
+</body>
+
+</html>

@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="zh-TW"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title> FHVirus IO - FHVirus&#39; 隨筆 </title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="referrer" content="no-referrer">
+    <meta name="description" content="因為是 FHVirus，所以第一篇就來寫輸入輸出吧。" />
+    <meta property="og:site_name" content="FHVirus&#39; 隨筆" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://fhvirus.github.io/blog/2020/fhvirus-io/" />
+    <meta property="og:title" content="FHVirus IO" />
+    <meta property="og:image" content="https://fhvirus.github.io" />
+    <meta property="og:description" content="因為是 FHVirus，所以第一篇就來寫輸入輸出吧。" />
+
+    <link rel="canonical" href="https://fhvirus.github.io/blog/2020/fhvirus-io/">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="https://fhvirus.github.iocss/custom.css" rel="stylesheet" type="text/css"/>
+    <link href="https://fhvirus.github.iocss/syntax.css" rel="stylesheet" type="text/css"/>
+    <link href="https://fhvirus.github.iocss/anchor.css" rel="stylesheet" type="text/css"/>
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/progressively/1.2.5/progressively.min.css" integrity="sha512-TdJkMXwjtS9Gb8rN919K1JVdUv2+q5YHsKXPtJGDP79t1Nd5oCZy5mFA6Nr85Dsp6wJ1SUQgOyHPDulLzTjDcQ==" crossorigin="anonymous" />
+    
+
+    <link rel="shortcut icon"
+        href="https://fhvirus.github.io/images/favicon.png">
+
+    
+    <link href="https://fhvirus.github.io/index.xml" rel="alternate" type="application/rss+xml" title="FHVirus&#39; 隨筆" />
+    
+</head>
+<body>
+    
+<div class="mt-xl header">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-auto">
+                <a href="https://fhvirus.github.io">
+                    <h1 class="name">FHVirus&#39; 隨筆</h1>
+                </a>
+            </div>
+        </div>
+
+        <div class="row">
+            <ul class="nav nav-primary justify-content-center">
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="/">
+                        
+                        Home
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="/about/">
+                        
+                        About
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/FHVirus">
+                        
+                        GitHub
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.instagram.com/fh.virus/">
+                        
+                        IG
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.youtube.com/channel/UCHJlyX44nyE_nYv5zMP4r4Q">
+                        
+                        Youtube
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="/index.xml">
+                        
+                        RSS
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<div class="content">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-lg-8">
+                <h1 class="mx-0 mx-md-4 blog-post-title">FHVirus IO</h1>
+
+                <div class="mb-md-4 meta">
+                    
+                    
+                    <span class="author middot" title="FHVirus">
+                        FHVirus
+                    </span>
+                    
+                    
+
+                    <span class="date" title='Sun Oct 18 2020 00:00:00 UTC'>
+                        2020-10-18
+                    </span>
+
+                    <div class="d-none d-md-inline tags">
+                        <ul class="list-unstyled d-inline">
+                            
+                            <li class="d-inline middot">
+                                <a href="/tags/%E6%A8%A1%E6%9D%BF">模板</a>
+                            </li>
+                            
+                            <li class="d-inline middot">
+                                <a href="/tags/%E8%BC%B8%E5%85%A5%E8%BC%B8%E5%87%BA">輸入輸出</a>
+                            </li>
+                            
+                            <li class="d-inline middot">
+                                <a href="/tags/%E9%B4%A8%E8%85%B8">鴨腸</a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="markdown blog-post-content">
+                    
+    
+    <p>因為是 FHVirus，所以第一篇就來寫輸入輸出吧。</p>
+<h1 id="正常的輸入輸出">正常的輸入輸出</h1>
+<p>大家都應該要會的東西。</p>
+<h3 id="iostream">IOStream</h3>
+<p>輸出入串流，最適合初學者使用的東西。
+不用自己判斷型別，但是大部分時候偏慢。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#include</span><span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="kt">int</span> <span class="n">a</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">a</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">a</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>本人覺得沒有到很好用（尤其是輸出的時候，一堆數字加空格很麻煩），但是可以應付大部分工作（例如 CodeForces 的比賽）。</p>
+<h3 id="faster-iostream">Faster IOStream</h3>
+<p>輸入輸出量很大 ( $10^6$ ) 的時候，直接用 <code>IOStream</code> 極有可能會 TLE。這個時候⋯⋯</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">ios_base</span><span class="o">::</span><span class="n">sync_with_stdio</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="n">cout</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>在 <code>main()</code> 一開頭加上這三行，並用 <code>'\n'</code>（換行字元） 取代 <code>endl</code>（換行 + flush，因為有 flush 所以會很慢），通常就可以過了，而且時間會少很多。
+至於為什麼，網路上都有，我懶得寫 OW&lt;)b
+也有很多人會在程式開頭加上這兩行：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#define OW0 ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+</span><span class="cp">#define endl &#39;\n&#39;
+</span></code></pre></td></tr></table>
+</div>
+</div><p>其中 <code>OW0</code> 可以是任何自己喜歡而且不會與變數函數撞名的東東（例如「艾蜜莉亞我婆」、「8e7好強」之類的）。</p>
+<h3 id="cstdio">cstdIO</h3>
+<p>通常比 IOStream 快（有點多）。指定輸出格式時超好用。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#include</span><span class="cpf">&lt;cstdio&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="kt">int</span> <span class="n">a</span><span class="p">;</span>
+<span class="n">scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">);</span>
+<span class="n">printf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>剛開始可能會覺得很麻煩，一旦會了就超方便（指定小數位數、寬度、輸入字串直到指定字元等等）。
+懶的寫教學，自己查 reference。</p>
+<h3 id="getline">GetLine</h3>
+<p>顧名思義，輸入一整行的時候可以用的東西。
+輸入都要一行一行讀而且輸入量大的時候， <code>GetLine</code> 會比其他方法都快（例題待補）。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#include</span><span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span><span class="cp">#include</span><span class="cpf">&lt;string&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="n">string</span> <span class="n">s</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">getline</span><span class="p">(</span><span class="n">cin</span><span class="p">,</span> <span class="n">s</span><span class="p">);</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="others">Others</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#include</span><span class="cpf">&lt;cstdio&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="kt">char</span> <span class="n">c</span><span class="p">;</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">getchar</span><span class="p">();</span>
+<span class="n">putchar</span><span class="p">(</span><span class="n">c</span><span class="p">);</span>
+<span class="n">puts</span><span class="p">(</span><span class="s">&#34;Jizz&#34;</span><span class="p">);</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>有時候只有要輸出 <code>&quot;Yes&quot;</code> 或 <code>&quot;No&quot;</code> 的時候就可以用 <code>puts()</code>。
+<code>puts()</code> 會自己多一個換行（像 Python 一樣）。</p>
+<p>另外， <code>putchar</code> 、 <code>getchar</code> 可以換成 <code>putchar_unlocked</code> 、 <code>getchar_unlocked</code>，似乎會比較快。</p>
+<hr>
+<h1 id="毒瘤壓常輸入輸出">毒瘤壓常輸入輸出</h1>
+<p>壓 TopCoder / 怪題要會的。
+用來造福（Ｘ）毒害（Ｏ）大眾的東東。</p>
+<h3 id="readchar">readchar</h3>
+<p>從<a href="https://omeletwithoutegg.github.io/2019/12/06/Fast-IO/">蛋餅那裡</a>出來的。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#include</span><span class="cpf">&lt;cstdio&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="kr">inline</span> <span class="kt">char</span> <span class="nf">readchar</span><span class="p">(){</span>
+	<span class="k">const</span> <span class="kt">int</span> <span class="n">S</span> <span class="o">=</span> <span class="mi">1</span><span class="o">&lt;&lt;</span><span class="mi">16</span><span class="p">;</span>
+	<span class="k">static</span> <span class="kt">char</span> <span class="n">buf</span><span class="p">[</span><span class="n">S</span><span class="p">],</span> <span class="o">*</span><span class="n">p</span> <span class="o">=</span> <span class="n">buf</span><span class="p">,</span> <span class="o">*</span><span class="n">q</span> <span class="o">=</span> <span class="n">buf</span><span class="p">;</span>
+	<span class="k">return</span> <span class="n">p</span> <span class="o">==</span> <span class="n">q</span> <span class="n">and</span> <span class="p">(</span><span class="n">q</span> <span class="o">=</span> <span class="p">(</span><span class="n">p</span> <span class="o">=</span> <span class="n">buf</span><span class="p">)</span> <span class="o">+</span> <span class="n">fread</span><span class="p">(</span><span class="n">buf</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">S</span><span class="p">,</span> <span class="n">stdin</span><span class="p">))</span> <span class="o">==</span> <span class="n">buf</span> <span class="o">?</span> <span class="nl">EOF</span> <span class="p">:</span> <span class="o">*</span><span class="n">p</span><span class="o">++</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>其中， <code>S</code>  的大小可以自己調整。
+<code>fread</code> 會回傳實際輸入的大小（大概是位元數吧）。</p>
+<h3 id="the-r-function">the R function</h3>
+<p>這裡提供兩種版本，方便使用但特殊情況會錯的和正確的。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kr">inline</span> <span class="kt">int</span> <span class="nf">R</span><span class="p">(){</span>
+	<span class="kt">int</span> <span class="n">ans</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="kt">char</span> <span class="n">c</span> <span class="o">=</span> <span class="n">readchar</span><span class="p">();</span> <span class="kt">bool</span> <span class="n">minus</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+	<span class="k">while</span><span class="p">((</span><span class="n">c</span> <span class="o">&lt;</span> <span class="sc">&#39;0&#39;</span> <span class="n">or</span> <span class="n">c</span> <span class="o">&gt;</span> <span class="sc">&#39;9&#39;</span><span class="p">)</span> <span class="n">and</span> <span class="n">c</span> <span class="o">!=</span> <span class="sc">&#39;-&#39;</span> <span class="n">and</span> <span class="n">c</span> <span class="o">!=</span> <span class="n">EOF</span><span class="p">)</span> <span class="n">c</span> <span class="o">=</span> <span class="n">readchar</span><span class="p">();</span>
+	<span class="k">if</span><span class="p">(</span><span class="n">c</span> <span class="o">==</span> <span class="sc">&#39;-&#39;</span><span class="p">)</span> <span class="n">minus</span> <span class="o">=</span> <span class="nb">true</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="n">readchar</span><span class="p">();</span>
+	<span class="k">while</span><span class="p">(</span><span class="n">c</span> <span class="o">&gt;=</span> <span class="sc">&#39;0&#39;</span> <span class="n">and</span> <span class="n">c</span> <span class="o">&lt;=</span> <span class="sc">&#39;9&#39;</span><span class="p">)</span> <span class="n">ans</span> <span class="o">=</span> <span class="n">ans</span> <span class="o">*</span> <span class="mi">10</span> <span class="o">+</span> <span class="p">(</span><span class="n">c</span> <span class="o">^</span> <span class="sc">&#39;0&#39;</span><span class="p">),</span> <span class="n">c</span> <span class="o">=</span> <span class="n">readchar</span><span class="p">();</span>
+	<span class="k">return</span> <span class="n">minus</span> <span class="o">?</span> <span class="o">-</span><span class="nl">ans</span> <span class="p">:</span> <span class="n">ans</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>可以根據題目輸入形式化簡。
+不要問我為何用 xor ，在下也不知道。
+這個版本在輸入 -2147483648 的時候會爆炸。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kr">inline</span> <span class="kt">int</span> <span class="nf">R</span><span class="p">(</span><span class="kt">int</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">){</span>
+	<span class="k">static</span> <span class="kt">char</span> <span class="n">c</span><span class="p">;</span>
+	<span class="k">while</span><span class="p">(((</span><span class="n">c</span> <span class="o">=</span> <span class="n">readchar</span><span class="p">())</span> <span class="o">&lt;</span> <span class="sc">&#39;0&#39;</span> <span class="n">or</span> <span class="n">c</span> <span class="o">&gt;</span> <span class="sc">&#39;9&#39;</span><span class="p">)</span> <span class="n">and</span> <span class="n">c</span> <span class="o">!=</span> <span class="sc">&#39;-&#39;</span> <span class="n">and</span> <span class="n">c</span> <span class="o">!=</span> <span class="n">EOF</span><span class="p">);</span>
+	<span class="k">if</span><span class="p">(</span><span class="n">c</span> <span class="o">==</span> <span class="sc">&#39;-&#39;</span><span class="p">){</span>
+		<span class="n">a</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+		<span class="k">while</span><span class="p">((</span><span class="n">c</span> <span class="o">=</span> <span class="n">readchar</span><span class="p">())</span> <span class="o">&gt;=</span> <span class="sc">&#39;0&#39;</span> <span class="n">and</span> <span class="n">c</span> <span class="o">&lt;=</span> <span class="sc">&#39;9&#39;</span><span class="p">)</span> <span class="n">a</span> <span class="o">*=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">a</span> <span class="o">-=</span> <span class="n">c</span> <span class="o">^</span> <span class="sc">&#39;0&#39;</span><span class="p">;</span>
+	<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+		<span class="n">a</span> <span class="o">=</span> <span class="n">c</span> <span class="o">^</span> <span class="sc">&#39;0&#39;</span><span class="p">;</span>
+		<span class="k">while</span><span class="p">((</span><span class="n">c</span> <span class="o">=</span> <span class="n">readchar</span><span class="p">())</span> <span class="o">&gt;=</span> <span class="sc">&#39;0&#39;</span> <span class="n">and</span> <span class="n">c</span> <span class="o">&lt;=</span> <span class="sc">&#39;9&#39;</span><span class="p">)</span> <span class="n">a</span> <span class="o">*=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">a</span> <span class="o">+=</span> <span class="n">c</span> <span class="o">^</span> <span class="sc">&#39;0&#39;</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>用了參照及 static ，似乎空間比較小吧。</p>
+<h3 id="the-w-funciton">the W funciton</h3>
+<p>筆者自行研發的。使用上有點麻煩，不推薦日常使用。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kt">char</span> <span class="n">outbuf</span><span class="p">[</span><span class="n">S</span><span class="p">];</span> <span class="kt">int</span> <span class="n">outp</span><span class="p">;</span>
+<span class="kr">inline</span> <span class="kt">void</span> <span class="nf">W</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">){</span>
+	<span class="k">static</span> <span class="kt">char</span> <span class="n">buf</span><span class="p">[</span><span class="mi">12</span><span class="p">],</span> <span class="n">p</span><span class="p">;</span>
+	<span class="k">if</span><span class="p">(</span><span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="n">outbuf</span><span class="p">[</span><span class="n">outp</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="sc">&#39;0&#39;</span><span class="p">;</span>
+	<span class="n">p</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="k">if</span><span class="p">(</span><span class="n">n</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">){</span>
+		<span class="n">outbuf</span><span class="p">[</span><span class="n">outp</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="sc">&#39;-&#39;</span><span class="p">;</span>
+		<span class="k">while</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="n">buf</span><span class="p">[</span><span class="n">p</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="sc">&#39;0&#39;</span> <span class="o">-</span> <span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">10</span><span class="p">),</span> <span class="n">n</span> <span class="o">/=</span> <span class="mi">10</span><span class="p">;</span>
+	<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+		<span class="k">while</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="n">buf</span><span class="p">[</span><span class="n">p</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="sc">&#39;0&#39;</span> <span class="o">+</span> <span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">10</span><span class="p">),</span> <span class="n">n</span> <span class="o">/=</span> <span class="mi">10</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="k">for</span><span class="p">(</span><span class="o">--</span><span class="n">p</span><span class="p">;</span> <span class="n">p</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">;</span> <span class="o">--</span><span class="n">p</span><span class="p">)</span> <span class="n">outbuf</span><span class="p">[</span><span class="n">outp</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="n">buf</span><span class="p">[</span><span class="n">p</span><span class="p">];</span>
+	<span class="n">outbuf</span><span class="p">[</span><span class="n">outp</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+	<span class="k">if</span><span class="p">(</span><span class="n">outp</span> <span class="o">&gt;</span> <span class="n">S</span><span class="o">-</span><span class="mi">12</span><span class="p">)</span> <span class="n">fwrite</span><span class="p">(</span><span class="n">outbuf</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">outp</span><span class="p">,</span> <span class="n">stdout</span><span class="p">),</span> <span class="n">outp</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+	<span class="c1">// ...do something
+</span><span class="c1"></span>	<span class="n">fwrite</span><span class="p">(</span><span class="n">outbuf</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">outp</span><span class="p">,</span> <span class="n">stdout</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>大概就是把所有輸出寫到一個 buffer 。程式結束前記得把剩下的東西 fwrite 出來喔。</p>
+<h3 id="the-rd-function">the RD function</h3>
+<p>很少很少會用到，但是寫了就丟上來吧。基本上只是為了某題寫了之後就丟在模板裡了。
+這個只能讀 0 ~ 1 之間的小數喔。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kr">inline</span> <span class="kt">double</span> <span class="nf">RB</span><span class="p">(){</span>
+	<span class="kt">double</span> <span class="n">ans</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">mult</span> <span class="o">=</span> <span class="mf">.1</span><span class="p">;</span> <span class="kt">char</span> <span class="n">c</span> <span class="o">=</span> <span class="n">readchar</span><span class="p">();</span>
+	<span class="k">while</span><span class="p">(</span><span class="n">c</span> <span class="o">!=</span> <span class="sc">&#39;.&#39;</span><span class="p">)</span> <span class="n">c</span> <span class="o">=</span> <span class="n">readchar</span><span class="p">();</span>
+	<span class="n">c</span> <span class="o">=</span> <span class="n">readchar</span><span class="p">();</span>
+	<span class="k">while</span><span class="p">(</span><span class="n">c</span> <span class="o">&gt;=</span> <span class="sc">&#39;0&#39;</span> <span class="n">and</span> <span class="n">c</span> <span class="o">&lt;=</span> <span class="sc">&#39;9&#39;</span><span class="p">)</span> <span class="n">ans</span> <span class="o">+=</span> <span class="n">mult</span> <span class="o">*</span> <span class="p">(</span><span class="n">c</span> <span class="o">-</span> <span class="sc">&#39;0&#39;</span><span class="p">),</span> <span class="n">mult</span> <span class="o">*=</span> <span class="mf">.1</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="n">readchar</span><span class="p">();</span>
+	<span class="k">return</span> <span class="n">ans</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="the-rd-rs-functions">the RD, RS&hellip; functions</h3>
+<p>待補。
+反正每次寫都是再刻一次，也不算模板。</p>
+<hr>
+<h1 id="毒中之毒">毒中之毒</h1>
+<p>一些怪東東：</p>
+<ul>
+<li>Fast &amp; Furious IO (CodeForces 上的東西)</li>
+<li><code>#include&lt;unistd.h&gt;</code> （壓空間，使用方法近 <code>fread &amp; fwrite</code>）</li>
+</ul>
+<p>如果有人知道其他神奇毒瘤麻煩告訴我 &gt;&lt;</p>
+<p>最後，附上<a href="https://pastebin.com/hxB2e6Gf">極簡版</a>。</p>
+<hr>
+<p>10/27 更新，感謝油油的 <code>cwcodinglife</code> 提醒我修正 <code>readchar()</code>。</p>
+
+
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+<script>
+  anchors.options = {
+    placement: 'left',
+    visible: 'hover',
+    icon: '#'
+  };
+  anchors.add('h1, h2, h3');
+</script>
+
+<section id="comments">
+    <div class="py-3 content">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-sm-12 col-lg-8">
+                    <div class="comments">
+                        <script src="https://utteranc.es/client.js" repo="fhvirus/fhvirus.github.io"
+                            issue-term="pathname" label="comment" theme="github-light" crossorigin="anonymous" async>
+                            </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer></footer>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css" integrity="sha384-dbVIfZGuN1Yq7/1Ocstc1lUEm+AT+/rCkibIcC/OmWo5f0EA48Vf8CytHzGrSwbQ" crossorigin="anonymous">
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js" integrity="sha384-2BKqo+exmr9su6dir+qCw08N2ZKRucY4PrGQPPWU1A7FtlCGjmEGFqXCv5nyM5Ij" crossorigin="anonymous"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"></script>
+
+<script>
+renderMathInElement(
+	document.body,
+	{
+		delimiters: [
+			{left: "$$", right: "$$", display: true},
+			{left: "\\[", right: "\\]", display: true},
+			{left: "$", right: "$", display: false},
+			{left: "\\(", right: "\\)", display: false}
+		]
+	}
+);
+</script>
+
+
+
+
+    
+        <script src="https://cdn.jsdelivr.net/npm/progressively/dist/progressively.min.js"></script>
+        <script>
+            window.addEventListener('load', function() {
+                progressively.init({delay: 30, throttle: 50});
+            }, true);
+        </script>
+    
+</body>
+
+</html>

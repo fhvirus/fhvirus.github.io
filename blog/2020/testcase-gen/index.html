@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="zh-TW"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title> FHVirus&#39; Testcase Generator - FHVirus&#39; 隨筆 </title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="referrer" content="no-referrer">
+    <meta name="description" content="剛好要出模競題就順便寫了一個生測資的東東，希望有用&gt;&lt;" />
+    <meta property="og:site_name" content="FHVirus&#39; 隨筆" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://fhvirus.github.io/blog/2020/testcase-gen/" />
+    <meta property="og:title" content="FHVirus&#39; Testcase Generator" />
+    <meta property="og:image" content="https://fhvirus.github.io" />
+    <meta property="og:description" content="剛好要出模競題就順便寫了一個生測資的東東，希望有用&gt;&lt;" />
+
+    <link rel="canonical" href="https://fhvirus.github.io/blog/2020/testcase-gen/">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="https://fhvirus.github.iocss/custom.css" rel="stylesheet" type="text/css"/>
+    <link href="https://fhvirus.github.iocss/syntax.css" rel="stylesheet" type="text/css"/>
+    <link href="https://fhvirus.github.iocss/anchor.css" rel="stylesheet" type="text/css"/>
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/progressively/1.2.5/progressively.min.css" integrity="sha512-TdJkMXwjtS9Gb8rN919K1JVdUv2+q5YHsKXPtJGDP79t1Nd5oCZy5mFA6Nr85Dsp6wJ1SUQgOyHPDulLzTjDcQ==" crossorigin="anonymous" />
+    
+
+    <link rel="shortcut icon"
+        href="https://fhvirus.github.io/images/favicon.png">
+
+    
+    <link href="https://fhvirus.github.io/index.xml" rel="alternate" type="application/rss+xml" title="FHVirus&#39; 隨筆" />
+    
+</head>
+<body>
+    
+<div class="mt-xl header">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-auto">
+                <a href="https://fhvirus.github.io">
+                    <h1 class="name">FHVirus&#39; 隨筆</h1>
+                </a>
+            </div>
+        </div>
+
+        <div class="row">
+            <ul class="nav nav-primary justify-content-center">
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="/">
+                        
+                        Home
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="/about/">
+                        
+                        About
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/FHVirus">
+                        
+                        GitHub
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.instagram.com/fh.virus/">
+                        
+                        IG
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.youtube.com/channel/UCHJlyX44nyE_nYv5zMP4r4Q">
+                        
+                        Youtube
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="/index.xml">
+                        
+                        RSS
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<div class="content">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-lg-8">
+                <h1 class="mx-0 mx-md-4 blog-post-title">FHVirus&#39; Testcase Generator</h1>
+
+                <div class="mb-md-4 meta">
+                    
+                    
+                    
+
+                    <span class="date" title='Mon Nov 16 2020 19:44:44 CST'>
+                        2020-11-16
+                    </span>
+
+                    <div class="d-none d-md-inline tags">
+                        <ul class="list-unstyled d-inline">
+                            
+                            <li class="d-inline middot">
+                                <a href="/tags/%E6%A8%A1%E6%9D%BF">模板</a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="markdown blog-post-content">
+                    
+    
+    <p>剛好要出模競題就順便寫了一個生測資的東東，希望有用&gt;&lt;</p>
+<p>說明都在裡面了，自己看吧 OW0)_b<br>
+至於為什麼是英文的？因為我不知道怎麼樣在 Vim 裡面打中文 QwQ<br>
+有人會的話麻煩教我（我用的是 Mac / zsh ）</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cm">/*           OJDL TestCase Generater             */</span>
+<span class="cm">/*  Made by FHVirus with patience for cin/cout   */</span>
+<span class="cm">/*
+</span><span class="cm">How this works:
+</span><span class="cm">1.  Generate a file (testcase#.in)
+</span><span class="cm">2.  Read that file as input and solve,
+</span><span class="cm">    output to another file(testcase#.out)
+</span><span class="cm">
+</span><span class="cm">How to use it:
+</span><span class="cm">0.  Put this program into a folder where
+</span><span class="cm">    you want to store the testcases.
+</span><span class="cm">1.  Input number of subtasks
+</span><span class="cm">2.  For each subtask, input the number of
+</span><span class="cm">    desired testcase for the subtask, then
+</span><span class="cm">    the arguments for generate().
+</span><span class="cm">3.  Done!
+</span><span class="cm">*/</span>
+<span class="cp">#include</span><span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span><span class="cp">#include</span><span class="cpf">&lt;fstream&gt;</span><span class="cp">
+</span><span class="cp">#include</span><span class="cpf">&lt;string&gt;</span><span class="cp">
+</span><span class="cp">#include</span><span class="cpf">&lt;chrono&gt;</span><span class="cp">
+</span><span class="cp">#include</span><span class="cpf">&lt;random&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="k">auto</span> <span class="n">seed</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">high_resolution_clock</span><span class="o">::</span><span class="n">now</span><span class="p">().</span><span class="n">time_since_epoch</span><span class="p">().</span><span class="n">count</span><span class="p">();</span>
+<span class="n">std</span><span class="o">::</span><span class="n">mt19937</span> <span class="n">mt</span><span class="p">(</span><span class="n">seed</span><span class="p">);</span>
+
+<span class="c1">// For generate(), you can add additional arguments
+</span><span class="c1">// for generating a testcase.
+</span><span class="c1">// But for solve(), just write a normal solution
+</span><span class="c1">// like that in main() for most of the time.
+</span><span class="c1"></span><span class="kt">void</span> <span class="nf">generate</span><span class="p">(</span><span class="n">ofstream</span> <span class="o">&amp;</span><span class="n">cout</span><span class="p">){}</span>
+<span class="kt">void</span> <span class="nf">solve</span><span class="p">(</span><span class="n">ifstream</span> <span class="o">&amp;</span><span class="n">cin</span><span class="p">,</span> <span class="n">ofstream</span> <span class="o">&amp;</span><span class="n">cout</span><span class="p">){}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+    <span class="kt">int</span> <span class="n">subtaskNumber</span><span class="p">,</span> <span class="n">testcaseCount</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">subtaskNumber</span><span class="p">;</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">t</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">t</span> <span class="o">&lt;=</span> <span class="n">subtaskNumber</span><span class="p">;</span> <span class="o">++</span><span class="n">t</span><span class="p">){</span>
+        <span class="kt">int</span> <span class="n">numOfTestCase</span><span class="p">;</span>
+        <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">numOfTestCase</span><span class="p">;</span>
+        <span class="c1">// You can add some other arguments for
+</span><span class="c1"></span>        <span class="c1">// generating testcases.
+</span><span class="c1"></span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;Generating Subtask #&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">t</span> <span class="o">&lt;&lt;</span> <span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(;</span> <span class="n">numOfTestCase</span><span class="p">;</span> <span class="o">--</span><span class="n">numOfTestCase</span><span class="p">,</span> <span class="o">++</span><span class="n">testcaseCount</span><span class="p">){</span>
+            <span class="n">string</span> <span class="n">in</span> <span class="o">=</span> <span class="n">to_string</span><span class="p">(</span><span class="n">testcaseCount</span><span class="p">)</span> <span class="o">+</span> <span class="s">&#34;.in&#34;</span><span class="p">;</span>
+            <span class="n">string</span> <span class="n">ou</span> <span class="o">=</span> <span class="n">to_string</span><span class="p">(</span><span class="n">testcaseCount</span><span class="p">)</span> <span class="o">+</span> <span class="s">&#34;.out&#34;</span><span class="p">;</span>
+            <span class="p">{</span>
+                <span class="n">ofstream</span> <span class="n">tsezi</span><span class="p">;</span>
+                <span class="n">tsezi</span><span class="p">.</span><span class="n">open</span><span class="p">(</span><span class="n">in</span><span class="p">);</span>
+                <span class="c1">// Remember to add arguments here too.
+</span><span class="c1"></span>                <span class="n">generate</span><span class="p">(</span><span class="n">tsezi</span><span class="p">);</span>
+                <span class="n">tsezi</span><span class="p">.</span><span class="n">close</span><span class="p">();</span>
+            <span class="p">}</span>
+            <span class="p">{</span>
+                <span class="n">ifstream</span> <span class="n">tsezi</span><span class="p">;</span>
+                <span class="n">ofstream</span> <span class="n">da_an</span><span class="p">;</span>
+                <span class="n">tsezi</span><span class="p">.</span><span class="n">open</span><span class="p">(</span><span class="n">in</span><span class="p">);</span>
+                <span class="n">da_an</span><span class="p">.</span><span class="n">open</span><span class="p">(</span><span class="n">ou</span><span class="p">);</span>
+                <span class="n">solve</span><span class="p">(</span><span class="n">tsezi</span><span class="p">,</span> <span class="n">da_an</span><span class="p">);</span>
+                <span class="n">tsezi</span><span class="p">.</span><span class="n">close</span><span class="p">();</span>
+                <span class="n">da_an</span><span class="p">.</span><span class="n">close</span><span class="p">();</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+
+
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+<script>
+  anchors.options = {
+    placement: 'left',
+    visible: 'hover',
+    icon: '#'
+  };
+  anchors.add('h1, h2, h3');
+</script>
+
+<section id="comments">
+    <div class="py-3 content">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-sm-12 col-lg-8">
+                    <div class="comments">
+                        <script src="https://utteranc.es/client.js" repo="fhvirus/fhvirus.github.io"
+                            issue-term="pathname" label="comment" theme="github-light" crossorigin="anonymous" async>
+                            </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer></footer>
+
+
+
+
+    
+        <script src="https://cdn.jsdelivr.net/npm/progressively/dist/progressively.min.js"></script>
+        <script>
+            window.addEventListener('load', function() {
+                progressively.init({delay: 30, throttle: 50});
+            }, true);
+        </script>
+    
+</body>
+
+</html>

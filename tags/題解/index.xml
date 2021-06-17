@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>題解 on FHVirus&#39; 隨筆</title>
+    <link>https://fhvirus.github.io/tags/%E9%A1%8C%E8%A7%A3/</link>
+    <description>Recent content in 題解 on FHVirus&#39; 隨筆</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-TW</language>
+    <lastBuildDate>Tue, 16 Feb 2021 15:25:40 +0800</lastBuildDate>
+    
+	<atom:link href="https://fhvirus.github.io/tags/%E9%A1%8C%E8%A7%A3/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>TIOJ 1283 &amp; 四邊形優化</title>
+      <link>https://fhvirus.github.io/blog/2021/tioj-1283/</link>
+      <pubDate>Tue, 16 Feb 2021 15:25:40 +0800</pubDate>
+      
+      <guid>https://fhvirus.github.io/blog/2021/tioj-1283/</guid>
+      <description>&lt;p&gt;用了 Deque 的四邊形優化做法加了輸入輸出優化就莫名其妙拿下了 Ow0;) 東東抱歉&amp;gt;////&amp;lt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

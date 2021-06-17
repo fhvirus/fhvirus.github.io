@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>心得 on FHVirus&#39; 隨筆</title>
+    <link>https://fhvirus.github.io/tags/%E5%BF%83%E5%BE%97/</link>
+    <description>Recent content in 心得 on FHVirus&#39; 隨筆</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-TW</language>
+    <lastBuildDate>Fri, 05 Feb 2021 17:17:45 +0800</lastBuildDate>
+    
+	<atom:link href="https://fhvirus.github.io/tags/%E5%BF%83%E5%BE%97/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>IOI 2012 Day 2 Virtual 心得</title>
+      <link>https://fhvirus.github.io/blog/2021/virtual_ioi2012d2/</link>
+      <pubDate>Fri, 05 Feb 2021 17:17:45 +0800</pubDate>
+      
+      <guid>https://fhvirus.github.io/blog/2021/virtual_ioi2012d2/</guid>
+      <description>&lt;p&gt;總之 Vir 的蠻糟的。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="zh-TW"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title> Vimrc &amp; Template - FHVirus&#39; 隨筆 </title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="referrer" content="no-referrer">
+    <meta name="description" content="FHVirus 的 .vimrc 跟模板" />
+    <meta property="og:site_name" content="FHVirus&#39; 隨筆" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://fhvirus.github.io/blog/2021/vimrc-template/" />
+    <meta property="og:title" content="Vimrc &amp; Template" />
+    <meta property="og:image" content="https://fhvirus.github.io" />
+    <meta property="og:description" content="FHVirus 的 .vimrc 跟模板" />
+
+    <link rel="canonical" href="https://fhvirus.github.io/blog/2021/vimrc-template/">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="https://fhvirus.github.iocss/custom.css" rel="stylesheet" type="text/css"/>
+    <link href="https://fhvirus.github.iocss/syntax.css" rel="stylesheet" type="text/css"/>
+    <link href="https://fhvirus.github.iocss/anchor.css" rel="stylesheet" type="text/css"/>
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/progressively/1.2.5/progressively.min.css" integrity="sha512-TdJkMXwjtS9Gb8rN919K1JVdUv2+q5YHsKXPtJGDP79t1Nd5oCZy5mFA6Nr85Dsp6wJ1SUQgOyHPDulLzTjDcQ==" crossorigin="anonymous" />
+    
+
+    <link rel="shortcut icon"
+        href="https://fhvirus.github.io/images/favicon.png">
+
+    
+    <link href="https://fhvirus.github.io/index.xml" rel="alternate" type="application/rss+xml" title="FHVirus&#39; 隨筆" />
+    
+</head>
+<body>
+    
+<div class="mt-xl header">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-auto">
+                <a href="https://fhvirus.github.io">
+                    <h1 class="name">FHVirus&#39; 隨筆</h1>
+                </a>
+            </div>
+        </div>
+
+        <div class="row">
+            <ul class="nav nav-primary justify-content-center">
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="/">
+                        
+                        Home
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="/about/">
+                        
+                        About
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/FHVirus">
+                        
+                        GitHub
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.instagram.com/fh.virus/">
+                        
+                        IG
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.youtube.com/channel/UCHJlyX44nyE_nYv5zMP4r4Q">
+                        
+                        Youtube
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="/index.xml">
+                        
+                        RSS
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<div class="content">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-lg-8">
+                <h1 class="mx-0 mx-md-4 blog-post-title">Vimrc &amp; Template</h1>
+
+                <div class="mb-md-4 meta">
+                    
+                    
+                    
+
+                    <span class="date" title='Sat Feb 6 2021 22:16:44 CST'>
+                        2021-02-06
+                    </span>
+
+                    <div class="d-none d-md-inline tags">
+                        <ul class="list-unstyled d-inline">
+                            
+                            <li class="d-inline middot">
+                                <a href="/tags/%E6%A8%A1%E6%9D%BF">模板</a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="markdown blog-post-content">
+                    
+    
+    <p>更新了一下所以就重新放的一篇。</p>
+<h2 id="vimrc">.vimrc</h2>
+<p>大概功能：</p>
+<ul>
+<li>蛋餅幫我裝的 <code>vim-plug</code>，因為我不會用，所以裡面空空如也。</li>
+<li>設定 colorscheme ，顯示選項之類的。</li>
+<li>快捷鍵：刷入模板，編譯，複製整份扣的等。</li>
+<li><strong>鎖住方向鍵並在你用了的時候嘲諷你</strong>。</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">set</span> <span class="nx">encoding</span><span class="p">=</span><span class="nx">utf</span><span class="m">-8</span><span class="err">
+</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">t_Co</span><span class="p">=</span><span class="m">256</span><span class="err">
+</span><span class="err"></span><span class="nx">colorscheme</span> <span class="nx">monokai</span><span class="err">
+</span><span class="err"></span><span class="nx">syntax</span> <span class="nx">on</span><span class="err">
+</span><span class="err">
+</span><span class="err"></span><span class="nx">call</span> <span class="nx">plug</span>#<span class="nx">begin</span><span class="p">(</span><span class="s1">&#39;~/.vim/plugged&#39;</span><span class="p">)</span><span class="err">
+</span><span class="err">
+</span><span class="err"></span><span class="nx">call</span> <span class="nx">plug</span>#<span class="nx">end</span><span class="p">()</span><span class="err">
+</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">number</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">relativenumber</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">cindent</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">cursorline</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">ruler</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">tabstop</span><span class="p">=</span><span class="m">4</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">shiftwidth</span><span class="p">=</span><span class="m">4</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">backspace</span><span class="p">=</span><span class="m">2</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">showcmd</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">hlsearch</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">scrolloff</span><span class="p">=</span><span class="m">3</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">laststatus</span><span class="p">=</span><span class="m">2</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">nowrap</span><span class="err">
+</span><span class="err"></span><span class="nx">filetype</span> <span class="nx">indent</span> <span class="nx">on</span><span class="err">
+</span><span class="err"></span><span class="c">
+</span><span class="c">&#34; cpp settings</span><span class="err">
+</span><span class="err"></span><span class="nx">inoremap</span> {<span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span> {<span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span>}<span class="p">&lt;</span><span class="nx">ESC</span><span class="p">&gt;</span><span class="nx">O</span><span class="err">
+</span><span class="err"></span><span class="nx">map</span><span class="p">&lt;</span><span class="nx">F3</span><span class="p">&gt;</span> :%<span class="nx">d</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span>:<span class="nx">r</span> <span class="p">~</span><span class="sr">/OWO/</span><span class="nx">template</span>.<span class="nx">cpp</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="nx">kJ40zF45G</span><span class="err">
+</span><span class="err"></span><span class="nx">map</span><span class="p">&lt;</span><span class="nx">F4</span><span class="p">&gt;</span> :<span class="nx">tabe</span> <span class="p">~</span><span class="sr">/OWO/</span><span class="nx">in</span>.<span class="nx">in</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
+</span><span class="err"></span><span class="nx">map</span><span class="p">&lt;</span><span class="nx">F7</span><span class="p">&gt;</span> :<span class="nx">w</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span>:<span class="p">!</span><span class="nx">g</span><span class="p">++</span><span class="m">-10</span> % <span class="p">-</span><span class="nx">o</span> <span class="p">~</span><span class="sr">/OWO/</span><span class="nx">run</span> <span class="p">-</span><span class="nx">std</span><span class="p">=</span><span class="nx">c</span><span class="p">++</span><span class="m">17</span> <span class="p">-</span><span class="nx">Wfatal</span><span class="p">-</span><span class="nx">errors</span> <span class="p">-</span><span class="nx">DOWO</span> <span class="p">-</span><span class="nx">fsanitize</span><span class="p">=</span><span class="nx">undefined</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
+</span><span class="err"></span><span class="nx">map</span><span class="p">&lt;</span><span class="nx">F8</span><span class="p">&gt;</span> :<span class="nx">w</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span>:<span class="p">!</span><span class="nx">echo</span> <span class="s2">&#34;\t\tinput\n&#34;</span> &amp;&amp; <span class="nx">cat</span> <span class="p">~</span><span class="sr">/OWO/</span><span class="nx">in</span>.<span class="nx">in</span> &amp;&amp; <span class="nx">echo</span> <span class="s2">&#34;\n\t\toutput\n&#34;</span> &amp;&amp; <span class="p">~</span><span class="sr">/OWO/</span><span class="nx">run</span> <span class="p">&lt;</span> <span class="p">~</span><span class="sr">/OWO/</span><span class="nx">in</span>.<span class="nx">in</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
+</span><span class="err"></span><span class="nx">map</span><span class="p">&lt;</span><span class="nx">F9</span><span class="p">&gt;</span> :%<span class="nx">y</span><span class="p">+&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
+</span><span class="err"></span><span class="nx">map</span><span class="p">&lt;</span><span class="nx">F10</span><span class="p">&gt;</span> :<span class="p">!~</span><span class="sr">/OWO/</span><span class="nx">run</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
+</span><span class="err"></span><span class="nx">map</span><span class="p">&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">p</span><span class="p">&gt;</span> <span class="nx">I</span><span class="sr">//</span><span class="p">&lt;</span><span class="nx">ESC</span><span class="p">&gt;</span><span class="err">
+</span><span class="err"></span><span class="c">
+</span><span class="c">&#34; LaTeX settings</span><span class="err">
+</span><span class="err"></span><span class="nx">map</span><span class="p">&lt;</span><span class="nx">F6</span><span class="p">&gt;</span> :<span class="nx">w</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span>:<span class="p">!</span><span class="nx">pdflatex</span> % &amp;&amp; <span class="nx">open</span> %:<span class="nx">r</span>.<span class="nx">pdf</span> <span class="p">-</span><span class="nx">a</span> <span class="nx">Preview</span> &amp;&amp; <span class="nx">open</span> <span class="p">-</span><span class="nx">a</span> <span class="nx">terminal</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
+</span><span class="err"></span><span class="c">
+</span><span class="c">&#34; Disabling settings</span><span class="err">
+</span><span class="err"></span><span class="nx">nnoremap</span> <span class="p">&lt;</span><span class="nx">Up</span><span class="p">&gt;</span> :<span class="nx">echo</span> <span class="s2">&#34;No up for you!&#34;</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
+</span><span class="err"></span><span class="nx">vnoremap</span> <span class="p">&lt;</span><span class="nx">Up</span><span class="p">&gt;</span> :<span class="p">&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">u</span><span class="p">&gt;</span><span class="nx">echo</span> <span class="s2">&#34;No up for you!&#34;</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
+</span><span class="err"></span><span class="nx">inoremap</span> <span class="p">&lt;</span><span class="nx">Up</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">o</span><span class="p">&gt;</span>:<span class="nx">echo</span> <span class="s2">&#34;No up for you!&#34;</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
+</span><span class="err"></span><span class="nx">nnoremap</span> <span class="p">&lt;</span><span class="nx">Down</span><span class="p">&gt;</span> :<span class="nx">echo</span> <span class="s2">&#34;No down for you!&#34;</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
+</span><span class="err"></span><span class="nx">vnoremap</span> <span class="p">&lt;</span><span class="nx">Down</span><span class="p">&gt;</span> :<span class="p">&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">u</span><span class="p">&gt;</span><span class="nx">echo</span> <span class="s2">&#34;No down for you!&#34;</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
+</span><span class="err"></span><span class="nx">inoremap</span> <span class="p">&lt;</span><span class="nx">Down</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">o</span><span class="p">&gt;</span>:<span class="nx">echo</span> <span class="s2">&#34;No down for you!&#34;</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
+</span><span class="err"></span><span class="nx">nnoremap</span> <span class="p">&lt;</span><span class="nx">Left</span><span class="p">&gt;</span> :<span class="nx">echo</span> <span class="s2">&#34;No left for you!&#34;</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
+</span><span class="err"></span><span class="nx">vnoremap</span> <span class="p">&lt;</span><span class="nx">Left</span><span class="p">&gt;</span> :<span class="p">&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">u</span><span class="p">&gt;</span><span class="nx">echo</span> <span class="s2">&#34;No left for you!&#34;</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
+</span><span class="err"></span><span class="nx">inoremap</span> <span class="p">&lt;</span><span class="nx">Left</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">o</span><span class="p">&gt;</span>:<span class="nx">echo</span> <span class="s2">&#34;No left for you!&#34;</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
+</span><span class="err"></span><span class="nx">nnoremap</span> <span class="p">&lt;</span><span class="nx">Right</span><span class="p">&gt;</span> :<span class="nx">echo</span> <span class="s2">&#34;No right for you!&#34;</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
+</span><span class="err"></span><span class="nx">vnoremap</span> <span class="p">&lt;</span><span class="nx">Right</span><span class="p">&gt;</span> :<span class="p">&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">u</span><span class="p">&gt;</span><span class="nx">echo</span> <span class="s2">&#34;No right for you!&#34;</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
+</span><span class="err"></span><span class="nx">inoremap</span> <span class="p">&lt;</span><span class="nx">Right</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">o</span><span class="p">&gt;</span>:<span class="nx">echo</span> <span class="s2">&#34;No right for you!&#34;</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
+</span></code></pre></td></tr></table>
+</div>
+</div><h2 id="模板">模板</h2>
+<p>也是更新了所以也放了新的。功能：</p>
+<ul>
+<li>一些我自己習慣的 macro (<code>FOR</code>, <code>FOO</code>, <code>OOF</code>&hellip;) 。</li>
+<li>一些抄蛋餅的 debug code （蛋餅的模板真香）。</li>
+<li>方便打的輸入輸出（<code>RI</code>, <code>PL</code>）。</li>
+<li>打 CF 專用的偷吃步變數宣告。</li>
+</ul>
+<p>壓過字元數的版本，整個才 40 行左右，debug 的部份也不到 1kB 真的超棒。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="c1">// Knapsack DP is harder than FFT.
+</span><span class="c1"></span><span class="cp">#ifndef OWO
+</span><span class="cp">#include</span><span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
+</span><span class="cp">#endif
+</span><span class="cp">#include</span><span class="cpf">&lt;bits/extc++.h&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">__gnu_pbds</span><span class="p">;</span>
+<span class="k">typedef</span> <span class="kt">int64_t</span> <span class="n">ll</span><span class="p">;</span>
+<span class="k">typedef</span> <span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">pii</span><span class="p">;</span>
+<span class="cp">#define ff first
+</span><span class="cp">#define ss second
+</span><span class="cp">#define pb emplace_back
+</span><span class="cp">#define FOR(i,n) for(int i=0;i&lt;(n);++i)
+</span><span class="cp">#define FOO(i,a,b) for(int i=(a);i&lt;=int(b);++i)
+</span><span class="cp">#define OOF(i,a,b) for(int i=(a);i&gt;=int(b);--i)
+</span><span class="cp">#define AI(x) (x).begin(),(x).end()
+</span><span class="cp"></span><span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">I</span><span class="o">&gt;</span><span class="kt">bool</span> <span class="n">chmax</span><span class="p">(</span><span class="n">I</span><span class="o">&amp;</span><span class="n">a</span><span class="p">,</span><span class="n">I</span> <span class="n">b</span><span class="p">){</span><span class="k">return</span> <span class="n">a</span><span class="o">&lt;</span><span class="n">b</span><span class="o">?</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="n">b</span><span class="p">,</span><span class="nb">true</span><span class="p">)</span><span class="o">:</span><span class="nb">false</span><span class="p">;}</span>
+<span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">I</span><span class="o">&gt;</span><span class="kt">bool</span> <span class="n">chmin</span><span class="p">(</span><span class="n">I</span><span class="o">&amp;</span><span class="n">a</span><span class="p">,</span><span class="n">I</span> <span class="n">b</span><span class="p">){</span><span class="k">return</span> <span class="n">b</span><span class="o">&lt;</span><span class="n">a</span><span class="o">?</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="n">b</span><span class="p">,</span><span class="nb">true</span><span class="p">)</span><span class="o">:</span><span class="nb">false</span><span class="p">;}</span>
+<span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">V</span><span class="o">&gt;</span><span class="kt">void</span> <span class="n">lisan</span><span class="p">(</span><span class="n">V</span><span class="o">&amp;</span><span class="n">v</span><span class="p">){</span><span class="n">sort</span><span class="p">(</span><span class="n">AI</span><span class="p">(</span><span class="n">v</span><span class="p">));</span><span class="n">v</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">unique</span><span class="p">(</span><span class="n">AI</span><span class="p">(</span><span class="n">v</span><span class="p">)),</span><span class="n">v</span><span class="p">.</span><span class="n">end</span><span class="p">());}</span>
+<span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">V</span><span class="p">,</span><span class="k">class</span> <span class="nc">T</span><span class="o">&gt;</span><span class="kt">int</span> <span class="n">lspos</span><span class="p">(</span><span class="k">const</span> <span class="n">V</span><span class="o">&amp;</span><span class="n">v</span><span class="p">,</span><span class="n">T</span> <span class="n">x</span><span class="p">){</span><span class="k">return</span> <span class="nf">lower_bound</span><span class="p">(</span><span class="n">AI</span><span class="p">(</span><span class="n">v</span><span class="p">),</span><span class="n">x</span><span class="p">)</span><span class="o">-</span><span class="n">v</span><span class="p">.</span><span class="n">begin</span><span class="p">();}</span>
+<span class="k">template</span><span class="o">&lt;</span><span class="k">class</span><span class="err">...</span><span class="nc">T</span><span class="o">&gt;</span><span class="kt">void</span> <span class="n">RI</span><span class="p">(</span><span class="n">T</span><span class="o">&amp;</span><span class="p">...</span><span class="n">t</span><span class="p">){(...,(</span><span class="n">cin</span><span class="o">&gt;&gt;</span><span class="n">t</span><span class="p">));}</span>
+<span class="k">template</span><span class="o">&lt;</span><span class="k">class</span><span class="err">...</span><span class="nc">T</span><span class="o">&gt;</span><span class="kt">void</span> <span class="n">PL</span><span class="p">(</span><span class="n">T</span><span class="p">...</span><span class="n">t</span><span class="p">){</span><span class="kt">int</span> <span class="n">c</span><span class="o">=</span><span class="k">sizeof</span><span class="p">...(</span><span class="n">T</span><span class="p">);</span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">c</span><span class="p">){</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="sc">&#39;\n&#39;</span><span class="p">;</span><span class="k">return</span><span class="p">;}(...,(</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">t</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="o">--</span><span class="n">c</span><span class="o">?</span><span class="sc">&#39; &#39;</span><span class="o">:</span><span class="sc">&#39;\n&#39;</span><span class="p">)));}</span>
+<span class="k">constexpr</span> <span class="kr">inline</span> <span class="n">ll</span> <span class="nf">cdiv</span><span class="p">(</span><span class="n">ll</span> <span class="n">x</span><span class="p">,</span><span class="n">ll</span> <span class="n">m</span><span class="p">){</span><span class="k">return</span> <span class="n">x</span><span class="o">/</span><span class="n">m</span><span class="o">+</span><span class="p">(</span><span class="n">x</span><span class="o">%</span><span class="n">m</span><span class="o">?</span><span class="p">(</span><span class="n">x</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">)</span><span class="o">^</span><span class="p">(</span><span class="n">m</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span><span class="o">:</span><span class="mi">0</span><span class="p">);}</span>
+<span class="k">constexpr</span> <span class="kr">inline</span> <span class="n">ll</span> <span class="nf">mpow</span><span class="p">(</span><span class="n">ll</span> <span class="n">x</span><span class="p">,</span><span class="n">ll</span> <span class="n">e</span><span class="p">,</span><span class="n">ll</span> <span class="n">m</span><span class="p">){</span><span class="n">ll</span> <span class="n">r</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="k">for</span><span class="p">(</span><span class="n">x</span><span class="o">%=</span><span class="n">m</span><span class="p">;</span><span class="n">e</span><span class="p">;</span><span class="n">e</span><span class="o">/=</span><span class="mi">2</span><span class="p">,</span><span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="o">%</span><span class="n">m</span><span class="p">)</span><span class="k">if</span><span class="p">(</span><span class="n">e</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">)</span><span class="n">r</span><span class="o">=</span><span class="n">r</span><span class="o">*</span><span class="n">x</span><span class="o">%</span><span class="n">m</span><span class="p">;</span><span class="k">return</span> <span class="n">r</span><span class="p">;}</span>
+<span class="cp">#ifdef OWO
+</span><span class="cp">#define safe cerr&lt;&lt;&#34;\033[1;32m&#34;&lt;&lt;__PRETTY_FUNCTION__&lt;&lt;&#34; - &#34;&lt;&lt;__LINE__&lt;&lt;&#34; JIZZ\033[0m\n&#34;
+</span><span class="cp">#define debug(args...) SDF(#args, args)
+</span><span class="cp">#define OIU(args...) ostream&amp; operator&lt;&lt;(ostream&amp;O,args)
+</span><span class="cp">#define LKJ(S,B,E,F) template&lt;class...T&gt;OIU(S&lt;T...&gt;s){O&lt;&lt;B;int c=0;for(auto i:s)O&lt;&lt;(c++?&#34;, &#34;:&#34;&#34;)&lt;&lt;F;return O&lt;&lt;E;}
+</span><span class="cp"></span><span class="n">LKJ</span><span class="p">(</span><span class="n">vector</span><span class="p">,</span><span class="sc">&#39;[&#39;</span><span class="p">,</span><span class="sc">&#39;]&#39;</span><span class="p">,</span><span class="n">i</span><span class="p">)</span><span class="n">LKJ</span><span class="p">(</span><span class="n">deque</span><span class="p">,</span><span class="sc">&#39;[&#39;</span><span class="p">,</span><span class="sc">&#39;]&#39;</span><span class="p">,</span><span class="n">i</span><span class="p">)</span><span class="n">LKJ</span><span class="p">(</span><span class="n">set</span><span class="p">,</span><span class="sc">&#39;{&#39;</span><span class="p">,</span><span class="sc">&#39;}&#39;</span><span class="p">,</span><span class="n">i</span><span class="p">)</span><span class="n">LKJ</span><span class="p">(</span><span class="n">multiset</span><span class="p">,</span><span class="sc">&#39;{&#39;</span><span class="p">,</span><span class="sc">&#39;}&#39;</span><span class="p">,</span><span class="n">i</span><span class="p">)</span><span class="n">LKJ</span><span class="p">(</span><span class="n">unordered_set</span><span class="p">,</span><span class="sc">&#39;{&#39;</span><span class="p">,</span><span class="sc">&#39;}&#39;</span><span class="p">,</span><span class="n">i</span><span class="p">)</span><span class="n">LKJ</span><span class="p">(</span><span class="n">map</span><span class="p">,</span><span class="sc">&#39;{&#39;</span><span class="p">,</span><span class="sc">&#39;}&#39;</span><span class="p">,</span><span class="n">i</span><span class="p">.</span><span class="n">ff</span><span class="o">&lt;&lt;</span><span class="sc">&#39;:&#39;</span><span class="o">&lt;&lt;</span><span class="n">i</span><span class="p">.</span><span class="n">ss</span><span class="p">)</span><span class="n">LKJ</span><span class="p">(</span><span class="n">unordered_map</span><span class="p">,</span><span class="sc">&#39;{&#39;</span><span class="p">,</span><span class="sc">&#39;}&#39;</span><span class="p">,</span><span class="n">i</span><span class="p">.</span><span class="n">ff</span><span class="o">&lt;&lt;</span><span class="sc">&#39;:&#39;</span><span class="o">&lt;&lt;</span><span class="n">i</span><span class="p">.</span><span class="n">ss</span><span class="p">)</span>
+<span class="k">template</span><span class="o">&lt;</span><span class="k">class</span><span class="err">...</span><span class="nc">T</span><span class="o">&gt;</span><span class="n">OIU</span><span class="p">(</span><span class="n">pair</span><span class="o">&lt;</span><span class="n">T</span><span class="p">...</span><span class="o">&gt;</span><span class="n">p</span><span class="p">){</span><span class="k">return</span> <span class="n">O</span><span class="o">&lt;&lt;</span><span class="sc">&#39;(&#39;</span><span class="o">&lt;&lt;</span><span class="n">p</span><span class="p">.</span><span class="n">ff</span><span class="o">&lt;&lt;</span><span class="sc">&#39;,&#39;</span><span class="o">&lt;&lt;</span><span class="n">p</span><span class="p">.</span><span class="n">ss</span><span class="o">&lt;&lt;</span><span class="sc">&#39;)&#39;</span><span class="p">;}</span>
+<span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">T</span><span class="p">,</span><span class="n">size_t</span> <span class="n">N</span><span class="o">&gt;</span><span class="n">OIU</span><span class="p">(</span><span class="n">array</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="n">N</span><span class="o">&gt;</span><span class="n">a</span><span class="p">){</span><span class="k">return</span> <span class="n">O</span><span class="o">&lt;&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">AI</span><span class="p">(</span><span class="n">a</span><span class="p">));}</span>
+<span class="k">template</span><span class="o">&lt;</span><span class="k">class</span><span class="err">...</span><span class="nc">T</span><span class="o">&gt;</span><span class="n">OIU</span><span class="p">(</span><span class="n">tuple</span><span class="o">&lt;</span><span class="n">T</span><span class="p">...</span><span class="o">&gt;</span><span class="n">t</span><span class="p">){</span><span class="k">return</span> <span class="n">O</span><span class="o">&lt;&lt;</span><span class="sc">&#39;(&#39;</span><span class="p">,</span><span class="n">apply</span><span class="p">([</span><span class="o">&amp;</span><span class="n">O</span><span class="p">](</span><span class="n">T</span><span class="p">...</span><span class="n">s</span><span class="p">){</span><span class="kt">int</span> <span class="n">c</span><span class="o">=</span><span class="mi">0</span><span class="p">;(...,(</span><span class="n">O</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">c</span><span class="o">++?</span><span class="s">&#34;, &#34;</span><span class="o">:</span><span class="s">&#34;&#34;</span><span class="p">)</span><span class="o">&lt;&lt;</span><span class="n">s</span><span class="p">));},</span><span class="n">t</span><span class="p">),</span><span class="n">O</span><span class="o">&lt;&lt;</span><span class="sc">&#39;)&#39;</span><span class="p">;}</span>
+<span class="k">template</span><span class="o">&lt;</span><span class="k">class</span><span class="err">...</span><span class="nc">T</span><span class="o">&gt;</span><span class="kt">void</span> <span class="n">SDF</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">s</span><span class="p">,</span><span class="n">T</span><span class="p">...</span><span class="n">a</span><span class="p">){</span><span class="kt">int</span> <span class="n">c</span><span class="o">=</span><span class="k">sizeof</span><span class="p">...(</span><span class="n">T</span><span class="p">);</span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">c</span><span class="p">){</span><span class="n">cerr</span><span class="o">&lt;&lt;</span><span class="s">&#34;</span><span class="se">\033</span><span class="s">[1;32mvoid</span><span class="se">\033</span><span class="s">[0m</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span><span class="k">return</span><span class="p">;}(</span><span class="n">cerr</span><span class="o">&lt;&lt;</span><span class="s">&#34;</span><span class="se">\033</span><span class="s">[1;32m(&#34;</span><span class="o">&lt;&lt;</span><span class="n">s</span><span class="o">&lt;&lt;</span><span class="s">&#34;) = (&#34;</span><span class="p">,...,(</span><span class="n">cerr</span><span class="o">&lt;&lt;</span><span class="n">a</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="o">--</span><span class="n">c</span><span class="o">?</span><span class="s">&#34;, &#34;</span><span class="o">:</span><span class="s">&#34;)</span><span class="se">\033</span><span class="s">[0m</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">)));}</span>
+<span class="cp">#else
+</span><span class="cp">#pragma GCC optimize(&#34;Ofast&#34;)
+</span><span class="cp">#define safe ((void)0)
+</span><span class="cp">#define debug(...) ((void)0)
+</span><span class="cp">#endif
+</span><span class="cp"></span><span class="k">constexpr</span> <span class="n">ll</span> <span class="n">inf</span> <span class="o">=</span> <span class="mf">1e9</span><span class="p">,</span> <span class="n">INF</span> <span class="o">=</span> <span class="mf">4e18</span><span class="p">;</span>
+<span class="k">const</span> <span class="kt">int</span> <span class="n">N</span> <span class="o">=</span> <span class="mf">2e5</span> <span class="o">+</span> <span class="mi">225</span><span class="p">,</span> <span class="n">M</span> <span class="o">=</span> <span class="mf">1e9</span> <span class="o">+</span> <span class="mi">7</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">t</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">a</span><span class="p">[</span><span class="n">N</span><span class="p">];</span>
+
+<span class="kt">int32_t</span> <span class="nf">main</span><span class="p">(){</span>
+	<span class="n">ios_base</span><span class="o">::</span><span class="n">sync_with_stdio</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="n">cout</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>很令人傷心的，上面的 <code>class...T</code> 似乎被 Chroma 當成錯誤了。被分錯類的我也沒辦法救了，只好忍受他這樣醜醜的。</p>
+
+
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+<script>
+  anchors.options = {
+    placement: 'left',
+    visible: 'hover',
+    icon: '#'
+  };
+  anchors.add('h1, h2, h3');
+</script>
+
+<section id="comments">
+    <div class="py-3 content">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-sm-12 col-lg-8">
+                    <div class="comments">
+                        <script src="https://utteranc.es/client.js" repo="fhvirus/fhvirus.github.io"
+                            issue-term="pathname" label="comment" theme="github-light" crossorigin="anonymous" async>
+                            </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer></footer>
+
+
+
+
+    
+        <script src="https://cdn.jsdelivr.net/npm/progressively/dist/progressively.min.js"></script>
+        <script>
+            window.addEventListener('load', function() {
+                progressively.init({delay: 30, throttle: 50});
+            }, true);
+        </script>
+    
+</body>
+
+</html>

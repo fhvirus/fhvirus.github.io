@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="zh-TW"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title> TIOJ 1283 &amp; 四邊形優化 - FHVirus&#39; 隨筆 </title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="referrer" content="no-referrer">
+    <meta name="description" content="既然不小心拿到了 TopCoder 就寫一篇來贖罪&gt;&lt;" />
+    <meta property="og:site_name" content="FHVirus&#39; 隨筆" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://fhvirus.github.io/blog/2021/tioj-1283/" />
+    <meta property="og:title" content="TIOJ 1283 &amp; 四邊形優化" />
+    <meta property="og:image" content="https://fhvirus.github.io" />
+    <meta property="og:description" content="既然不小心拿到了 TopCoder 就寫一篇來贖罪&gt;&lt;" />
+
+    <link rel="canonical" href="https://fhvirus.github.io/blog/2021/tioj-1283/">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="https://fhvirus.github.iocss/custom.css" rel="stylesheet" type="text/css"/>
+    <link href="https://fhvirus.github.iocss/syntax.css" rel="stylesheet" type="text/css"/>
+    <link href="https://fhvirus.github.iocss/anchor.css" rel="stylesheet" type="text/css"/>
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/progressively/1.2.5/progressively.min.css" integrity="sha512-TdJkMXwjtS9Gb8rN919K1JVdUv2+q5YHsKXPtJGDP79t1Nd5oCZy5mFA6Nr85Dsp6wJ1SUQgOyHPDulLzTjDcQ==" crossorigin="anonymous" />
+    
+
+    <link rel="shortcut icon"
+        href="https://fhvirus.github.io/images/favicon.png">
+
+    
+    <link href="https://fhvirus.github.io/index.xml" rel="alternate" type="application/rss+xml" title="FHVirus&#39; 隨筆" />
+    
+</head>
+<body>
+    
+<div class="mt-xl header">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-auto">
+                <a href="https://fhvirus.github.io">
+                    <h1 class="name">FHVirus&#39; 隨筆</h1>
+                </a>
+            </div>
+        </div>
+
+        <div class="row">
+            <ul class="nav nav-primary justify-content-center">
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="/">
+                        
+                        Home
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="/about/">
+                        
+                        About
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/FHVirus">
+                        
+                        GitHub
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.instagram.com/fh.virus/">
+                        
+                        IG
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.youtube.com/channel/UCHJlyX44nyE_nYv5zMP4r4Q">
+                        
+                        Youtube
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="/index.xml">
+                        
+                        RSS
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<div class="content">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-lg-8">
+                <h1 class="mx-0 mx-md-4 blog-post-title">TIOJ 1283 &amp; 四邊形優化</h1>
+
+                <div class="mb-md-4 meta">
+                    
+                    
+                    
+
+                    <span class="date" title='Tue Feb 16 2021 15:25:40 CST'>
+                        2021-02-16
+                    </span>
+
+                    <div class="d-none d-md-inline tags">
+                        <ul class="list-unstyled d-inline">
+                            
+                            <li class="d-inline middot">
+                                <a href="/tags/%E9%9A%A8%E7%AD%86">隨筆</a>
+                            </li>
+                            
+                            <li class="d-inline middot">
+                                <a href="/tags/%E9%A1%8C%E8%A7%A3">題解</a>
+                            </li>
+                            
+                            <li class="d-inline middot">
+                                <a href="/tags/tioj">TIOJ</a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="markdown blog-post-content">
+                    
+    
+    <p>用了 Deque 的四邊形優化做法加了輸入輸出優化就莫名其妙拿下了 Ow0;) 東東抱歉&gt;////&lt;</p>
+<blockquote>
+<p>參考資料：</p>
+<ul>
+<li><a href="https://omeletwithoutegg.github.io/2020/01/25/TIOJ-1283/">Sean Liu&rsquo;s Post on 2qbx&rsquo;s blog</a></li>
+<li>ToMmyDong 在 IOICamp2021 的講義</li>
+</ul>
+</blockquote>
+<p>重點提示，<strong>請不要帶著 DP 的想法看這篇</strong>，這裡跟 DP 一點關係都沒有。</p>
+<h2 id="題序httpstiojcktpedutwproblems1283"><a href="https://tioj.ck.tp.edu.tw/problems/1283">題序</a></h2>
+<p>自己看。</p>
+<h2 id="思路">思路</h2>
+<p>我們先把所有右上角的 $n$ 個點叫做紅點，左下的 $m$ 個點叫做藍點，圖就變成這樣了：</p>
+<p><img src="graphs/2.jpeg" alt="快樂的點點們"></p>
+<p>注意到有些角根本不重要，所以沒有點點。</p>
+<p>我們要想做的事情是，找出每一個可能是答案的「紅點—藍點」點對，逐一計算並取其最大值做為答案。暴力的作法可能長這樣：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="k">typedef</span> <span class="kt">int64_t</span> <span class="n">ll</span><span class="p">;</span>
+<span class="k">typedef</span> <span class="n">pair</span><span class="o">&lt;</span><span class="n">ll</span><span class="p">,</span> <span class="n">ll</span><span class="o">&gt;</span> <span class="n">pll</span><span class="p">;</span>
+<span class="n">pll</span> <span class="n">red</span><span class="p">[</span><span class="n">N</span><span class="p">],</span> <span class="n">blu</span><span class="p">[</span><span class="n">N</span><span class="p">];</span> <span class="c1">// 紅點藍點
+</span><span class="c1"></span><span class="kr">inline</span> <span class="n">ll</span> <span class="nf">area</span><span class="p">(</span><span class="kt">int</span> <span class="n">r</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">){</span> <span class="c1">// red id, blu id
+</span><span class="c1"></span>    <span class="c1">// 不小心取到負的也沒關係，反正會被蓋掉。
+</span><span class="c1"></span>    <span class="c1">// 切記不可以加絕對值，那不是合法的矩形。
+</span><span class="c1"></span>    <span class="k">return</span> <span class="p">(</span><span class="n">red</span><span class="p">[</span><span class="n">r</span><span class="p">].</span><span class="n">ff</span> <span class="o">-</span> <span class="n">blu</span><span class="p">[</span><span class="n">b</span><span class="p">].</span><span class="n">ff</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">blu</span><span class="p">[</span><span class="n">b</span><span class="p">].</span><span class="n">ss</span> <span class="o">-</span> <span class="n">red</span><span class="p">[</span><span class="n">r</span><span class="p">].</span><span class="n">ss</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="kt">int32_t</span> <span class="nf">main</span><span class="p">(){</span>
+    <span class="c1">// eeks &amp; jizzs...
+</span><span class="c1"></span>    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">m</span><span class="p">;</span> <span class="o">++</span><span class="n">j</span><span class="p">)</span>
+            <span class="n">chmax</span><span class="p">(</span><span class="n">ans</span><span class="p">,</span> <span class="n">area</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">));</span>
+    <span class="c1">// jizzs &amp; eeks...
+</span><span class="c1"></span><span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>複雜度是 $O(n^2)$。過不了耶 Ow0;)</p>
+<h2 id="四邊形優化">四邊形優化</h2>
+<p>還記得我們的目標嗎？「找出每一個可能是答案的『紅點—藍點』點對並逐一計算」，關鍵在於「找出每一個<strong>可能是答案的</strong>點對」。確切要怎麼做呢？</p>
+<p>我們先想像有一個表格，橫軸對應到紅點，縱軸對應到藍點，大概會長這樣：</p>
+<table>
+<thead>
+<tr>
+<th>點對</th>
+<th>red[1]</th>
+<th>red[2]</th>
+<th>&hellip;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>blu[1]</td>
+<td>area(1, 1)</td>
+<td>area(2, 1)</td>
+<td>&hellip;</td>
+</tr>
+<tr>
+<td>blu[2]</td>
+<td>area(1, 2)</td>
+<td>area(2, 2)</td>
+<td>&hellip;</td>
+</tr>
+<tr>
+<td>&hellip;</td>
+<td>&hellip;</td>
+<td>&hellip;</td>
+<td>&hellip;</td>
+</tr>
+</tbody>
+</table>
+<p>接著，我們會想要略過不算一些不可能是答案的位置。但是，又有哪些位置是不必要的呢？</p>
+<h3 id="想法一monge-condition-tommydong-的想法">想法一：Monge Condition (<code>TomMyDong</code> 的想法)</h3>
+<h4 id="什麼是-monge-condition">什麼是 Monge Condition？</h4>
+<p>先不要管那長得像某海綿的名字，我們來看看他想說什麼？</p>
+<blockquote>
+<p>當一個矩陣 $A_{n, m}$ 滿足：</p>
+<p>$$ A_{i, j} + A_{i&rsquo;, j&rsquo;} \geq A_{i, j&rsquo;} + A_{i&rsquo;, j} \ \forall 0 \leq i &lt; i&rsquo; &lt; n, 0 \leq j &lt; j&rsquo; &lt; m$$</p>
+<p>則他符合 Concave Monge Condition。</p>
+</blockquote>
+<p>看起來很複雜呢！但先別著急，我們把圖畫出來：</p>
+<p><img src="graphs/3.jpeg" alt="Concave Monge Condition"></p>
+<p>就是這樣！移項一下我們可以得到：</p>
+<p>$$ A_{i, j} \leq A_{i&rsquo;, j} \Rightarrow A_{i, j&rsquo;} \leq A_{i&rsquo;, j&rsquo;}$$</p>
+<p>似乎是個漂亮的性質呢。</p>
+<h4 id="怎麼用">怎麼用？</h4>
+<p>讓我們回到我們的假想表格，想辦法把 Monge Condition 翻譯成畫框上的事情。</p>
+<p><img src="graphs/4.jpeg" alt="Concave Monge Condition"></p>
+<p>有沒有好理解一點了？</p>
+<p>若能證明他符合 Concave Monge Condition 的話，我們就有一個漂亮的性質可以使用了：</p>
+<blockquote>
+<p>如果紅點 $i$ 對到藍點 $j$ 不比紅點 $i'$ 對到藍點 $j$ 好，
+那接下來的 $j'$ 們都不可能對到 $i$，因為對到 $i'$ 一定不會比較差！</p>
+</blockquote>
+<p>那要怎麼證明 Concave Monge Condition 呢？其實超直觀的！我們先關注上面兩塊（類？）矩形就好：</p>
+<p><img src="graphs/5.jpeg" alt="Concave Monge Condition Proof"></p>
+<p>$$ A_{i, j} + A_{i&rsquo;, j&rsquo;} \ = (a + b + c + d) + (d + e + f + g) \ \geq (b + d + f) + (c + d + e) \ = A_{i, j&rsquo;} + A_{i&rsquo;, j} $$</p>
+<p>到此就證完了！ $\square$</p>
+<h3 id="想法二硬證四邊形zck-教的">想法二：硬證四邊形（<code>ZCK</code> 教的）</h3>
+<p>待補。</p>
+<h3 id="實作呢">實作呢？</h3>
+<p>我們先照順序枚舉紅點，讓他們每個人防守一個藍點的區間：</p>
+<ul>
+<li>如果還沒有人防守，那就全部是我的！</li>
+<li>如果前面有人守了一個區間，但是他在區間的最左邊（最小 $j$ ）就已經比我差了，那他接下來也不可能比我好（上面的漂亮性質），當掉！</li>
+<li>不然就二分搜我哪裡開始會比他好，搶過來！</li>
+</ul>
+<p>然後再枚舉一次藍點，算算他們跟守備他們的人形成的矩形面積，最後取最大值！</p>
+<p>扣的待補。我得把他弄的漂亮一點。</p>
+
+
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+<script>
+  anchors.options = {
+    placement: 'left',
+    visible: 'hover',
+    icon: '#'
+  };
+  anchors.add('h1, h2, h3');
+</script>
+
+<section id="comments">
+    <div class="py-3 content">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-sm-12 col-lg-8">
+                    <div class="comments">
+                        <script src="https://utteranc.es/client.js" repo="fhvirus/fhvirus.github.io"
+                            issue-term="pathname" label="comment" theme="github-light" crossorigin="anonymous" async>
+                            </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer></footer>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css" integrity="sha384-dbVIfZGuN1Yq7/1Ocstc1lUEm+AT+/rCkibIcC/OmWo5f0EA48Vf8CytHzGrSwbQ" crossorigin="anonymous">
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js" integrity="sha384-2BKqo+exmr9su6dir+qCw08N2ZKRucY4PrGQPPWU1A7FtlCGjmEGFqXCv5nyM5Ij" crossorigin="anonymous"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"></script>
+
+<script>
+renderMathInElement(
+	document.body,
+	{
+		delimiters: [
+			{left: "$$", right: "$$", display: true},
+			{left: "\\[", right: "\\]", display: true},
+			{left: "$", right: "$", display: false},
+			{left: "\\(", right: "\\)", display: false}
+		]
+	}
+);
+</script>
+
+
+
+
+    
+        <script src="https://cdn.jsdelivr.net/npm/progressively/dist/progressively.min.js"></script>
+        <script>
+            window.addEventListener('load', function() {
+                progressively.init({delay: 30, throttle: 50});
+            }, true);
+        </script>
+    
+</body>
+
+</html>

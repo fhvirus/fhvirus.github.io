@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>模板 on FHVirus&#39; 隨筆</title>
+    <link>https://fhvirus.github.io/tags/%E6%A8%A1%E6%9D%BF/</link>
+    <description>Recent content in 模板 on FHVirus&#39; 隨筆</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-TW</language>
+    <lastBuildDate>Sun, 07 Feb 2021 17:58:21 +0800</lastBuildDate>
+    
+	<atom:link href="https://fhvirus.github.io/tags/%E6%A8%A1%E6%9D%BF/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>pb_ds tree</title>
+      <link>https://fhvirus.github.io/blog/2021/pbds-tree/</link>
+      <pubDate>Sun, 07 Feb 2021 17:58:21 +0800</pubDate>
+      
+      <guid>https://fhvirus.github.io/blog/2021/pbds-tree/</guid>
+      <description>&lt;p&gt;因為寫題會用到就順便寫一篇吧。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Vimrc &amp; Template</title>
+      <link>https://fhvirus.github.io/blog/2021/vimrc-template/</link>
+      <pubDate>Sat, 06 Feb 2021 22:16:44 +0800</pubDate>
+      
+      <guid>https://fhvirus.github.io/blog/2021/vimrc-template/</guid>
+      <description>&lt;p&gt;更新了一下所以就重新放的一篇。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>FHVirus&#39; Testcase Generator</title>
+      <link>https://fhvirus.github.io/blog/2020/testcase-gen/</link>
+      <pubDate>Mon, 16 Nov 2020 19:44:44 +0800</pubDate>
+      
+      <guid>https://fhvirus.github.io/blog/2020/testcase-gen/</guid>
+      <description>&lt;p&gt;剛好要出模競題就順便寫了一個生測資的東東，希望有用&amp;gt;&amp;lt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Template</title>
+      <link>https://fhvirus.github.io/blog/2020/template/</link>
+      <pubDate>Mon, 26 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://fhvirus.github.io/blog/2020/template/</guid>
+      <description>&lt;p&gt;到目前為止（&lt;code&gt;2020/10/26&lt;/code&gt;）都在用 &lt;code&gt;8e7&lt;/code&gt; 的模板，想說自己也來寫一份好了。
+會盡量用 STL、寫一份乾淨易懂的模板。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>FHVirus IO</title>
+      <link>https://fhvirus.github.io/blog/2020/fhvirus-io/</link>
+      <pubDate>Sun, 18 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://fhvirus.github.io/blog/2020/fhvirus-io/</guid>
+      <description>&lt;p&gt;因為是 FHVirus，所以第一篇就來寫輸入輸出吧。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
