@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="zh-TW"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title> Counting Triangles - FHVirus&#39; 隨筆 </title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="referrer" content="no-referrer">
+    <meta name="description" content="SproutOJ 252" />
+    <meta property="og:site_name" content="FHVirus&#39; 隨筆" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://fhvirus.github.io/blog/2021/counting-triangles/" />
+    <meta property="og:title" content="Counting Triangles" />
+    <meta property="og:image" content="https://fhvirus.github.io/" />
+    <meta property="og:description" content="SproutOJ 252" />
+
+    <link rel="canonical" href="https://fhvirus.github.io/blog/2021/counting-triangles/">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="https://fhvirus.github.io/css/custom.css" rel="stylesheet" type="text/css"/>
+    <link href="https://fhvirus.github.io/css/syntax.css" rel="stylesheet" type="text/css"/>
+    <link href="https://fhvirus.github.io/css/anchor.css" rel="stylesheet" type="text/css"/>
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/progressively/1.2.5/progressively.min.css" integrity="sha512-TdJkMXwjtS9Gb8rN919K1JVdUv2+q5YHsKXPtJGDP79t1Nd5oCZy5mFA6Nr85Dsp6wJ1SUQgOyHPDulLzTjDcQ==" crossorigin="anonymous" />
+    
+
+    <link rel="shortcut icon"
+        href="https://fhvirus.github.io/images/favicon.png">
+
+    
+    <link href="https://fhvirus.github.io/index.xml" rel="alternate" type="application/rss+xml" title="FHVirus&#39; 隨筆" />
+    
+</head>
+<body>
+    
+<div class="mt-xl header">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-auto">
+                <a href="https://fhvirus.github.io/">
+                    <h1 class="name">FHVirus&#39; 隨筆</h1>
+                </a>
+            </div>
+        </div>
+
+        <div class="row">
+            <ul class="nav nav-primary justify-content-center">
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="/">
+                        
+                        Home
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="/about/">
+                        
+                        About
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/FHVirus">
+                        
+                        GitHub
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.instagram.com/fh.virus/">
+                        
+                        IG
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.youtube.com/channel/UCHJlyX44nyE_nYv5zMP4r4Q">
+                        
+                        Youtube
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="/index.xml">
+                        
+                        RSS
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<div class="content">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-lg-8">
+                <h1 class="mx-0 mx-md-4 blog-post-title">Counting Triangles</h1>
+
+                <div class="mb-md-4 meta">
+                    
+                    
+                    <span class="author" title="FHVirus">
+                        FHVirus
+                    </span>
+                    
+                    
+
+                    <span class="date middot" title='Thu Jun 17 2021 21:08:38 CST'>
+                        2021-06-17
+                    </span>
+
+                    <div class="d-none d-md-inline tags">
+                        <ul class="list-unstyled d-inline">
+                            
+                            <li class="d-inline middot">
+                                <a href="/tags/%E9%A1%8C%E8%A7%A3">題解</a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="markdown blog-post-content">
+                    
+    
+    <p>終於搞定了新的 Theme （大概吧），該回來寫題了。</p>
+<!-- more -->
+<h2 id="題目httpsneojsprouttwproblem252"><a href="https://neoj.sprout.tw/problem/252/">題目</a></h2>
+<p>給你一個 $N$ 個點、$M$ 條邊的簡單無向圖（也就是沒有自環或重邊的無向圖），請算出這張圖裡有幾個「三角形」？<br>
+「三角形」定義為一組數對 $(x,y,z)$ ，使得 $0 \le x&lt;y&lt;z&lt;N$ 且 $(x,y),(y,z),(z,x)$ 均為圖上的邊。</p>
+<p>這張圖的點被編號為 $0$ 到 $N−1$ 。<br>
+$3 \le N \le 10 ^ 5, 0 \le M \le 10 ^ 5$</p>
+<hr>
+<h3 id="前情提要">前情提要</h3>
+<ul>
+<li>C++ STL 的 <code>unordered</code> 系列很慢，實測也會吃 <code>TLE</code> ，思考的時候請暫時忽略他們的存在。<code>gp_hash_table</code> 裸裸的用也會 <code>TLE</code>。不要去想 Hash 。
+<img src="zck-no-unordered.png" alt="ORZCK">
+<p class="caption"> ZCK 怎麼說就怎麼做。 </p>
+</li>
+<li>請好好欣賞複雜度證明（拜託）。也許可以學到一些<del>唬爛的技巧</del>美麗的作法。</li>
+</ul>
+<h4 id="hand-shaking-lemma">Hand Shaking Lemma</h4>
+<p>$$ 2 \vert E \vert = \sum_{v \in V}{d(v)} $$</p>
+<p>白話來說，一張圖 $G = (V, E)$ 中，所有點的點度和等於邊數的兩倍。<br>
+證明應該很直觀，因為一條邊會貢獻兩個點度。</p>
+<hr>
+<h2 id="作法一">作法一</h2>
+<p>嘗試枚舉每一個點 $i \in V$，算包含 $i$ 的三角形有幾個，最後總數 $\div 3$。</p>
+<p>應該不難發現有兩種作法：</p>
+<ol>
+<li>枚舉鄰邊 $(i, u)$ 和 $(i, v)$，看看對邊 $(u, v)$ 是否存在。複雜度 $O(d(i) ^ 2 \cdot w)$。</li>
+<li>枚舉對邊 $(u, v)$，看看鄰邊 $(i, u)$ 和 $(i, v)$ 是否存在。複雜度 $O(M \cdot w)$。</li>
+</ol>
+<p>其中，$O(w)$ 代表查詢一個邊 $(i, j)$ 存不存在的複雜度，而本題要求 $w \in O(1)$。<br>
+再仔細觀察一下，作法一對點度少的點好像比較划算。<br>
+如果對點度 $\le K$ 的點用方法一，而點度 $&gt; K$ 則用方法二會發生什麼事呢？</p>
+<h4 id="嘗試唬爛證明複雜度">嘗試<del>唬爛</del>證明複雜度</h4>
+<p>想出了一個有點唬爛的方法就算算看他的複雜度吧。</p>
+<ol>
+<li>點度 $\le K$（以下稱輕點）：
+$$O(\sum_{d(i) \le K}{d(i) ^ 2} \cdot w) = O(K \cdot \sum_{d(i) \le K}{d(i)} \cdot w)$$
+把一個 $d(i)$ 換掉就豁然開朗了呢。再根據 Hand Shaking Lemma：
+$$O(K \cdot \sum_{d(i) \le K}{d(i)} \cdot w) = O(K \cdot M \cdot w)$$
+清楚明瞭。</li>
+<li>點度 $&gt; K$（以下稱重點）：<br>
+首先要注意到重點的數量有限。<br>
+設其數量為 $C$，則 $C \cdot K &lt; 2M$，即 $C &lt; \frac{2M}{K}$。<br>
+Hand Shaking Lemma 真好用。<br>
+做一個點的複雜度就是 $O(M \cdot w)$，一共是 $O(\frac{M ^ 2}{K} \cdot w)$。</li>
+</ol>
+<p>總複雜度是 $O(w \cdot (MK + \frac{M ^ 2}{K}))$。有沒有很熟悉？</p>
+<p>沒錯！就是根號分塊。取 $K = \sqrt{M}$ 時有最好複雜度 $O(w \cdot M ^ {1.5})$。</p>
+<h4 id="那麼-ow-呢log-又不是常數">那麼 $O(w)$ 呢？$\log$ 又不是常數。</h4>
+<p>沒錯，這題帶 $\log$ 會 <code>TLE</code>。（我寫的應該還算有說服力？)<br>
+那要怎麼讓查詢一個邊變成 $O(1)$ 呢？</p>
+<ol>
+<li>這次先看重點。<br>
+反正都至少 $O(M)$ 了，就乾脆每個點都開一次 <code>bitset</code> 紀錄鄰居吧。<br>
+這樣查鄰邊就 $O(1)$ 了。</li>
+<li>那麼輕點呢？好像沒有這麼好算。<br>
+如果能夠像重點一樣，一次算所有相關一個點的詢問呢？
+不如試試看「紀錄同一個點所有詢問一起算」吧！</li>
+</ol>
+<h4 id="離線">離線！</h4>
+<p>對於所有輕點，把詢問存起來，最後在對所有輕點一個一個做。</p>
+<p>每次一樣開一個 <code>bitset</code>，然後對於一個點 $i$，</p>
+<ol>
+<li>更新所有 $u\ s.t.\ (u, i) \in E$</li>
+<li>查詢所有詢問。</li>
+</ol>
+<p>這樣查詢就 $O(1)$ 了！
+至於用好的複雜度清空 <code>bitset</code> 有兩種作法：</p>
+<ol>
+<li>用 <code>vector</code> 紀錄剛剛改了哪些點，只把這些重設。</li>
+<li>改成用 <code>int</code> 紀錄，在原本要打 <code>true</code> 的地方設成現在處理的點編號。<br>
+這個小技巧常用在例如 Kosaraju 或二分圖匹配等需要大量重設一個 <code>bitset</code> 的時候。</li>
+</ol>
+<p>好耶，那就做完了！</p>
+<h3 id="實做">實做</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="k">const</span> <span class="kt">int</span> <span class="n">N</span> <span class="o">=</span> <span class="mi">100001</span><span class="p">;</span>
+
+<span class="kt">signed</span> <span class="nf">main</span><span class="p">(){</span>
+	<span class="n">ios_base</span><span class="o">::</span><span class="n">sync_with_stdio</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="n">cout</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+	<span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">;</span> <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span> <span class="o">&gt;&gt;</span> <span class="n">m</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="n">ceil</span><span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="n">m</span><span class="p">));</span>
+
+	<span class="n">vector</span><span class="o">&lt;</span><span class="n">pii</span><span class="o">&gt;</span> <span class="n">es</span><span class="p">;</span>
+	<span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">deg</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+	<span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span> <span class="n">adj</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">());</span>
+	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">m</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">){</span>
+		<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">u</span> <span class="o">&gt;&gt;</span> <span class="n">v</span><span class="p">;</span>
+		<span class="o">++</span><span class="n">deg</span><span class="p">[</span><span class="n">u</span><span class="p">],</span> <span class="o">++</span><span class="n">deg</span><span class="p">[</span><span class="n">v</span><span class="p">];</span>
+		<span class="n">adj</span><span class="p">[</span><span class="n">u</span><span class="p">].</span><span class="n">pb</span><span class="p">(</span><span class="n">v</span><span class="p">),</span> <span class="n">adj</span><span class="p">[</span><span class="n">v</span><span class="p">].</span><span class="n">pb</span><span class="p">(</span><span class="n">u</span><span class="p">);</span>
+		<span class="n">es</span><span class="p">.</span><span class="n">pb</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">);</span>
+	<span class="p">}</span>
+
+	<span class="kt">int</span> <span class="n">ans</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	
+	<span class="c1">// Heavy vertex
+</span><span class="c1"></span>	<span class="n">bitset</span><span class="o">&lt;</span><span class="n">N</span><span class="o">&gt;</span> <span class="n">nei</span><span class="p">;</span>
+	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">){</span>
+		<span class="k">if</span><span class="p">(</span><span class="n">deg</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">k</span><span class="p">)</span> <span class="k">continue</span><span class="p">;</span>
+		<span class="n">nei</span><span class="p">.</span><span class="n">reset</span><span class="p">();</span>
+		<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="nl">v</span><span class="p">:</span> <span class="n">adj</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="n">nei</span><span class="p">[</span><span class="n">v</span><span class="p">]</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+		<span class="k">for</span><span class="p">(</span><span class="k">auto</span> <span class="p">[</span><span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">]</span><span class="o">:</span> <span class="n">es</span><span class="p">)</span> <span class="n">ans</span> <span class="o">+=</span> <span class="p">(</span><span class="n">nei</span><span class="p">[</span><span class="n">u</span><span class="p">]</span> <span class="n">and</span> <span class="n">nei</span><span class="p">[</span><span class="n">v</span><span class="p">]);</span>
+	<span class="p">}</span>
+
+	<span class="c1">// Light vertex
+</span><span class="c1"></span>	<span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span> <span class="n">qs</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">());</span>
+	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">){</span>
+		<span class="k">if</span><span class="p">(</span><span class="n">deg</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">k</span><span class="p">)</span> <span class="k">continue</span><span class="p">;</span>
+		<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">deg</span><span class="p">[</span><span class="n">i</span><span class="p">];</span> <span class="o">++</span><span class="n">j</span><span class="p">)</span>
+			<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">l</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">l</span> <span class="o">&lt;</span> <span class="n">j</span><span class="p">;</span> <span class="o">++</span><span class="n">l</span><span class="p">)</span>
+				<span class="n">qs</span><span class="p">[</span><span class="n">adj</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]].</span><span class="n">pb</span><span class="p">(</span><span class="n">adj</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">l</span><span class="p">]);</span>
+	<span class="p">}</span>
+
+	<span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">la</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">){</span>
+		<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="nl">v</span><span class="p">:</span> <span class="n">adj</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="n">la</span><span class="p">[</span><span class="n">v</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+		<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="nl">v</span><span class="p">:</span> <span class="n">qs</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="n">ans</span> <span class="o">+=</span> <span class="p">(</span><span class="n">la</span><span class="p">[</span><span class="n">v</span><span class="p">]</span> <span class="o">==</span> <span class="n">i</span><span class="p">);</span>
+	<span class="p">}</span>
+
+	<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">ans</span> <span class="o">/</span> <span class="mi">3</span> <span class="o">&lt;&lt;</span> <span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><a href="https://neoj.sprout.tw/challenge/173033/">Submission: 3750ms Accepted</a><br>
+超乾淨的啦。感謝 <code>ZCK</code> 提供作法 🛐。</p>
+<blockquote>
+<p>也可以對輕點的鄰接串列排序後雙指針爬交集，<br>
+重點維持一樣作法，複雜度一樣。<br>
+實做在<a href="https://pastebin.com/AZm4EuX2">這裡</a>。這份比較醜又慢（7840ms）所以就不解釋了。</p>
+</blockquote>
+<hr>
+<h2 id="作法二">作法二</h2>
+<p>先附上<a href="https://blog.csdn.net/yang20141109/article/details/50382495">原出處</a>。</p>
+<p>不覺得上一個作法每個三角形要算三次很累贅嗎？<br>
+如果我們把邊定向，讓所有邊都從度數較小（如果度數一樣就取編號較小）指向度數大的點，<br>
+這樣就不會重複算了！</p>
+<p>也就是，我除了鄰接串列 <code>vector&lt;vector&lt;int&gt;&gt; adj</code> 之外，<br>
+我們還要做出另一個東東 <code>vector&lt;vector&lt;int&gt;&gt; val</code>（val stands for valid），<br>
+代表一個點的鄰居中度數比他大的人。</p>
+<p>接著，我們枚舉（不須依序）每一個點 $i$ 的每一條 val 邊 $(i, u)$，<br>
+看 <code>val[i]</code> 和 <code>val[u]</code> 有幾個重複的元素，就做完了！</p>
+<h4 id="複雜度呢">複雜度呢？</h4>
+<p>看起來好像有點爛？<br>
+試著看每一個點的 <code>val[i]</code> 大小，
+可以證明他們的大小為 $O(\sqrt{M})$！
+<img src="eric_xiaorz.png" alt="eric_xiaorz"></p>
+<p class="caption"> 我就不解釋了。 </p>
+<p>最多有 $O(M)$ 次看兩個 <code>val[i]</code> 交集，<br>
+如果先把所有 <code>val[i]</code> 排序的話，<br>
+用雙指針爬過去複雜度就是 $O(M \cdot \sqrt M) = O(M ^ {1.5})$！</p>
+<h4 id="實做-1">實做</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="k">const</span> <span class="kt">int</span> <span class="n">N</span> <span class="o">=</span> <span class="mi">100001</span><span class="p">;</span>
+
+<span class="c1">// 給兩個 ordered set 求交集
+</span><span class="c1"></span><span class="kt">int</span> <span class="nf">inter</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">){</span>
+	<span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">ans</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="k">while</span><span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">a</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="n">and</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">b</span><span class="p">.</span><span class="n">size</span><span class="p">()){</span>
+		<span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">b</span><span class="p">[</span><span class="n">j</span><span class="p">])</span> <span class="o">++</span><span class="n">i</span><span class="p">,</span> <span class="o">++</span><span class="n">j</span><span class="p">,</span> <span class="o">++</span><span class="n">ans</span><span class="p">;</span>
+		<span class="k">else</span> <span class="o">++</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">b</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">?</span> <span class="nl">i</span> <span class="p">:</span> <span class="n">j</span><span class="p">);</span>
+	<span class="p">}</span>
+	<span class="k">return</span> <span class="n">ans</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">signed</span> <span class="nf">main</span><span class="p">(){</span>
+	<span class="n">ios_base</span><span class="o">::</span><span class="n">sync_with_stdio</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="n">cout</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+	<span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">;</span> <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span> <span class="o">&gt;&gt;</span> <span class="n">m</span><span class="p">;</span>
+
+	<span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">deg</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+	<span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span> <span class="n">adj</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">());</span>
+	<span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span> <span class="n">val</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">());</span>
+
+	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">m</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">){</span>
+		<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">u</span> <span class="o">&gt;&gt;</span> <span class="n">v</span><span class="p">;</span>
+		<span class="o">++</span><span class="n">deg</span><span class="p">[</span><span class="n">u</span><span class="p">],</span> <span class="o">++</span><span class="n">deg</span><span class="p">[</span><span class="n">v</span><span class="p">];</span>
+		<span class="n">adj</span><span class="p">[</span><span class="n">u</span><span class="p">].</span><span class="n">pb</span><span class="p">(</span><span class="n">v</span><span class="p">),</span> <span class="n">adj</span><span class="p">[</span><span class="n">v</span><span class="p">].</span><span class="n">pb</span><span class="p">(</span><span class="n">u</span><span class="p">);</span>
+	<span class="p">}</span>
+
+	<span class="c1">// 建立 val
+</span><span class="c1"></span>	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">){</span>
+		<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="nl">j</span><span class="p">:</span> <span class="n">adj</span><span class="p">[</span><span class="n">i</span><span class="p">]){</span>
+			<span class="c1">// 也可以用 tie(deg[i], i) &lt; tie(deg[j], j)
+</span><span class="c1"></span>			<span class="k">if</span><span class="p">(</span><span class="n">deg</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">deg</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="n">or</span> <span class="p">(</span><span class="n">deg</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">deg</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="n">and</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">j</span><span class="p">))</span>
+				<span class="n">val</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">pb</span><span class="p">(</span><span class="n">j</span><span class="p">);</span>
+		<span class="p">}</span>
+		<span class="n">sort</span><span class="p">(</span><span class="n">AI</span><span class="p">(</span><span class="n">val</span><span class="p">[</span><span class="n">i</span><span class="p">]));</span>
+	<span class="p">}</span>
+
+	<span class="kt">int</span> <span class="n">ans</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">){</span>
+		<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="nl">j</span><span class="p">:</span> <span class="n">val</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+			<span class="n">ans</span> <span class="o">+=</span> <span class="n">inter</span><span class="p">(</span><span class="n">val</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">val</span><span class="p">[</span><span class="n">j</span><span class="p">]);</span>
+	<span class="p">}</span>
+	<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">ans</span> <span class="o">&lt;&lt;</span> <span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><a href="https://neoj.sprout.tw/challenge/173149/">Submission: 2540ms Accepted</a><br>
+這作法蠻通靈的。不過也許可以給一點啟示？</p>
+<hr>
+<h2 id="作法三">作法三</h2>
+<p>在<a href="https://www.zhihu.com/question/36652212">這裡</a>找到的算法，用到了奇怪矩陣乘法，不實用但酷酷的。<br>
+論文在<a href="https://www.tau.ac.il/~nogaa/PDFS/ayz97.pdf">這裡</a>，其中 AYZ 的 Z 就是 ZwiCK。無所不在的 ZCK （誤。</p>
+<hr>
+<h2 id="後記">後記</h2>
+<p>原本聽完這題以後以為自己懂了，但寫題的時候才發現自己什麼都不懂 qwq<br>
+以後看完做法還是盡量去補題吧（還有好多等補）。\</p>
+<p>喜歡這種<del>冗長</del>詳細的題解的話麻煩留言讓我知道，<br>
+維持我創作長文的動力 &gt;&lt;<br>
+不然久而久之就會變成血衣兩句話然後丟程式自己看的類型了吧 qwq。
+另外，對於新的主題有什麼建議的話一樣可以留言在下面喔。</p>
+
+
+
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+<script>
+  anchors.options = {
+    placement: 'left',
+    visible: 'hover',
+    icon: '#'
+  };
+  anchors.add('h1, h2, h3');
+</script>
+
+<section id="comments">
+    <div class="py-3 content">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-sm-12 col-lg-8">
+                    <div class="comments">
+                        <script src="https://utteranc.es/client.js" repo="fhvirus/fhvirus.github.io"
+                            issue-term="pathname" label="comment" theme="github-light" crossorigin="anonymous" async>
+                            </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer></footer>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css" integrity="sha384-dbVIfZGuN1Yq7/1Ocstc1lUEm+AT+/rCkibIcC/OmWo5f0EA48Vf8CytHzGrSwbQ" crossorigin="anonymous">
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js" integrity="sha384-2BKqo+exmr9su6dir+qCw08N2ZKRucY4PrGQPPWU1A7FtlCGjmEGFqXCv5nyM5Ij" crossorigin="anonymous"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"></script>
+
+<script>
+renderMathInElement(
+	document.body,
+	{
+		delimiters: [
+			{left: "$$", right: "$$", display: true},
+			{left: "\\[", right: "\\]", display: true},
+			{left: "$", right: "$", display: false},
+			{left: "\\(", right: "\\)", display: false}
+		]
+	}
+);
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script>
+
+
+
+    
+        <script src="https://cdn.jsdelivr.net/npm/progressively/dist/progressively.min.js"></script>
+        <script>
+            window.addEventListener('load', function() {
+                progressively.init({delay: 30, throttle: 50});
+            }, true);
+        </script>
+    
+</body>
+
+</html>

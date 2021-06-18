@@ -86,6 +86,7 @@ hr {
 .content h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
     color: #333333;
+	margin-top: 2rem;
     margin-bottom: 1rem;
 }
 
@@ -100,7 +101,7 @@ hr {
     text-decoration: none;
 }
 
-.content .middot:after {
+.content .middot:before {
     margin: 0 3px;
     content: "·";
 }
@@ -149,6 +150,7 @@ hr {
 
 .content img {
     display: block;
+	margin-top: 1rem;
     margin-left: auto;
     margin-right: auto;
     max-width: 100%;
