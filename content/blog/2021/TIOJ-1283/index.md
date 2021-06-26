@@ -129,3 +129,72 @@ $$ A_{i, j} + A_{i', j'} \\ = (a + b + c + d) + (d + e + f + g) \\ \geq (b + d +
 然後再枚舉一次藍點，算算他們跟守備他們的人形成的矩形面積，最後取最大值！
 
 扣的待補。我得把他弄的漂亮一點。
+
+### 李超揍他（2021/06/26 補）
+
+既然證出了優超性，符合李超線段樹的使用時機，何不就揍他？
+
+```cpp
+struct DOT{
+	ll x, y;
+	DOT(ll x = 0, ll y = 0): x(x), y(y){}
+	ll operator()(const DOT &a){ return 1ll * (a.x - x) * (y - a.y); }
+	bool operator<(const DOT &a){ return x < a.x; }
+};
+vector<DOT> dot;
+struct SGT{
+	int n; vector<DOT> val;
+	SGT(int n): n(n), val(n * 2){}
+	constexpr int id(int l, int r) const { return (l + r) | (l != r); }
+	void ins(int l, int r, DOT v){ 
+		if(l == r){
+			if(v(dot[l]) > val[id(l, r)](dot[l])) val[id(l, r)] = v;
+			return;
+		}
+		int m = (l + r) / 2;
+		if(v(dot[m]) > val[id(l, r)](dot[m])) swap(val[id(l, r)], v);
+		if(v < val[id(l, r)]) ins(l, m, v);
+		else ins(m+1, r, v);
+	}
+	void ins(int x, int y){ ins(0, n-1, DOT(x, y)); }
+	ll que(int l, int r, int p){
+		debug(l, r, p, val[id(l, r)](dot[p]));
+		if(l == r) return val[id(l, r)](dot[p]);
+		int m = (l + r) / 2;
+		return max(val[id(l, r)](dot[p]), p <= m ? que(l, m, p) : que(m+1, r, p));
+	}
+	ll que(int p){ return que(0, n-1, p); }
+};
+
+signed main(){
+	ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+	int n, m;
+
+	{
+		cin >> n; n /= 2;
+		ll x = 0, y = 0, dx, dy;
+		for(int i = 0; i < n; ++i){
+			cin >> dx >> dy;
+			debug(x + dx, y);
+			dot.pb(x + dx, y);
+			x += dx, y += dy;
+		}
+	}
+	SGT sgt(n);
+	{
+		cin >> m; m /= 2;
+		ll x = 0, y = 0, dx, dy;
+		for(int i = 0; i < m; ++i){
+			cin >> dy >> dx;
+			debug(x, y + dy);
+			sgt.ins(x, y + dy);
+			x += dx, y += dy;
+		}
+	}
+
+	ll ans = 0;
+	for(int i = 0; i < n; ++i) chmax(ans, sgt.que(i));
+	cout << ans;
+	return 0;
+} 
+```
