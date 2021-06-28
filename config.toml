@@ -23,6 +23,7 @@ ignoreFiles = []
   progressively = true
   commentsrepo = "fhvirus/fhvirus.github.io"
   faviconfile = "images/favicon.png"
+	searchconsoleid = "OmeoCl3L8243BxuGCzij-BbCwBW3_bcDuT4df39yOds"
 
 [markup]
   # defaultMarkdownHandler = "blackfriday"
