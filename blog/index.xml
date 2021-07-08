@@ -6,10 +6,19 @@
     <description>Recent content in FHVirus’ Blog on FHVirus&#39; 隨筆</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-TW</language>
-    <lastBuildDate>Thu, 17 Jun 2021 21:08:38 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 08 Jul 2021 11:51:21 +0800</lastBuildDate>
     
 	<atom:link href="https://fhvirus.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>文月</title>
+      <link>https://fhvirus.github.io/blog/2021/fumizuki/</link>
+      <pubDate>Thu, 08 Jul 2021 11:51:21 +0800</pubDate>
+      
+      <guid>https://fhvirus.github.io/blog/2021/fumizuki/</guid>
+      <description>&lt;p&gt;一些寫題的時候的小筆記，不夠撐起一整篇題解的東西應該會放在這裡。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Counting Triangles</title>
