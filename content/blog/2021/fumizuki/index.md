@@ -1,7 +1,6 @@
 ---
 title: '文月'
 date: 2021-07-08T11:51:21+08:00
-draft: true
 # img: "images/image.png"
 author: FHVirus
 tags:
