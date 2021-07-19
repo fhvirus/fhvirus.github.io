@@ -149,6 +149,57 @@
 但是只看頭尾的話就不會被戳到，也就不會把前面的推掉。<br>
 還是要好好 $O(n \log n)$ 維護轉移區間才行。</li>
 </ol>
+<h2 id="關於邊界">關於邊界</h2>
+<ol>
+<li>記得檢查自己假定的東西有沒有成立。<br>
+例如，假定有解但是其實不一定有，或是假定字串長度大於 1 卻有可能等於 1 。</li>
+<li>當找不到 bug 的時候，換一種寫法吧。</li>
+</ol>
+<h2 id="關於數論及微唬爛">關於數論及微唬爛</h2>
+<ol>
+<li><a href="https://gist.github.com/dario2994/fb4713f252ca86c1254d">這裡</a>有個有趣的東西。也許可以提供數論題唬爛的想法。<br>
+稍微整理一下之後可以發現大概就是 $O(\sqrt[3]{x})$ 的趨勢。</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th align="center">範圍</th>
+<th align="center">因數個數上界</th>
+<th align="center">有最多因數的數</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">$10 ^ 9$</td>
+<td align="center">1344</td>
+<td align="center">735134400</td>
+</tr>
+<tr>
+<td align="center">$10 ^ {12}$</td>
+<td align="center">6720</td>
+<td align="center">963761198400</td>
+</tr>
+<tr>
+<td align="center">$10 ^ {18}$</td>
+<td align="center">103680</td>
+<td align="center">897612484786617600</td>
+</tr>
+</tbody>
+</table>
+<h2 id="關於資結實作">關於資結實作</h2>
+<ol>
+<li>要實作多棵相同資結的時候（如線段樹、Trie 的時候），可以先開一個 pool 再用偽指標（很好寫！）<br>
+如果怕 Memory leak 的話也可以開一個 <code>vector&lt;int&gt;</code> 紀錄被 delete 的指標們。</li>
+<li>Trie 真的不難寫。</li>
+</ol>
+<h2 id="關於中毒">關於中毒</h2>
+<p>例題：<a href="https://csacademy.com/contest/archive/task/online_xormax/statement/">CSAcademy Online XorMax</a></p>
+<ol>
+<li>好好觀察，複雜度先好好估，估完有點爛要強迫自己再想一下。</li>
+<li>想到可怕的東東也是中毒徵兆之一。</li>
+<li>不要分塊、莫隊中毒，真的，序列題還可以有更多好性質。</li>
+<li>去練一下莫隊。赫然發現自己寫不出來乾淨實作。</li>
+</ol>
 
 
                 </div>
