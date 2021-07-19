@@ -133,7 +133,8 @@
                 <div class="markdown blog-post-content">
                     
     
-    <p>一些寫題的時候的小筆記，不夠撐起一整篇題解的東西應該會放在這裡。</p>
+    <p>一些寫題的時候的小筆記，不夠撐起一整篇題解的東西應該會放在這裡。
+有一些小技巧，看到賺到（？</p>
 <h2 id="關於枚舉">關於枚舉</h2>
 <p>例題：<a href="https://oj.uz/problem/view/IZhO19_xorsum">IZhO 2019 Intergalatic Ship</a></p>
 <ol>
@@ -191,6 +192,8 @@
 <li>要實作多棵相同資結的時候（如線段樹、Trie 的時候），可以先開一個 pool 再用偽指標（很好寫！）<br>
 如果怕 Memory leak 的話也可以開一個 <code>vector&lt;int&gt;</code> 紀錄被 delete 的指標們。</li>
 <li>Trie 真的不難寫。</li>
+<li>一個小技巧：假設有一個序列題，要一個一個拔掉，拆成一個一個子區間，而子區間可以用資結維護的時候，<br>
+不妨考慮反過來變成一個一個加入，資結可以啟發式合併做！</li>
 </ol>
 <h2 id="關於中毒">關於中毒</h2>
 <p>例題：<a href="https://csacademy.com/contest/archive/task/online_xormax/statement/">CSAcademy Online XorMax</a></p>
