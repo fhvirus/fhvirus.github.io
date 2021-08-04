@@ -64,3 +64,19 @@ katex: true
 2. 想到可怕的東東也是中毒徵兆之一。
 3. 不要分塊、莫隊中毒，真的，序列題還可以有更多好性質。
 4. 去練一下莫隊。赫然發現自己寫不出來乾淨實作。
+
+## 關於定方向
+
+例題：[CEOI 2017 Day 1 One Way Streets](https://csacademy.com/contest/archive/task/one-way-streets/statement/)
+[巧妙作法 by Zi-Hong Xiao](https://csacademy.com/submission/3119849/)
+
+1. 仔細想好，在 DFS 的時候可以一起別的事。BCC Tarjan 其實不一定要把樹建出來。
+2. 在做事的時候要想好「要用的性質」而不是先套演算法。
+3. 在樹上定方向的時候，可以直接 `++u, --v`，再樹上 DP。因為處理完子樹就知道現在節點的方向了！
+4. XZH 真的特別強Orz。
+
+## 關於唬爛
+
+例題：[CSAcademy Odd Palindromes](https://csacademy.com/contest/archive/task/odd-palindromes/statement/)
+
+1. 複雜度 $O(26N), N \le 10 ^ 6$ 的字串題居然只要 40 ms ？（輸入用 `getline`）
