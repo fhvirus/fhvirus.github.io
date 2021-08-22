@@ -191,25 +191,71 @@
 </span><span class="lnt">49
 </span><span class="lnt">50
 </span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span><span class="lnt">75
+</span><span class="lnt">76
+</span><span class="lnt">77
+</span><span class="lnt">78
+</span><span class="lnt">79
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">set</span> <span class="nx">encoding</span><span class="p">=</span><span class="nx">utf</span><span class="m">-8</span><span class="err">
 </span><span class="err">
 </span><span class="err"></span><span class="nx">set</span> <span class="nx">t_Co</span><span class="p">=</span><span class="m">256</span><span class="err">
-</span><span class="err"></span><span class="nx">colorscheme</span> <span class="nx">monokai</span><span class="err">
 </span><span class="err"></span><span class="nx">syntax</span> <span class="nx">on</span><span class="err">
+</span><span class="err"></span><span class="nx">colorscheme</span> <span class="nx">monokai</span><span class="err">
 </span><span class="err">
 </span><span class="err"></span><span class="nx">call</span> <span class="nx">plug</span>#<span class="nx">begin</span><span class="p">(</span><span class="s1">&#39;~/.vim/plugged&#39;</span><span class="p">)</span><span class="err">
-</span><span class="err">
+</span><span class="err"></span><span class="nx">Plug</span> <span class="s1">&#39;https://github.com/gi1242/vim-tex-syntax.git&#39;</span><span class="err">
+</span><span class="err"></span><span class="nx">Plug</span> <span class="s1">&#39;joker1007/vim-markdown-quote-syntax&#39;</span><span class="err">
+</span><span class="err"></span><span class="nx">Plug</span> <span class="s1">&#39;cespare/vim-toml&#39;</span><span class="err">
+</span><span class="err"></span><span class="nx">Plug</span> <span class="s1">&#39;godlygeek/tabular&#39;</span><span class="err">
+</span><span class="err"></span><span class="nx">Plug</span> <span class="s1">&#39;vim-latex/vim-latex&#39;</span><span class="err">
 </span><span class="err"></span><span class="nx">call</span> <span class="nx">plug</span>#<span class="nx">end</span><span class="p">()</span><span class="err">
+</span><span class="err"></span><span class="c">&#34; Plug &#39;plasticboy/vim-markdown&#39;</span><span class="err">
+</span><span class="err"></span><span class="c">&#34; Plug &#39;gabrielelana/vim-markdown&#39;</span><span class="err">
+</span><span class="err">
+</span><span class="err"></span><span class="k">let</span> <span class="nx">t</span>:<span class="nx">is_transparent</span> <span class="p">=</span> <span class="m">0</span><span class="err">
+</span><span class="err"></span><span class="k">function</span><span class="p">!</span> <span class="nx">Toggle_transparent_background</span><span class="p">()</span><span class="err">
+</span><span class="err"></span>  <span class="k">if</span> <span class="nx">t</span>:<span class="nx">is_transparent</span> <span class="p">==</span> <span class="m">0</span><span class="err">
+</span><span class="err"></span>    <span class="nx">hi</span> <span class="nx">Normal</span> <span class="nx">guibg</span><span class="p">=</span><span class="nb">NONE</span> <span class="nx">ctermbg</span><span class="p">=</span><span class="nx">black</span><span class="err">
+</span><span class="err"></span>    <span class="k">let</span> <span class="nx">t</span>:<span class="nx">is_transparent</span> <span class="p">=</span> <span class="m">1</span><span class="err">
+</span><span class="err"></span>  <span class="k">else</span><span class="err">
+</span><span class="err"></span>    <span class="nx">hi</span> <span class="nx">Normal</span> <span class="nx">guibg</span><span class="p">=</span><span class="nb">NONE</span> <span class="nx">ctermbg</span><span class="p">=</span><span class="nb">NONE</span><span class="err">
+</span><span class="err"></span>    <span class="k">let</span> <span class="nx">t</span>:<span class="nx">is_transparent</span> <span class="p">=</span> <span class="m">0</span><span class="err">
+</span><span class="err"></span>  <span class="k">endif</span><span class="err">
+</span><span class="err"></span><span class="k">endfunction</span><span class="err">
+</span><span class="err"></span><span class="nx">nnoremap</span> <span class="p">&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">x</span><span class="p">&gt;&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">t</span><span class="p">&gt;</span> :<span class="nx">call</span> <span class="nx">Toggle_transparent_background</span><span class="p">()&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
 </span><span class="err">
 </span><span class="err"></span><span class="nx">set</span> <span class="nx">number</span><span class="err">
 </span><span class="err"></span><span class="nx">set</span> <span class="nx">relativenumber</span><span class="err">
 </span><span class="err"></span><span class="nx">set</span> <span class="nx">cindent</span><span class="err">
 </span><span class="err"></span><span class="nx">set</span> <span class="nx">cursorline</span><span class="err">
 </span><span class="err"></span><span class="nx">set</span> <span class="nx">ruler</span><span class="err">
-</span><span class="err"></span><span class="nx">set</span> <span class="nx">tabstop</span><span class="p">=</span><span class="m">4</span><span class="err">
-</span><span class="err"></span><span class="nx">set</span> <span class="nx">shiftwidth</span><span class="p">=</span><span class="m">4</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">tabstop</span><span class="p">=</span><span class="m">2</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">shiftwidth</span><span class="p">=</span><span class="m">2</span><span class="err">
 </span><span class="err"></span><span class="nx">set</span> <span class="nx">backspace</span><span class="p">=</span><span class="m">2</span><span class="err">
 </span><span class="err"></span><span class="nx">set</span> <span class="nx">showcmd</span><span class="err">
 </span><span class="err"></span><span class="nx">set</span> <span class="nx">hlsearch</span><span class="err">
@@ -220,16 +266,18 @@
 </span><span class="err"></span><span class="c">
 </span><span class="c">&#34; cpp settings</span><span class="err">
 </span><span class="err"></span><span class="nx">inoremap</span> {<span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span> {<span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span>}<span class="p">&lt;</span><span class="nx">ESC</span><span class="p">&gt;</span><span class="nx">O</span><span class="err">
-</span><span class="err"></span><span class="nx">map</span><span class="p">&lt;</span><span class="nx">F3</span><span class="p">&gt;</span> :%<span class="nx">d</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span>:<span class="nx">r</span> <span class="p">~</span><span class="sr">/OWO/</span><span class="nx">template</span>.<span class="nx">cpp</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="nx">kJ40zF45G</span><span class="err">
+</span><span class="err"></span><span class="nx">map</span><span class="p">&lt;</span><span class="nx">F3</span><span class="p">&gt;</span> :%<span class="nx">d</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span>:<span class="nx">r</span> <span class="p">~</span><span class="sr">/OWO/</span><span class="nx">template</span>.<span class="nx">cpp</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="nx">kJ21zF24G</span><span class="err">
 </span><span class="err"></span><span class="nx">map</span><span class="p">&lt;</span><span class="nx">F4</span><span class="p">&gt;</span> :<span class="nx">tabe</span> <span class="p">~</span><span class="sr">/OWO/</span><span class="nx">in</span>.<span class="nx">in</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
-</span><span class="err"></span><span class="nx">map</span><span class="p">&lt;</span><span class="nx">F7</span><span class="p">&gt;</span> :<span class="nx">w</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span>:<span class="p">!</span><span class="nx">g</span><span class="p">++</span><span class="m">-10</span> % <span class="p">-</span><span class="nx">o</span> <span class="p">~</span><span class="sr">/OWO/</span><span class="nx">run</span> <span class="p">-</span><span class="nx">std</span><span class="p">=</span><span class="nx">c</span><span class="p">++</span><span class="m">17</span> <span class="p">-</span><span class="nx">Wfatal</span><span class="p">-</span><span class="nx">errors</span> <span class="p">-</span><span class="nx">DOWO</span> <span class="p">-</span><span class="nx">fsanitize</span><span class="p">=</span><span class="nx">undefined</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
+</span><span class="err"></span><span class="nx">map</span><span class="p">&lt;</span><span class="nx">F5</span><span class="p">&gt;</span> :%<span class="nx">d</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span>&#34;<span class="p">+</span><span class="nx">P</span>:<span class="nx">w</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;&lt;</span><span class="nx">F8</span><span class="p">&gt;</span><span class="err">
+</span><span class="err"></span><span class="nx">map</span><span class="p">&lt;</span><span class="nx">F7</span><span class="p">&gt;</span> :<span class="nx">w</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span>:<span class="p">!</span><span class="nx">g</span><span class="p">++</span> <span class="s2">&#34;%&#34;</span> <span class="p">-</span><span class="nx">o</span> <span class="p">~</span><span class="sr">/OWO/</span><span class="nx">run</span> <span class="p">-</span><span class="nx">std</span><span class="p">=</span><span class="nx">c</span><span class="p">++</span><span class="m">17</span> <span class="p">-</span><span class="nx">Wfatal</span><span class="p">-</span><span class="nx">errors</span> <span class="p">-</span><span class="nx">DOWO</span> <span class="p">-</span><span class="nx">fsanitize</span><span class="p">=</span><span class="nx">undefined</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
 </span><span class="err"></span><span class="nx">map</span><span class="p">&lt;</span><span class="nx">F8</span><span class="p">&gt;</span> :<span class="nx">w</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span>:<span class="p">!</span><span class="nx">echo</span> <span class="s2">&#34;\t\tinput\n&#34;</span> &amp;&amp; <span class="nx">cat</span> <span class="p">~</span><span class="sr">/OWO/</span><span class="nx">in</span>.<span class="nx">in</span> &amp;&amp; <span class="nx">echo</span> <span class="s2">&#34;\n\t\toutput\n&#34;</span> &amp;&amp; <span class="p">~</span><span class="sr">/OWO/</span><span class="nx">run</span> <span class="p">&lt;</span> <span class="p">~</span><span class="sr">/OWO/</span><span class="nx">in</span>.<span class="nx">in</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
 </span><span class="err"></span><span class="nx">map</span><span class="p">&lt;</span><span class="nx">F9</span><span class="p">&gt;</span> :%<span class="nx">y</span><span class="p">+&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
-</span><span class="err"></span><span class="nx">map</span><span class="p">&lt;</span><span class="nx">F10</span><span class="p">&gt;</span> :<span class="p">!~</span><span class="sr">/OWO/</span><span class="nx">run</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
+</span><span class="err"></span><span class="nx">map</span><span class="p">&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">l</span><span class="p">&gt;</span> :<span class="nx">w</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span>:<span class="p">!</span><span class="nx">g</span><span class="p">++</span> <span class="s2">&#34;%&#34;</span> <span class="p">-</span><span class="nx">o</span> <span class="p">~</span><span class="sr">/OWO/</span><span class="nx">run</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
+</span><span class="err"></span><span class="nx">map</span><span class="p">&lt;</span><span class="nx">F2</span><span class="p">&gt;</span> :<span class="nx">w</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span>:<span class="p">!</span><span class="nx">g</span><span class="p">++</span> <span class="s2">&#34;%&#34;</span> <span class="nx">grader</span>.<span class="nx">cpp</span> <span class="p">-</span><span class="nx">o</span> <span class="p">~</span><span class="sr">/OWO/</span><span class="nx">run</span> <span class="p">-</span><span class="nx">std</span><span class="p">=</span><span class="nx">c</span><span class="p">++</span><span class="m">17</span> <span class="p">-</span><span class="nx">Wfatal</span><span class="p">-</span><span class="nx">errors</span> <span class="p">-</span><span class="nx">DOWO</span> <span class="p">-</span><span class="nx">fsanitize</span><span class="p">=</span><span class="nx">undefined</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
 </span><span class="err"></span><span class="nx">map</span><span class="p">&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">p</span><span class="p">&gt;</span> <span class="nx">I</span><span class="sr">//</span><span class="p">&lt;</span><span class="nx">ESC</span><span class="p">&gt;</span><span class="err">
 </span><span class="err"></span><span class="c">
 </span><span class="c">&#34; LaTeX settings</span><span class="err">
-</span><span class="err"></span><span class="nx">map</span><span class="p">&lt;</span><span class="nx">F6</span><span class="p">&gt;</span> :<span class="nx">w</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span>:<span class="p">!</span><span class="nx">pdflatex</span> % &amp;&amp; <span class="nx">open</span> %:<span class="nx">r</span>.<span class="nx">pdf</span> <span class="p">-</span><span class="nx">a</span> <span class="nx">Preview</span> &amp;&amp; <span class="nx">open</span> <span class="p">-</span><span class="nx">a</span> <span class="nx">terminal</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
+</span><span class="err"></span><span class="nx">map</span><span class="p">&lt;</span><span class="nx">F6</span><span class="p">&gt;</span> :<span class="nx">w</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span>:<span class="p">!</span><span class="nx">xelatex</span> <span class="s2">&#34;%&#34;</span> &amp;&amp; <span class="nx">open</span> <span class="s2">&#34;%:r&#34;</span>.<span class="nx">pdf</span> <span class="p">-</span><span class="nx">a</span> <span class="nx">Preview</span> &amp;&amp; <span class="nx">open</span> <span class="p">-</span><span class="nx">a</span> <span class="nx">terminal</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
 </span><span class="err"></span><span class="c">
 </span><span class="c">&#34; Disabling settings</span><span class="err">
 </span><span class="err"></span><span class="nx">nnoremap</span> <span class="p">&lt;</span><span class="nx">Up</span><span class="p">&gt;</span> :<span class="nx">echo</span> <span class="s2">&#34;No up for you!&#34;</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
@@ -244,6 +292,14 @@
 </span><span class="err"></span><span class="nx">nnoremap</span> <span class="p">&lt;</span><span class="nx">Right</span><span class="p">&gt;</span> :<span class="nx">echo</span> <span class="s2">&#34;No right for you!&#34;</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
 </span><span class="err"></span><span class="nx">vnoremap</span> <span class="p">&lt;</span><span class="nx">Right</span><span class="p">&gt;</span> :<span class="p">&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">u</span><span class="p">&gt;</span><span class="nx">echo</span> <span class="s2">&#34;No right for you!&#34;</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
 </span><span class="err"></span><span class="nx">inoremap</span> <span class="p">&lt;</span><span class="nx">Right</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">o</span><span class="p">&gt;</span>:<span class="nx">echo</span> <span class="s2">&#34;No right for you!&#34;</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
+</span><span class="err">
+</span><span class="err"></span><span class="nx">nmap</span> <span class="p">&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">e</span><span class="p">&gt;</span> :<span class="nx">call</span> <span class="p">&lt;</span><span class="nx">SID</span><span class="p">&gt;</span><span class="nx">SynStack</span><span class="p">()&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
+</span><span class="err"></span><span class="k">function</span><span class="p">!</span> <span class="p">&lt;</span><span class="nx">SID</span><span class="p">&gt;</span><span class="nx">SynStack</span><span class="p">()</span><span class="err">
+</span><span class="err"></span>    <span class="k">if</span> <span class="p">!</span><span class="nx">exists</span><span class="p">(</span><span class="s2">&#34;*synstack&#34;</span><span class="p">)</span><span class="err">
+</span><span class="err"></span>        <span class="nx">return</span><span class="err">
+</span><span class="err"></span>    <span class="k">endif</span><span class="err">
+</span><span class="err"></span>    <span class="nx">echo</span> <span class="nx">map</span><span class="p">(</span><span class="nx">synstack</span><span class="p">(</span><span class="nx">line</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">),</span> <span class="nx">col</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)),</span> <span class="s1">&#39;synIDattr(v:val, &#34;name&#34;)&#39;</span><span class="p">)</span><span class="err">
+</span><span class="err"></span><span class="nx">endfunc</span><span class="err">
 </span></code></pre></td></tr></table>
 </div>
 </div><h2 id="模板">模板</h2>
