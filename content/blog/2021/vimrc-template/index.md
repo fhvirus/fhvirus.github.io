@@ -26,20 +26,38 @@ katex: false
 set encoding=utf-8
 
 set t_Co=256
-colorscheme monokai
 syntax on
+colorscheme monokai
 
 call plug#begin('~/.vim/plugged')
-
+Plug 'https://github.com/gi1242/vim-tex-syntax.git'
+Plug 'joker1007/vim-markdown-quote-syntax'
+Plug 'cespare/vim-toml'
+Plug 'godlygeek/tabular'
+Plug 'vim-latex/vim-latex'
 call plug#end()
+" Plug 'plasticboy/vim-markdown'
+" Plug 'gabrielelana/vim-markdown'
+
+let t:is_transparent = 0
+function! Toggle_transparent_background()
+  if t:is_transparent == 0
+    hi Normal guibg=NONE ctermbg=black
+    let t:is_transparent = 1
+  else
+    hi Normal guibg=NONE ctermbg=NONE
+    let t:is_transparent = 0
+  endif
+endfunction
+nnoremap <C-x><C-t> :call Toggle_transparent_background()<CR>
 
 set number
 set relativenumber
 set cindent
 set cursorline
 set ruler
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set backspace=2
 set showcmd
 set hlsearch
@@ -50,16 +68,18 @@ filetype indent on
 
 " cpp settings
 inoremap {<CR> {<CR>}<ESC>O
-map<F3> :%d<CR>:r ~/OWO/template.cpp<CR>kJ40zF45G
+map<F3> :%d<CR>:r ~/OWO/template.cpp<CR>kJ21zF24G
 map<F4> :tabe ~/OWO/in.in<CR>
-map<F7> :w<CR>:!g++-10 % -o ~/OWO/run -std=c++17 -Wfatal-errors -DOWO -fsanitize=undefined<CR>
+map<F5> :%d<CR>"+P:w<CR><F8>
+map<F7> :w<CR>:!g++ "%" -o ~/OWO/run -std=c++17 -Wfatal-errors -DOWO -fsanitize=undefined<CR>
 map<F8> :w<CR>:!echo "\t\tinput\n" && cat ~/OWO/in.in && echo "\n\t\toutput\n" && ~/OWO/run < ~/OWO/in.in<CR>
 map<F9> :%y+<CR>
-map<F10> :!~/OWO/run<CR>
+map<C-l> :w<CR>:!g++ "%" -o ~/OWO/run<CR>
+map<F2> :w<CR>:!g++ "%" grader.cpp -o ~/OWO/run -std=c++17 -Wfatal-errors -DOWO -fsanitize=undefined<CR>
 map<C-p> I//<ESC>
 
 " LaTeX settings
-map<F6> :w<CR>:!pdflatex % && open %:r.pdf -a Preview && open -a terminal<CR><CR>
+map<F6> :w<CR>:!xelatex "%" && open "%:r".pdf -a Preview && open -a terminal<CR><CR>
 
 " Disabling settings
 nnoremap <Up> :echo "No up for you!"<CR>
@@ -74,6 +94,14 @@ inoremap <Left> <C-o>:echo "No left for you!"<CR>
 nnoremap <Right> :echo "No right for you!"<CR>
 vnoremap <Right> :<C-u>echo "No right for you!"<CR>
 inoremap <Right> <C-o>:echo "No right for you!"<CR>
+
+nmap <C-e> :call <SID>SynStack()<CR>
+function! <SID>SynStack()
+    if !exists("*synstack")
+        return
+    endif
+    echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc
 ```
 
 
