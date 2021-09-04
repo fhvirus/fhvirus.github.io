@@ -6,10 +6,19 @@
     <description>Recent content in 模板 on FHVirus&#39; 隨筆</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-TW</language>
-    <lastBuildDate>Sun, 07 Feb 2021 17:58:21 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 04 Sep 2021 19:47:48 +0800</lastBuildDate>
     
 	<atom:link href="https://fhvirus.github.io/tags/%E6%A8%A1%E6%9D%BF/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Contest Template</title>
+      <link>https://fhvirus.github.io/blog/2021/contesttemplate/</link>
+      <pubDate>Sat, 04 Sep 2021 19:47:48 +0800</pubDate>
+      
+      <guid>https://fhvirus.github.io/blog/2021/contesttemplate/</guid>
+      <description>&lt;p&gt;為了明天的 APCS 來複習一下模板，順便放一個備忘錄。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>pb_ds tree</title>
