@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="zh-TW"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title> 關於常數 - FHVirus&#39; 隨筆 </title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="referrer" content="no-referrer">
+    <meta name="description" content="一些壓常技巧" />
+    <meta property="og:site_name" content="FHVirus&#39; 隨筆" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://fhvirus.github.io/blog/2021/constantoptimization/" />
+    <meta property="og:title" content="關於常數" />
+    <meta property="og:image" content="https://fhvirus.github.io/" />
+    <meta property="og:description" content="一些壓常技巧" />
+
+		
+		<meta name="google-site-verification" content=OmeoCl3L8243BxuGCzij-BbCwBW3_bcDuT4df39yOds />
+		
+
+    <link rel="canonical" href="https://fhvirus.github.io/blog/2021/constantoptimization/">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="https://fhvirus.github.io/css/custom.css" rel="stylesheet" type="text/css"/>
+    <link href="https://fhvirus.github.io/css/syntax.css" rel="stylesheet" type="text/css"/>
+    <link href="https://fhvirus.github.io/css/anchor.css" rel="stylesheet" type="text/css"/>
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/progressively/1.2.5/progressively.min.css" integrity="sha512-TdJkMXwjtS9Gb8rN919K1JVdUv2+q5YHsKXPtJGDP79t1Nd5oCZy5mFA6Nr85Dsp6wJ1SUQgOyHPDulLzTjDcQ==" crossorigin="anonymous" />
+    
+
+    <link rel="shortcut icon"
+        href="https://fhvirus.github.io/images/favicon.png">
+
+    
+    <link href="https://fhvirus.github.io/index.xml" rel="alternate" type="application/rss+xml" title="FHVirus&#39; 隨筆" />
+    
+</head>
+<body>
+    
+<div class="mt-xl header">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-auto">
+                <a href="https://fhvirus.github.io/">
+                    <h1 class="name">FHVirus&#39; 隨筆</h1>
+                </a>
+            </div>
+        </div>
+
+        <div class="row">
+            <ul class="nav nav-primary justify-content-center">
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="/">
+                        
+                        Home
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="/about/">
+                        
+                        About
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/FHVirus">
+                        
+                        GitHub
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.instagram.com/fh.virus/">
+                        
+                        IG
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.youtube.com/channel/UCHJlyX44nyE_nYv5zMP4r4Q">
+                        
+                        Youtube
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="/index.xml">
+                        
+                        RSS
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<div class="content">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-lg-8">
+                <h1 class="mx-0 mx-md-4 blog-post-title">關於常數</h1>
+
+                <div class="mb-md-4 meta">
+                    
+                    
+                    <span class="author" title="FHVirus">
+                        FHVirus
+                    </span>
+                    
+                    
+
+                    <span class="date middot" title='Wed Nov 10 2021 20:00:25 CST'>
+                        2021-11-10
+                    </span>
+
+                    <div class="d-none d-md-inline tags">
+                        <ul class="list-unstyled d-inline">
+                            
+                            <li class="d-inline middot">
+                                <a href="/tags/%E9%B4%A8%E8%85%B8">鴨腸</a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="markdown blog-post-content">
+                    
+    
+    <p>拜託不要像我一樣沉迷於壓常和 TIOJ Topcoder。</p>
+<hr>
+<p>首先先放幾個重要的觀念。</p>
+<ol>
+<li><code>cin cout</code> 其實很有效率也很乾淨，雖然時間上不一定最快。</li>
+<li>除法和模運算很慢，尤其是模變數的時候。</li>
+<li>使用大空間又不連續存取的時候會影響到時間。真的。</li>
+<li><code>std::vector</code> 對於執行速度的影響取決於使用方式。</li>
+<li>把程式寫的乾淨簡潔遠比硬壓常數重要；簡單的程式碼通常常數不會太糟。</li>
+</ol>
+<p>以下會一一解說。</p>
+<hr>
+<h3 id="1-cin-cout-其實很有效率">1. <code>cin cout</code> 其實很有效率</h3>
+<p>在加了 <code>ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);</code> 之後，<code>cin cout</code> 其實就足夠應付絕大多數的題目了。
+我在壓常的時候常常使用快速輸入輸出，但那通常不會讓一題從 <code>TLE</code> 變成 <code>AC</code>。是一個非必要的技巧，看過一遍知道怎麼做就好。</p>
+<p>如果你想學，我寫過一篇介紹了，請點<a href="/blog/2020/fhvirus-io/">這裡</a>並斟酌使用。</p>
+<p>實用度： <code>0</code>。在賽中從來沒用過。</p>
+<hr>
+<h3 id="2-除法和模運算很慢">2. 除法和模運算很慢</h3>
+<p>先看例子吧：<a href="https://tioj.ck.tp.edu.tw/problems/1306">TIOJ 1306 字串中的字串</a>。<br>
+這題的 hash 作法會需要蠻多的模運算，可以自行試試看在模的質數前面加或不加 <code>const</code>  的時間差別。</p>
+<p>網路上<a href="https://blog.csdn.net/huanghaox1212/article/details/104347035">有人測試出來</a>，如果把整數加法和位元運算當作一單位時間，那整數乘法大概是兩單位，整數除法和模運算則是 21 單位。<br>
+同理，浮點數和開根號超慢，在做計算幾何算距離的時候存 <code>long long</code> 都比開根號好很多（還可以避免精度問題）。<br>
+再同理，<code>cmath</code> 裡面會用到浮點數的函式常數都不小，能少運算幾次就少運算幾次。<strong>請注意，並不是不要用</strong>，是減少不必要的呼叫次數。</p>
+<p>回到除法和取模，簡而言之就是「減少不必要的使用次數」，也可以寫成下面這樣的形式：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="k">typedef</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">ll</span><span class="p">;</span>
+<span class="k">const</span> <span class="kt">int</span> <span class="n">MOD</span> <span class="o">=</span> <span class="mf">1e9</span><span class="o">+</span><span class="mi">7</span><span class="p">;</span>
+<span class="kr">inline</span> <span class="kt">int</span> <span class="nf">madd</span><span class="p">(</span><span class="kt">int</span> <span class="n">u</span><span class="p">,</span> <span class="kt">int</span> <span class="n">v</span><span class="p">){</span>
+	<span class="n">u</span> <span class="o">+=</span> <span class="n">v</span> <span class="o">-</span> <span class="n">MOD</span><span class="p">;</span>
+	<span class="c1">// 等價於：
+</span><span class="c1"></span>	<span class="c1">// if(u &lt; 0) u += MOD;
+</span><span class="c1"></span>	<span class="n">u</span> <span class="o">+=</span> <span class="n">MOD</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">u</span><span class="o">&gt;&gt;</span><span class="mi">31</span><span class="p">);</span>
+	<span class="k">return</span> <span class="n">u</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kr">inline</span> <span class="kt">int</span> <span class="nf">mmul</span><span class="p">(</span><span class="kt">int</span> <span class="n">u</span><span class="p">,</span> <span class="kt">int</span> <span class="n">v</span><span class="p">){</span>
+	<span class="k">return</span> <span class="p">(</span><span class="n">ll</span><span class="p">)</span> <span class="n">u</span> <span class="o">*</span> <span class="n">v</span> <span class="o">%</span> <span class="n">MOD</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>這樣寫會讓運算變得比較容易閱讀（個人覺得），常數也不會太大，也不用小心翼翼的估會不會爆 <code>long long</code>。<br>
+特別是加法，不用每次都取模。想知道它在做什麼的話，可以去研究補數表示法。</p>
+<p>如果你覺得正常除、模一個常數還是太慢，可以考慮去學 <code>Barrett Reduction</code>。例題：<a href="https://tioj.ck.tp.edu.tw/problems/1768">TIOJ 1768</a>。
+<a href="https://tioj.ck.tp.edu.tw/problems/1064">TIOJ 1064</a> 的 NTT 也可以用這個技巧加速。</p>
+<p>實用度：<code>3</code>。除了常數之外，我特別推薦上面的寫法，因為有人校內賽被模運算搞，改成上面寫法就過了。<br>
+請小心處理（跟常數無關）。</p>
+<hr>
+<h3 id="3-空間存取">3. 空間存取</h3>
+<p>首先，記憶體大致上（非常粗略的）可以被想像成這樣：</p>
+<ul>
+<li>記憶體是一個超長的一維跑道。</li>
+<li>陣列是這條跑道上的連續某一區段（二維的就是很多個排在一起的區段）。</li>
+<li>電腦是一個人站在上面，永遠面對正向。</li>
+<li>當電腦要存取某個位置的時候，他就要慢慢跑過去那邊。</li>
+</ul>
+<p>可以用歪理得出一些結論：</p>
+<ul>
+<li>連續存取一段會比隨機順序亂戳要來的快（不用折返跑）。</li>
+<li>正著讀會比逆著讀快（你到著跑試試看）。</li>
+<li>簡單的暴力 <code>For</code> 迴圈其實蠻快的（因為通常都是順順掃過去）。</li>
+<li>在要遍歷的陣列大小超大的時候，<code>char</code>、<code>short</code> 會比 <code>int</code> 快。</li>
+<li>滾動 DP 會比開滿還要快。</li>
+<li>改變迴圈順序也許會變快（下面影片有講）。</li>
+</ul>
+<p>如果你想要深入了解 Locality 還有 Cache miss 之類的，可以去看看 CPU 架構，或是看看<a href="https://youtu.be/EmzdmqUWq3o">這部影片</a>。</p>
+<p>例題：<a href="https://tioj.ck.tp.edu.tw/problems/1090">TIOJ 1090 Grazing on the Run</a>。<br>
+當初我去問 <code>ZCK</code> 那時的 Topcoder 怎麼跑那麼快的，<code>ZCK</code> 就和我說：「你有聽過滾動 DP 嗎？」
+他是認真問的，但感覺就很嘲諷 XD</p>
+<p>實用度： <code>1</code>。知道這些有時候還是有點用。</p>
+<hr>
+<h3 id="4-stdvector-其實不慢">4. <code>std::vector</code> 其實不慢</h3>
+<p>一般情況下會 <code>vector</code> 導致常數變大都是因為他會動態的要空間（細節請自行研究）。如果你已經知道你的 <code>vector</code> 會開多大了，那先開好或是使用 <code>reserve</code> 函式都是不錯的選擇（後者也適用於其他 STL container）。</p>
+<p>舉例來說，建一棵樹的鄰接串列的時候，會有 $n$ 個 <code>vector</code> 輪流要空間，但實際上只要大約 $2n$ 的空間就足夠了。<br>
+想要壓這個的話，可以去學前向星（或叫做 linked list 存圖，中國人常用）。<br>
+雖然我有很多 Topcoder 是靠這個搶的，但它會導至前面提到的記憶體不連續存取，不一定會比較快，各有利弊。</p>
+<p>再來說說 <code>vector</code> 會比較快的例子。</p>
+<p>在做樹背包的時候，一個作法是把所有節點的背包存起來，然後一個一個取。<br>
+這樣一樣會被第三點提到的東西卡掉，導致時間和空間都頗大。<br>
+這時候考慮每次都只在遞迴到的時候開區域，做完 <code>return</code> 回去；<br>
+這樣不只省空間，也可以讓時間變快。也許 <code>vector</code> 有某種分配空間的黑魔法。<br>
+例題：<a href="https://tioj.ck.tp.edu.tw/problems/2199">TIOJ 2199 大促銷改</a>，比較慢的那筆完全沒有壓常。</p>
+<p>實用度： <code>8e7</code>。好好用 <code>vector</code> 雖然會大多數時候會慢一點，但是其實還不錯（根本就自己在推銷）。
+<del>還可以避免測資大小寫錯找不到 bug</del></p>
+<hr>
+<h3 id="5-壓常不重要">5. 壓常不重要</h3>
+<p>如題，寫出乾淨的扣的、想題比較重要。<br>
+壓常就像刷水題一樣沒營養，請不要讓壓常佔用寫好題目的時間。<br>
+不會做題目會壓也沒用……除非你真的賽中壓的過 $N, Q \le 10^5$ 的 $O(NQ)$。</p>
+<hr>
+<h3 id="6-雜燴">6. 雜燴</h3>
+<h4 id="關於-pragma">關於 <code>#pragma</code></h4>
+<p>大致上可以理解成讓編譯器幫你處理壓常的事情。我沒有深入研究，但模板理常駐 <code>#pragma GCC optimize(&quot;Ofast&quot;)</code>。
+有些題目沒差，但大部分都會有感的變快，有些甚至可以差到三、五倍。</p>
+<h4 id="實戰壓常">實戰壓常</h4>
+<p>例：<a href="https://tioj.ck.tp.edu.tw/problems/1937">TIOJ 1937</a>。</p>
+<p>這題我用了快速輸入輸出＋優化迴圈順序＋把矩陣用 <code>short</code> 和 <code>char</code> 存＋神奇<code>#pragma</code>。
+就像前面所說，簡單迴圈優化後超級快。</p>
+<h4 id="偽指標">偽指標</h4>
+<p>在要重複開多棵資結的時候，偽指標會讓空間使用變得比較有效率。<br>
+通常我會寫一個 <code>newNode()</code> 函式，讓他跟 <code>new</code> 做一樣的事情。</p>
+<h4 id="遞迴減肥">遞迴減肥</h4>
+<p>分治遞迴到夠小的時候就可以用暴力迴圈做，因為簡單迴圈真的很快。<br>
+例：<a href="https://tioj.ck.tp.edu.tw/problems/2213">TIOJ 2213 花枝遊戲</a>。我用偽指標資結＋分治減肥就很快了。<br>
+好處是我可以偷懶不處理分治邊界狀態。</p>
+<h4 id="關於-zkw">關於 ZKW</h4>
+<p>快，但不必要，因為寫起來沒有比較快（賽中不太實用）。<br>
+可以學起來但不要過度依賴。</p>
+<h4 id="關於潮汐">關於潮汐</h4>
+<p>同一份程式碼上傳多次可能拿到不同的執行時間、空間。我喜歡叫他潮汐。
+TIOJ 的漲退潮差平常應該是 20 ~ 40 kB 左右，不過賭那個潮汐不如去寫題。</p>
+<h4 id="賽中">賽中？</h4>
+<p>我會說大概不需要以上任何東西（我自己也沒用過），頂多 <code>#pragma</code> 加暴力賭會不會過、好好取模避免爆炸。</p>
+<hr>
+<p>以上大概是我所有壓常的技巧了。有想到再補。<br>
+有錯誤、疏漏的話還請大家不吝指教 &gt;&lt;</p>
+
+
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+<script>
+  anchors.options = {
+    placement: 'left',
+    visible: 'hover',
+    icon: '#'
+  };
+  anchors.add('h1, h2, h3');
+</script>
+
+<section id="comments">
+    <div class="py-3 content">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-sm-12 col-lg-8">
+                    <div class="comments">
+                        <script src="https://utteranc.es/client.js" repo="fhvirus/fhvirus.github.io"
+                            issue-term="pathname" label="comment" theme="github-light" crossorigin="anonymous" async>
+                            </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer></footer>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css" integrity="sha384-dbVIfZGuN1Yq7/1Ocstc1lUEm+AT+/rCkibIcC/OmWo5f0EA48Vf8CytHzGrSwbQ" crossorigin="anonymous">
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js" integrity="sha384-2BKqo+exmr9su6dir+qCw08N2ZKRucY4PrGQPPWU1A7FtlCGjmEGFqXCv5nyM5Ij" crossorigin="anonymous"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"></script>
+
+<script>
+renderMathInElement(
+	document.body,
+	{
+		delimiters: [
+			{left: "$$", right: "$$", display: true},
+			{left: "\\[", right: "\\]", display: true},
+			{left: "$", right: "$", display: false},
+			{left: "\\(", right: "\\)", display: false}
+		]
+	}
+);
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script>
+
+
+
+    
+        <script src="https://cdn.jsdelivr.net/npm/progressively/dist/progressively.min.js"></script>
+        <script>
+            window.addEventListener('load', function() {
+                progressively.init({delay: 30, throttle: 50});
+            }, true);
+        </script>
+    
+</body>
+
+</html>
