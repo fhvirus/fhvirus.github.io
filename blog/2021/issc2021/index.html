@@ -164,7 +164,7 @@
 <li>沒有提供測資大小範圍，反正可以輸入就可以做。實作方法之一是把斜向的、邊上的橫向或直向的分開算，可能要處理一點奇偶性之類的。</li>
 <li><code>8e7</code> 處理掉了。應該就<a href="https://oeis.org/A001845">這個東東</a>。</li>
 <li>應該不難想到要先 DP 一次然後再從頭一個一個拿。然後這題 <code>next_permutation</code> 居然會過，強烈懷疑生測資是用 <code>rand()</code> 生的。
-補充：<code>next_permutaion</code> 的時間複雜度雖然是 $O(n)$，但是如果是跑過所有的 permutation 的話平均就是 $O(#permutation)$。實作方法酷酷的，請參考<a href="https://en.cppreference.com/w/cpp/algorithm/next_permutation">這裡</a>。官解有可能就是這樣做的，畢竟 ${32 \choose 16} = 6 \cdot 10 ^ 8$ 乘上一個常數還算勉強可以接受，也可能沒有卡到滿。</li>
+補充：<code>next_permutaion</code> 的時間複雜度雖然是 $O(n)$，但是如果是跑過所有的 permutation 的話平均就是 $O(\#permutation)$。實作方法酷酷的，請參考<a href="https://en.cppreference.com/w/cpp/algorithm/next_permutation">這裡</a>。官解有可能就是這樣做的，畢竟 ${32 \choose 16} = 6 \cdot 10 ^ 8$ 乘上一個常數還算勉強可以接受，也可能沒有卡到滿。</li>
 <li><code>JiKuai</code> 有個強強的 claim 做掉了（好像是枚舉因數當 $a$ 且 $a = lcm(a, b, c)$），<code>i_am_noob</code> 似乎用了強強的數學也做掉了。我不會做。</li>
 <li>你很好奇 $n$ 到多少嗎？沒關係，大家都好奇。最後試出來只要寫 $O(n^2)$ 就會過了。題目原本沒有給範圍，賽中有人問了兩次，第一次回答在 int 範圍，第二次直接 No comment，題解的時候還說這題這麼簡單為什麼大家都很晚才做。個人認為作為一個正式的國家隊選拔賽，把「猜猜看複雜度是多少才會過」當成一個考點有一點本末倒置了。你以為大家是不會 $O(n^2)$ 作法才不寫嗎？<br>
 另外，<code>balbit</code> 他們好像枚舉跟重心最近的十個點之類的也過了。測資堪憂。</li>
