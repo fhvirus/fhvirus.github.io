@@ -14,6 +14,9 @@ Markdown tests.
 HLB test; HLB test;
 HLB test; \\ HLB test;
 
+HLB test;  
+HLB test;
+
 HLB test; \
 HLB test;
 
@@ -38,6 +41,7 @@ int main(){
 	return 0;
 }
 ```
+
 {{< highlight cpp "lineNos=false" >}}
 //Knapsack DP is harder than FFT.
 #include<bits/stdc++.h>
@@ -57,6 +61,16 @@ int main(){
 	return 0;
 }
 {{< /highlight >}}
+
+{{< spoiler text="Zisk" >}}
+Danb? Zisk! 
+```cpp
+#include <unistd.h>
+int main() {
+	write(1, "Zisk!\n", 6);
+}
+```
+{{< /spoiler >}}
 
 The following
 
@@ -164,7 +178,8 @@ Tables aren't part of the core Markdown spec, but Hugo supports supports them ou
 
 #### Ordered List
 
-1. First item
+1. First item  
+	Text in first item
 2. Second item
 3. Third item
 
