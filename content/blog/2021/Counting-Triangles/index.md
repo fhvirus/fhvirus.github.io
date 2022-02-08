@@ -100,7 +100,7 @@ $$ 2 \vert E \vert = \sum_{v \in V}{d(v)} $$
 
 好耶，那就做完了！
 
-### 實做
+### 實作
 
 ```cpp
 const int N = 100001;
@@ -187,7 +187,7 @@ signed main(){
 如果先把所有 `val[i]` 排序的話，\
 用雙指針爬過去複雜度就是 $O(M \cdot \sqrt M) = O(M ^ {1.5})$！
 
-#### 實做
+#### 實作
 
 ```cpp
 const int N = 100001;
@@ -237,6 +237,8 @@ signed main(){
 ```
 [Submission: 2540ms Accepted](https://neoj.sprout.tw/challenge/173149/)\
 這作法蠻通靈的。不過也許可以給一點啟示？
+
+2022/02/08 Update: 用到類似技巧的酷題：[CodeForces 506D](https://codeforces.com/contest/506/problem/d)
 
 ---
 
