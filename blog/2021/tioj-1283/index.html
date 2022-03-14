@@ -155,7 +155,7 @@
 <p>我們要想做的事情是，找出每一個可能是答案的「紅點—藍點」點對，逐一計算並取其最大值做為答案。暴力的作法可能長這樣：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -172,7 +172,7 @@
 </span><span class="lnt">15
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="k">typedef</span> <span class="kt">int64_t</span> <span class="n">ll</span><span class="p">;</span>
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="k">typedef</span> <span class="kt">int64_t</span> <span class="n">ll</span><span class="p">;</span>
 <span class="k">typedef</span> <span class="n">pair</span><span class="o">&lt;</span><span class="n">ll</span><span class="p">,</span> <span class="n">ll</span><span class="o">&gt;</span> <span class="n">pll</span><span class="p">;</span>
 <span class="n">pll</span> <span class="n">red</span><span class="p">[</span><span class="n">N</span><span class="p">],</span> <span class="n">blu</span><span class="p">[</span><span class="n">N</span><span class="p">];</span> <span class="c1">// 紅點藍點
 </span><span class="c1"></span><span class="kr">inline</span> <span class="n">ll</span> <span class="nf">area</span><span class="p">(</span><span class="kt">int</span> <span class="n">r</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">){</span> <span class="c1">// red id, blu id
@@ -229,13 +229,13 @@
 <p>先不要管那長得像某海綿的名字，我們來看看他想說什麼？</p>
 <blockquote>
 <p>當一個矩陣 $A_{n, m}$ 滿足：</p>
-<p>$$ A_{i, j} + A_{i&rsquo;, j&rsquo;} \geq A_{i, j&rsquo;} + A_{i&rsquo;, j} \ \forall 0 \leq i &lt; i&rsquo; &lt; n, 0 \leq j &lt; j&rsquo; &lt; m$$</p>
+<p>$$ A_{i, j} + A_{i', j'} \geq A_{i, j'} + A_{i', j} \ \forall 0 \leq i &lt; i' &lt; n, 0 \leq j &lt; j' &lt; m$$</p>
 <p>則他符合 Concave Monge Condition。</p>
 </blockquote>
 <p>看起來很複雜呢！但先別著急，我們把圖畫出來：</p>
 <p><img src="graphs/3.jpeg" alt="Concave Monge Condition"></p>
 <p>就是這樣！移項一下我們可以得到：</p>
-<p>$$ A_{i, j} \leq A_{i&rsquo;, j} \Rightarrow A_{i, j&rsquo;} \leq A_{i&rsquo;, j&rsquo;}$$</p>
+<p>$$ A_{i, j} \leq A_{i', j} \Rightarrow A_{i, j'} \leq A_{i', j'}$$</p>
 <p>似乎是個漂亮的性質呢。</p>
 <h4 id="怎麼用">怎麼用？</h4>
 <p>讓我們回到我們的假想表格，想辦法把 Monge Condition 翻譯成畫框上的事情。</p>
@@ -248,7 +248,7 @@
 </blockquote>
 <p>那要怎麼證明 Concave Monge Condition 呢？其實超直觀的！我們先關注上面兩塊（類？）矩形就好：</p>
 <p><img src="graphs/5.jpeg" alt="Concave Monge Condition Proof"></p>
-<p>$$ A_{i, j} + A_{i&rsquo;, j&rsquo;} \ = (a + b + c + d) + (d + e + f + g) \ \geq (b + d + f) + (c + d + e) \ = A_{i, j&rsquo;} + A_{i&rsquo;, j} $$</p>
+<p>$$ A_{i, j} + A_{i', j'} \ = (a + b + c + d) + (d + e + f + g) \ \geq (b + d + f) + (c + d + e) \ = A_{i, j'} + A_{i', j} $$</p>
 <p>到此就證完了！ $\square$</p>
 <h3 id="想法二硬證四邊形zck-教的">想法二：硬證四邊形（<code>ZCK</code> 教的）</h3>
 <p>待補。</p>
@@ -265,7 +265,7 @@
 <p>既然證出了優超性，符合李超線段樹的使用時機，何不就揍他？</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -329,7 +329,7 @@
 </span><span class="lnt">62
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="k">struct</span> <span class="nc">DOT</span><span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="k">struct</span> <span class="nc">DOT</span><span class="p">{</span>
 	<span class="n">ll</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">;</span>
 	<span class="n">DOT</span><span class="p">(</span><span class="n">ll</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">ll</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span><span class="o">:</span> <span class="n">x</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">y</span><span class="p">(</span><span class="n">y</span><span class="p">){}</span>
 	<span class="n">ll</span> <span class="nf">operator</span><span class="p">()(</span><span class="k">const</span> <span class="n">DOT</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">){</span> <span class="k">return</span> <span class="mi">1ll</span> <span class="o">*</span> <span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">x</span> <span class="o">-</span> <span class="n">x</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">y</span> <span class="o">-</span> <span class="n">a</span><span class="p">.</span><span class="n">y</span><span class="p">);</span> <span class="p">}</span>

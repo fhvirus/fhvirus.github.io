@@ -136,7 +136,7 @@
     <p>終於搞定了新的 Theme （大概吧），該回來寫題了。</p>
 <!-- more -->
 <h2 id="題目httpsneojsprouttwproblem252"><a href="https://neoj.sprout.tw/problem/252/">題目</a></h2>
-<p>給你一個 $N$ 個點、$M$ 條邊的簡單無向圖（也就是沒有自環或重邊的無向圖），請算出這張圖裡有幾個「三角形」？<br>
+<p>給你一個 $N$ 個點、$M$ 條邊的簡單無向圖（也就是沒有自環或重邊的無向圖），請算出這張圖裡有幾個「三角形」？ <br>
 「三角形」定義為一組數對 $(x,y,z)$ ，使得 $0 \le x&lt;y&lt;z&lt;N$ 且 $(x,y),(y,z),(z,x)$ 均為圖上的邊。</p>
 <p>這張圖的點被編號為 $0$ 到 $N−1$ 。<br>
 $3 \le N \le 10 ^ 5, 0 \le M \le 10 ^ 5$</p>
@@ -209,7 +209,7 @@ Hand Shaking Lemma 真好用。<br>
 <h3 id="實作">實作</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -257,7 +257,7 @@ Hand Shaking Lemma 真好用。<br>
 </span><span class="lnt">46
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="k">const</span> <span class="kt">int</span> <span class="n">N</span> <span class="o">=</span> <span class="mi">100001</span><span class="p">;</span>
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="k">const</span> <span class="kt">int</span> <span class="n">N</span> <span class="o">=</span> <span class="mi">100001</span><span class="p">;</span>
 
 <span class="kt">signed</span> <span class="nf">main</span><span class="p">(){</span>
 	<span class="n">ios_base</span><span class="o">::</span><span class="n">sync_with_stdio</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="n">cout</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
@@ -335,7 +335,7 @@ Hand Shaking Lemma 真好用。<br>
 <h4 id="實作-1">實作</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -381,7 +381,7 @@ Hand Shaking Lemma 真好用。<br>
 </span><span class="lnt">44
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="k">const</span> <span class="kt">int</span> <span class="n">N</span> <span class="o">=</span> <span class="mi">100001</span><span class="p">;</span>
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="k">const</span> <span class="kt">int</span> <span class="n">N</span> <span class="o">=</span> <span class="mi">100001</span><span class="p">;</span>
 
 <span class="c1">// 給兩個 ordered set 求交集
 </span><span class="c1"></span><span class="kt">int</span> <span class="nf">inter</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">){</span>

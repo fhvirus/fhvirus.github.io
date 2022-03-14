@@ -149,13 +149,13 @@
 不用自己判斷型別，但是大部分時候偏慢。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#include</span><span class="cpf">&lt;iostream&gt;</span><span class="cp">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#include</span><span class="cpf">&lt;iostream&gt;</span><span class="cp">
 </span><span class="cp"></span><span class="kt">int</span> <span class="n">a</span><span class="p">;</span>
 <span class="n">std</span><span class="o">::</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">a</span><span class="p">;</span>
 <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">a</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
@@ -166,12 +166,12 @@
 <p>輸入輸出量很大 ( $10^6$ ) 的時候，直接用 <code>IOStream</code> 極有可能會 TLE。這個時候⋯⋯</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">ios_base</span><span class="o">::</span><span class="n">sync_with_stdio</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">ios_base</span><span class="o">::</span><span class="n">sync_with_stdio</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
 <span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
 <span class="n">cout</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
 </code></pre></td></tr></table>
@@ -181,11 +181,11 @@
 也有很多人會在程式開頭加上這兩行：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#define OW0 ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#define OW0 ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
 </span><span class="cp">#define endl &#39;\n&#39;
 </span></code></pre></td></tr></table>
 </div>
@@ -194,13 +194,13 @@
 <p>通常比 IOStream 快（有點多）。指定輸出格式時超好用。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#include</span><span class="cpf">&lt;cstdio&gt;</span><span class="cp">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#include</span><span class="cpf">&lt;cstdio&gt;</span><span class="cp">
 </span><span class="cp"></span><span class="kt">int</span> <span class="n">a</span><span class="p">;</span>
 <span class="n">scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">);</span>
 <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span>
@@ -213,13 +213,13 @@
 輸入都要一行一行讀而且輸入量大的時候， <code>GetLine</code> 會比其他方法都快（例題待補）。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#include</span><span class="cpf">&lt;iostream&gt;</span><span class="cp">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#include</span><span class="cpf">&lt;iostream&gt;</span><span class="cp">
 </span><span class="cp">#include</span><span class="cpf">&lt;string&gt;</span><span class="cp">
 </span><span class="cp"></span><span class="n">string</span> <span class="n">s</span><span class="p">;</span>
 <span class="n">std</span><span class="o">::</span><span class="n">getline</span><span class="p">(</span><span class="n">cin</span><span class="p">,</span> <span class="n">s</span><span class="p">);</span>
@@ -228,14 +228,14 @@
 </div><h3 id="others">Others</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#include</span><span class="cpf">&lt;cstdio&gt;</span><span class="cp">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#include</span><span class="cpf">&lt;cstdio&gt;</span><span class="cp">
 </span><span class="cp"></span><span class="kt">char</span> <span class="n">c</span><span class="p">;</span>
 <span class="n">c</span> <span class="o">=</span> <span class="n">getchar</span><span class="p">();</span>
 <span class="n">putchar</span><span class="p">(</span><span class="n">c</span><span class="p">);</span>
@@ -253,7 +253,7 @@
 <p>從<a href="https://omeletwithoutegg.github.io/2019/12/06/Fast-IO/">蛋餅那裡</a>出來的。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -261,7 +261,7 @@
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#include</span><span class="cpf">&lt;cstdio&gt;</span><span class="cp">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#include</span><span class="cpf">&lt;cstdio&gt;</span><span class="cp">
 </span><span class="cp"></span><span class="kr">inline</span> <span class="kt">char</span> <span class="nf">readchar</span><span class="p">(){</span>
 	<span class="k">const</span> <span class="kt">int</span> <span class="n">S</span> <span class="o">=</span> <span class="mi">1</span><span class="o">&lt;&lt;</span><span class="mi">16</span><span class="p">;</span>
 	<span class="k">static</span> <span class="kt">char</span> <span class="n">buf</span><span class="p">[</span><span class="n">S</span><span class="p">],</span> <span class="o">*</span><span class="n">p</span> <span class="o">=</span> <span class="n">buf</span><span class="p">,</span> <span class="o">*</span><span class="n">q</span> <span class="o">=</span> <span class="n">buf</span><span class="p">;</span>
@@ -275,7 +275,7 @@
 <p>這裡提供兩種版本，方便使用但特殊情況會錯的和正確的。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -284,7 +284,7 @@
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kr">inline</span> <span class="kt">int</span> <span class="nf">R</span><span class="p">(){</span>
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kr">inline</span> <span class="kt">int</span> <span class="nf">R</span><span class="p">(){</span>
 	<span class="kt">int</span> <span class="n">ans</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="kt">char</span> <span class="n">c</span> <span class="o">=</span> <span class="n">readchar</span><span class="p">();</span> <span class="kt">bool</span> <span class="n">minus</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
 	<span class="k">while</span><span class="p">((</span><span class="n">c</span> <span class="o">&lt;</span> <span class="sc">&#39;0&#39;</span> <span class="n">or</span> <span class="n">c</span> <span class="o">&gt;</span> <span class="sc">&#39;9&#39;</span><span class="p">)</span> <span class="n">and</span> <span class="n">c</span> <span class="o">!=</span> <span class="sc">&#39;-&#39;</span> <span class="n">and</span> <span class="n">c</span> <span class="o">!=</span> <span class="n">EOF</span><span class="p">)</span> <span class="n">c</span> <span class="o">=</span> <span class="n">readchar</span><span class="p">();</span>
 	<span class="k">if</span><span class="p">(</span><span class="n">c</span> <span class="o">==</span> <span class="sc">&#39;-&#39;</span><span class="p">)</span> <span class="n">minus</span> <span class="o">=</span> <span class="nb">true</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="n">readchar</span><span class="p">();</span>
@@ -298,7 +298,7 @@
 這個版本在輸入 -2147483648 的時候會爆炸。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -311,7 +311,7 @@
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kr">inline</span> <span class="kt">int</span> <span class="nf">R</span><span class="p">(</span><span class="kt">int</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">){</span>
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kr">inline</span> <span class="kt">int</span> <span class="nf">R</span><span class="p">(</span><span class="kt">int</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">){</span>
 	<span class="k">static</span> <span class="kt">char</span> <span class="n">c</span><span class="p">;</span>
 	<span class="k">while</span><span class="p">(((</span><span class="n">c</span> <span class="o">=</span> <span class="n">readchar</span><span class="p">())</span> <span class="o">&lt;</span> <span class="sc">&#39;0&#39;</span> <span class="n">or</span> <span class="n">c</span> <span class="o">&gt;</span> <span class="sc">&#39;9&#39;</span><span class="p">)</span> <span class="n">and</span> <span class="n">c</span> <span class="o">!=</span> <span class="sc">&#39;-&#39;</span> <span class="n">and</span> <span class="n">c</span> <span class="o">!=</span> <span class="n">EOF</span><span class="p">);</span>
 	<span class="k">if</span><span class="p">(</span><span class="n">c</span> <span class="o">==</span> <span class="sc">&#39;-&#39;</span><span class="p">){</span>
@@ -329,7 +329,7 @@
 <p>筆者自行研發的。使用上有點麻煩，不推薦日常使用。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -351,7 +351,7 @@
 </span><span class="lnt">20
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kt">char</span> <span class="n">outbuf</span><span class="p">[</span><span class="n">S</span><span class="p">];</span> <span class="kt">int</span> <span class="n">outp</span><span class="p">;</span>
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kt">char</span> <span class="n">outbuf</span><span class="p">[</span><span class="n">S</span><span class="p">];</span> <span class="kt">int</span> <span class="n">outp</span><span class="p">;</span>
 <span class="kr">inline</span> <span class="kt">void</span> <span class="nf">W</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">){</span>
 	<span class="k">static</span> <span class="kt">char</span> <span class="n">buf</span><span class="p">[</span><span class="mi">12</span><span class="p">],</span> <span class="n">p</span><span class="p">;</span>
 	<span class="k">if</span><span class="p">(</span><span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="n">outbuf</span><span class="p">[</span><span class="n">outp</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="sc">&#39;0&#39;</span><span class="p">;</span>
@@ -379,7 +379,7 @@
 這個只能讀 0 ~ 1 之間的小數喔。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -388,7 +388,7 @@
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kr">inline</span> <span class="kt">double</span> <span class="nf">RB</span><span class="p">(){</span>
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kr">inline</span> <span class="kt">double</span> <span class="nf">RB</span><span class="p">(){</span>
 	<span class="kt">double</span> <span class="n">ans</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">mult</span> <span class="o">=</span> <span class="mf">.1</span><span class="p">;</span> <span class="kt">char</span> <span class="n">c</span> <span class="o">=</span> <span class="n">readchar</span><span class="p">();</span>
 	<span class="k">while</span><span class="p">(</span><span class="n">c</span> <span class="o">!=</span> <span class="sc">&#39;.&#39;</span><span class="p">)</span> <span class="n">c</span> <span class="o">=</span> <span class="n">readchar</span><span class="p">();</span>
 	<span class="n">c</span> <span class="o">=</span> <span class="n">readchar</span><span class="p">();</span>
