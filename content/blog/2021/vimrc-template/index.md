@@ -7,6 +7,7 @@ tags:
 images:
   - cover.jpg
 katex: false
+draft: true
 ---
 
 更新了一下所以就重新放的一篇。
