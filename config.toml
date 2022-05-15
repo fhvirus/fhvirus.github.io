@@ -54,10 +54,6 @@ ignoreFiles = []
 	url = "https://www.instagram.com/fh.virus/"
     weight = 4
 [[menu.primary]]
-    name = "Youtube"
-    url = "https://www.youtube.com/channel/UCHJlyX44nyE_nYv5zMP4r4Q"
-    weight = 5
-[[menu.primary]]
     name = "RSS"
     url = "/index.xml"
-    weight = 6
+    weight = 5

@@ -16,11 +16,12 @@ description: "FHVirus\' vimrc and template for contests."
 ### vimrc
 
 ```vim
-sy on
+sy on | im jk <esc> | im kj <esc> | no ; :
 se nu ru rnu cin cul sc so=4 ls=2 bs=2 ts=2 sw=2
-inoremap {<CR> {<CR>}<ESC>O
+ino {<CR> {<CR>}<ESC>O
 map <F7> :w<CR>:!g++ "%" -o run -DOWO -fsanitize=undefined<CR>
 map <F8> :!cat in.in && echo ------------ && ./run < in.in<CR>
+map <C-p> I//<ESC>
 ```
 
 想知道這些簡寫是啥，可以參考[這裡](https://vimhelp.org/options.txt.html)。
@@ -44,10 +45,8 @@ typedef long long ll; typedef pair<int, int> pii;
 #define pb emplace_back
 #define ff first
 #define ss second
-template<class I> bool chmax(I &a, I b){ return a<b ? (a=b, true) : false; }
-template<class I> bool chmin(I &a, I b){ return a>b ? (a=b, true) : false; }
 #ifdef OWO
-#define debug(args...) LKJ("\033[1;32m[ " + string(#args) + " ]\033[0m", args)
+#define debug(args...) LKJ("\033[1;32m[ " #args " ]\033[0m", args)
 template<class I> void LKJ(I&&x){ cerr << x << '\n'; }
 template<class I, class...T> void LKJ(I&&x, T&&...t){ cerr << x << ", ", LKJ(t...); }
 template<class I> void OI(I a, I b){ while(a < b) cerr << *a << " \n"[next(a) == b], ++a; }
@@ -57,7 +56,8 @@ template<class I> void OI(I a, I b){ while(a < b) cerr << *a << " \n"[next(a) ==
 #endif
 
 signed main(){
-	ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+	ios::sync_with_stdio(0);
+	cin.tie(0); cout.tie(0);
 	int a, b;
 	cin >> a >> b;
 	debug(a, b);
@@ -66,8 +66,7 @@ signed main(){
 }
 ```
 
-主要就 `#define` 一些常用的關鍵字，debug 函式（有顏色喔！），還有 `ZCK` 最愛的 `chmin & chmax`。
-那個 `ch` 就是唸作「取」沒錯喔 XD
+主要就 `#define` 一些常用的關鍵字，debug 函式（有顏色喔！）
 
 ### 一些給自己的注意事項
 
