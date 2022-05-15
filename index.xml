@@ -9,10 +9,10 @@
     <lastBuildDate>Sun, 31 Jan 2021 21:56:05 +0800</lastBuildDate><atom:link href="https://fhvirus.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>.vimrc</title>
-      <link>https://fhvirus.github.io/blog/2022/vimrc-template/</link>
+      <link>https://fhvirus.github.io/blog/2022/vimrc/</link>
       <pubDate>Sun, 15 May 2022 17:08:49 +0800</pubDate>
       
-      <guid>https://fhvirus.github.io/blog/2022/vimrc-template/</guid>
+      <guid>https://fhvirus.github.io/blog/2022/vimrc/</guid>
       <description>&lt;p&gt;&lt;del&gt;看雞塊的&lt;a href=&#34;https://rk42745417.github.io/vimrc/&#34;&gt;這篇&lt;/a&gt;看的心癢癢，更新了兩下所以就重新放的一篇。&lt;/del&gt;&lt;/p&gt;
 &lt;p&gt;因為我的 &lt;code&gt;.vimrc&lt;/code&gt; 又進化了，所以再放一次。&lt;/p&gt;</description>
     </item>
