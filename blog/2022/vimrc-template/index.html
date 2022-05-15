@@ -2,18 +2,18 @@
 <html lang="zh-TW"><head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title> Vimrc &amp; Template - FHVirus&#39; 隨筆 </title>
+    <title> .vimrc - FHVirus&#39; 隨筆 </title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="referrer" content="no-referrer">
-    <meta name="description" content="FHVirus 的 .vimrc 跟模板" />
+    <meta name="description" content="FHVirus 的 .vimrc" />
     <meta property="og:site_name" content="FHVirus&#39; 隨筆" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://fhvirus.github.io/blog/2022/vimrc-template/" />
-    <meta property="og:title" content="Vimrc &amp; Template" />
+    <meta property="og:title" content=".vimrc" />
     <meta property="og:image" content="https://fhvirus.github.io/" />
-    <meta property="og:description" content="FHVirus 的 .vimrc 跟模板" />
+    <meta property="og:description" content="FHVirus 的 .vimrc" />
 
 		
 		<meta name="google-site-verification" content=OmeoCl3L8243BxuGCzij-BbCwBW3_bcDuT4df39yOds />
@@ -81,13 +81,6 @@
                 </li>
                 
                 <li class="nav-item">
-                    <a class="nav-link" href="https://www.youtube.com/channel/UCHJlyX44nyE_nYv5zMP4r4Q">
-                        
-                        Youtube
-                    </a>
-                </li>
-                
-                <li class="nav-item">
                     <a class="nav-link" href="/index.xml">
                         
                         RSS
@@ -104,15 +97,15 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-sm-12 col-lg-8">
-                <h1 class="mx-0 mx-md-4 blog-post-title">Vimrc &amp; Template</h1>
+                <h1 class="mx-0 mx-md-4 blog-post-title">.vimrc</h1>
 
                 <div class="mb-md-4 meta">
                     
                     
                     
 
-                    <span class="date middot" title='Mon Mar 14 2022 21:20:51 CST'>
-                        2022-03-14
+                    <span class="date middot" title='Sun May 15 2022 17:08:49 CST'>
+                        2022-05-15
                     </span>
 
                     <div class="d-none d-md-inline tags">
@@ -129,250 +122,39 @@
                 <div class="markdown blog-post-content">
                     
     
-    <p>看雞塊的<a href="https://rk42745417.github.io/vimrc/">這篇</a>看的心癢癢，更新了兩下所以就重新放的一篇。</p>
-<h2 id="vimrc">.vimrc</h2>
-<p>大概功能：</p>
-<ul>
-<li><code>vim-plug</code> 裡面的插件我懶得介紹，自己去 GitHub 找。</li>
-<li>設定 colorscheme ，顯示選項之類的正常 vimrc。</li>
-<li>快捷鍵：刷入模板，編譯，複製整份扣的等。裡面快捷建可以看到有一個資料夾叫 <code>OWO</code>，那是我平常打扣用的專門資料夾，裡面存有寫好可以直接 <code>:Load</code> 的模板。連結在<a href="https://github.com/fhvirus/OWO">這裡</a>喔。</li>
-<li><strong>鎖住方向鍵並在你用了的時候嘲諷你</strong>。</li>
-<li>自動排版格式用的 <code>ClangFormat</code> （超推）。</li>
-<li>可以一邊打扣一邊看推直播的透明 terminal 設定。值得一題的是要先去把 terminal 本身的背景換掉才可以喔。</li>
-</ul>
+    <p><del>看雞塊的<a href="https://rk42745417.github.io/vimrc/">這篇</a>看的心癢癢，更新了兩下所以就重新放的一篇。</del></p>
+<p>因為我的 <code>.vimrc</code> 又進化了，所以再放一次。</p>
+<hr>
+<p>我現在的 <code>.vimrc</code> 長這樣：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">  1
-</span><span class="lnt">  2
-</span><span class="lnt">  3
-</span><span class="lnt">  4
-</span><span class="lnt">  5
-</span><span class="lnt">  6
-</span><span class="lnt">  7
-</span><span class="lnt">  8
-</span><span class="lnt">  9
-</span><span class="lnt"> 10
-</span><span class="lnt"> 11
-</span><span class="lnt"> 12
-</span><span class="lnt"> 13
-</span><span class="lnt"> 14
-</span><span class="lnt"> 15
-</span><span class="lnt"> 16
-</span><span class="lnt"> 17
-</span><span class="lnt"> 18
-</span><span class="lnt"> 19
-</span><span class="lnt"> 20
-</span><span class="lnt"> 21
-</span><span class="lnt"> 22
-</span><span class="lnt"> 23
-</span><span class="lnt"> 24
-</span><span class="lnt"> 25
-</span><span class="lnt"> 26
-</span><span class="lnt"> 27
-</span><span class="lnt"> 28
-</span><span class="lnt"> 29
-</span><span class="lnt"> 30
-</span><span class="lnt"> 31
-</span><span class="lnt"> 32
-</span><span class="lnt"> 33
-</span><span class="lnt"> 34
-</span><span class="lnt"> 35
-</span><span class="lnt"> 36
-</span><span class="lnt"> 37
-</span><span class="lnt"> 38
-</span><span class="lnt"> 39
-</span><span class="lnt"> 40
-</span><span class="lnt"> 41
-</span><span class="lnt"> 42
-</span><span class="lnt"> 43
-</span><span class="lnt"> 44
-</span><span class="lnt"> 45
-</span><span class="lnt"> 46
-</span><span class="lnt"> 47
-</span><span class="lnt"> 48
-</span><span class="lnt"> 49
-</span><span class="lnt"> 50
-</span><span class="lnt"> 51
-</span><span class="lnt"> 52
-</span><span class="lnt"> 53
-</span><span class="lnt"> 54
-</span><span class="lnt"> 55
-</span><span class="lnt"> 56
-</span><span class="lnt"> 57
-</span><span class="lnt"> 58
-</span><span class="lnt"> 59
-</span><span class="lnt"> 60
-</span><span class="lnt"> 61
-</span><span class="lnt"> 62
-</span><span class="lnt"> 63
-</span><span class="lnt"> 64
-</span><span class="lnt"> 65
-</span><span class="lnt"> 66
-</span><span class="lnt"> 67
-</span><span class="lnt"> 68
-</span><span class="lnt"> 69
-</span><span class="lnt"> 70
-</span><span class="lnt"> 71
-</span><span class="lnt"> 72
-</span><span class="lnt"> 73
-</span><span class="lnt"> 74
-</span><span class="lnt"> 75
-</span><span class="lnt"> 76
-</span><span class="lnt"> 77
-</span><span class="lnt"> 78
-</span><span class="lnt"> 79
-</span><span class="lnt"> 80
-</span><span class="lnt"> 81
-</span><span class="lnt"> 82
-</span><span class="lnt"> 83
-</span><span class="lnt"> 84
-</span><span class="lnt"> 85
-</span><span class="lnt"> 86
-</span><span class="lnt"> 87
-</span><span class="lnt"> 88
-</span><span class="lnt"> 89
-</span><span class="lnt"> 90
-</span><span class="lnt"> 91
-</span><span class="lnt"> 92
-</span><span class="lnt"> 93
-</span><span class="lnt"> 94
-</span><span class="lnt"> 95
-</span><span class="lnt"> 96
-</span><span class="lnt"> 97
-</span><span class="lnt"> 98
-</span><span class="lnt"> 99
-</span><span class="lnt">100
-</span><span class="lnt">101
-</span><span class="lnt">102
-</span><span class="lnt">103
-</span><span class="lnt">104
-</span><span class="lnt">105
-</span><span class="lnt">106
-</span><span class="lnt">107
-</span><span class="lnt">108
-</span><span class="lnt">109
-</span><span class="lnt">110
-</span><span class="lnt">111
-</span><span class="lnt">112
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">set</span> <span class="nx">encoding</span><span class="p">=</span><span class="nx">utf</span><span class="m">-8</span><span class="err">
-</span><span class="err"></span><span class="nx">scriptencoding</span><span class="p">=</span><span class="nx">utf</span><span class="m">-8</span><span class="err">
-</span><span class="err"></span><span class="nx">set</span> <span class="nx">fileencoding</span><span class="p">=</span><span class="nx">utf</span><span class="m">-8</span><span class="err">
-</span><span class="err">
-</span><span class="err"></span><span class="nx">set</span> <span class="nx">t_Co</span><span class="p">=</span><span class="m">256</span><span class="err">
-</span><span class="err"></span><span class="nx">syntax</span> <span class="nx">on</span><span class="err">
-</span><span class="err">
-</span><span class="err"></span><span class="nx">call</span> <span class="nx">plug</span>#<span class="nx">begin</span><span class="p">(</span><span class="s1">&#39;~/.vim/plugged&#39;</span><span class="p">)</span><span class="err">
-</span><span class="err"></span><span class="nx">Plug</span> <span class="s1">&#39;https://github.com/gi1242/vim-tex-syntax.git&#39;</span><span class="err">
-</span><span class="err"></span><span class="nx">Plug</span> <span class="s1">&#39;joker1007/vim-markdown-quote-syntax&#39;</span><span class="err">
-</span><span class="err"></span><span class="nx">Plug</span> <span class="s1">&#39;cespare/vim-toml&#39;</span><span class="err">
-</span><span class="err"></span><span class="nx">Plug</span> <span class="s1">&#39;godlygeek/tabular&#39;</span><span class="err">
-</span><span class="err"></span><span class="nx">Plug</span> <span class="s1">&#39;vim-latex/vim-latex&#39;</span><span class="err">
-</span><span class="err"></span><span class="nx">Plug</span> <span class="s1">&#39;rhysd/vim-clang-format&#39;</span><span class="err">
-</span><span class="err"></span><span class="nx">Plug</span> <span class="s1">&#39;pangloss/vim-javascript&#39;</span><span class="err">
-</span><span class="err"></span><span class="nx">Plug</span> <span class="s1">&#39;rlue/vim-barbaric&#39;</span><span class="err">
-</span><span class="err"></span><span class="nx">call</span> <span class="nx">plug</span>#<span class="nx">end</span><span class="p">()</span><span class="err">
-</span><span class="err"></span><span class="c">
-</span><span class="c">&#34; Short version:</span><span class="err">
-</span><span class="err"></span><span class="c">&#34; se nu ru rnu cin cul sc so=4 ts=2 sw=2 bs=2 ls=2 bo=all</span><span class="err">
-</span><span class="err"></span><span class="nx">set</span> <span class="nx">number</span><span class="err">
-</span><span class="err"></span><span class="nx">set</span> <span class="nx">ruler</span><span class="err">
-</span><span class="err"></span><span class="nx">set</span> <span class="nx">relativenumber</span><span class="err">
-</span><span class="err"></span><span class="nx">set</span> <span class="nx">cindent</span><span class="err">
-</span><span class="err"></span><span class="nx">set</span> <span class="nx">cursorline</span><span class="err">
-</span><span class="err"></span><span class="nx">set</span> <span class="nx">showcmd</span><span class="err">
-</span><span class="err"></span><span class="nx">set</span> <span class="nx">scrolloff</span><span class="p">=</span><span class="m">3</span><span class="err">
-</span><span class="err"></span><span class="nx">set</span> <span class="nx">tabstop</span><span class="p">=</span><span class="m">2</span><span class="err">
-</span><span class="err"></span><span class="nx">set</span> <span class="nx">shiftwidth</span><span class="p">=</span><span class="m">2</span><span class="err">
-</span><span class="err"></span><span class="nx">set</span> <span class="nx">backspace</span><span class="p">=</span><span class="m">2</span><span class="err">
-</span><span class="err"></span><span class="nx">set</span> <span class="nx">laststatus</span><span class="p">=</span><span class="m">2</span><span class="err">
-</span><span class="err"></span><span class="nx">set</span> <span class="nx">belloff</span><span class="p">=</span><span class="nx">all</span><span class="err">
-</span><span class="err"></span><span class="c">
-</span><span class="c">&#34; Search settings</span><span class="err">
-</span><span class="err"></span><span class="nx">set</span> <span class="nx">hlsearch</span><span class="err">
-</span><span class="err"></span><span class="nx">set</span> <span class="nx">incsearch</span><span class="err">
-</span><span class="err"></span><span class="nx">set</span> <span class="nx">ignorecase</span><span class="err">
-</span><span class="err"></span><span class="nx">set</span> <span class="nx">smartcase</span><span class="err">
-</span><span class="err"></span><span class="c">&#34; &lt;ESC&gt;&lt;ESC&gt; : toggle highlight</span><span class="err">
-</span><span class="err"></span><span class="nx">nnoremap</span> <span class="p">&lt;</span><span class="nx">silent</span><span class="p">&gt;&lt;</span><span class="nx">Esc</span><span class="p">&gt;&lt;</span><span class="nx">Esc</span><span class="p">&gt;</span> :<span class="p">&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">u</span><span class="p">&gt;</span><span class="nx">set</span> <span class="nx">nohlsearch</span><span class="p">!&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
-</span><span class="err">
-</span><span class="err"></span><span class="nx">set</span> <span class="nx">nowrap</span><span class="err">
-</span><span class="err"></span><span class="nx">filetype</span> <span class="nx">indent</span> <span class="nx">on</span><span class="err">
-</span><span class="err"></span><span class="c">
-</span><span class="c">&#34; key mapping</span><span class="err">
-</span><span class="err"></span><span class="nx">inoremap</span> {<span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span> {<span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span>}<span class="p">&lt;</span><span class="nx">ESC</span><span class="p">&gt;</span><span class="nx">O</span><span class="err">
-</span><span class="err"></span><span class="nx">map</span><span class="p">&lt;</span><span class="nx">F9</span><span class="p">&gt;</span> :%<span class="nx">y</span><span class="p">+&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
-</span><span class="err"></span><span class="c">
-</span><span class="c">&#34; cpp settings</span><span class="err">
-</span><span class="err"></span><span class="nx">autocmd</span> <span class="nx">filetype</span> <span class="nx">cpp</span> <span class="nx">map</span> <span class="p">&lt;</span><span class="nx">F3</span><span class="p">&gt;</span> :%<span class="nx">d</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span>:<span class="nx">r</span> <span class="p">~</span><span class="sr">/OWO/</span><span class="nx">templates</span>/<span class="nx">template</span>.<span class="nx">cpp</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="nx">kJ18zF21G</span><span class="err">
-</span><span class="err"></span><span class="nx">autocmd</span> <span class="nx">filetype</span> <span class="nx">cpp</span> <span class="nx">map</span> <span class="p">&lt;</span><span class="nx">F4</span><span class="p">&gt;</span> :<span class="nx">tabe</span> <span class="p">~</span><span class="sr">/OWO/</span><span class="nx">in</span>.<span class="nx">in</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
-</span><span class="err"></span><span class="nx">autocmd</span> <span class="nx">filetype</span> <span class="nx">cpp</span> <span class="nx">map</span> <span class="p">&lt;</span><span class="nx">F5</span><span class="p">&gt;</span> :%<span class="nx">d</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span>&#34;<span class="p">+</span><span class="nx">P</span>:<span class="nx">w</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
-</span><span class="err"></span><span class="nx">autocmd</span> <span class="nx">filetype</span> <span class="nx">in</span>  <span class="nx">map</span> <span class="p">&lt;</span><span class="nx">F5</span><span class="p">&gt;</span> :%<span class="nx">d</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span>&#34;<span class="p">+</span><span class="nx">P</span>:<span class="nx">w</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;&lt;</span><span class="nx">F8</span><span class="p">&gt;</span><span class="err">
-</span><span class="err"></span><span class="nx">autocmd</span> <span class="nx">filetype</span> <span class="nx">cpp</span> <span class="nx">map</span> <span class="p">&lt;</span><span class="nx">F6</span><span class="p">&gt;</span> :%<span class="nx">d</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span>:<span class="nx">r</span> <span class="p">~</span><span class="sr">/OWO/</span><span class="nx">templates</span>/<span class="nx">minimum</span>.<span class="nx">cpp</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="nx">kJ5G</span><span class="err">
-</span><span class="err"></span><span class="nx">autocmd</span> <span class="nx">filetype</span> <span class="nx">cpp</span> <span class="nx">map</span> <span class="p">&lt;</span><span class="nx">F7</span><span class="p">&gt;</span> :<span class="nx">w</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span>:<span class="p">!</span><span class="nx">g</span><span class="p">++</span> <span class="s2">&#34;%&#34;</span> <span class="p">-</span><span class="nx">o</span> <span class="p">~</span><span class="sr">/OWO/</span><span class="nx">run</span> <span class="p">-</span><span class="nx">std</span><span class="p">=</span><span class="nx">c</span><span class="p">++</span><span class="m">17</span> <span class="p">-</span><span class="nx">Wfatal</span><span class="p">-</span><span class="nx">errors</span> <span class="p">-</span><span class="nx">DOWO</span> <span class="p">-</span><span class="nx">fsanitize</span><span class="p">=</span><span class="nx">undefined</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
-</span><span class="err"></span><span class="nx">autocmd</span> <span class="nx">filetype</span> <span class="nx">cpp</span> <span class="nx">map</span> <span class="p">&lt;</span><span class="nx">F8</span><span class="p">&gt;</span> :<span class="p">!</span><span class="nx">echo</span> <span class="s2">&#34;\t\tinput\n&#34;</span> &amp;&amp; <span class="nx">cat</span> <span class="p">~</span><span class="sr">/OWO/</span><span class="nx">in</span>.<span class="nx">in</span> &amp;&amp; <span class="nx">echo</span> <span class="s2">&#34;\n\t\toutput\n&#34;</span> &amp;&amp; <span class="p">~</span><span class="sr">/OWO/</span><span class="nx">run</span> <span class="p">&lt;</span> <span class="p">~</span><span class="sr">/OWO/</span><span class="nx">in</span>.<span class="nx">in</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
-</span><span class="err"></span><span class="nx">autocmd</span> <span class="nx">filetype</span> <span class="nx">in</span>  <span class="nx">map</span> <span class="p">&lt;</span><span class="nx">F8</span><span class="p">&gt;</span> :<span class="nx">w</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span>:<span class="p">!</span><span class="nx">echo</span> <span class="s2">&#34;\t\tinput\n&#34;</span> &amp;&amp; <span class="nx">cat</span> <span class="p">~</span><span class="sr">/OWO/</span><span class="nx">in</span>.<span class="nx">in</span> &amp;&amp; <span class="nx">echo</span> <span class="s2">&#34;\n\t\toutput\n&#34;</span> &amp;&amp; <span class="p">~</span><span class="sr">/OWO/</span><span class="nx">run</span> <span class="p">&lt;</span> <span class="p">~</span><span class="sr">/OWO/</span><span class="nx">in</span>.<span class="nx">in</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
-</span><span class="err"></span><span class="nx">autocmd</span> <span class="nx">filetype</span> <span class="nx">cpp</span> <span class="nx">nnoremap</span> <span class="p">&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">C</span><span class="p">&gt;</span> :<span class="nx">s</span><span class="sr">/^\(\s*\)/</span>\<span class="m">1</span>\<span class="sr">/\/&lt;CR&gt; :s/</span>^\<span class="p">(</span>\<span class="nx">s</span>*\<span class="p">)</span>\<span class="sr">/\/\/\//</span>\<span class="m">1</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span> $<span class="err">
-</span><span class="err"></span><span class="c">
-</span><span class="c">&#34; Load template</span><span class="err">
-</span><span class="err"></span><span class="nx">command</span> <span class="p">-</span><span class="nx">nargs</span><span class="p">=</span><span class="m">1</span> <span class="nx">Load</span> :<span class="nx">r</span> <span class="p">~</span><span class="sr">/OWO/</span><span class="nx">templates</span>/<span class="p">&lt;</span><span class="nx">args</span><span class="p">&gt;</span>.<span class="nx">cpp</span><span class="err">
-</span><span class="err"></span><span class="c">
-</span><span class="c">&#34; LaTeX compile</span><span class="err">
-</span><span class="err"></span><span class="nx">autocmd</span> <span class="nx">filetype</span> <span class="nx">tex</span> <span class="nx">map</span> <span class="p">&lt;</span><span class="nx">F7</span><span class="p">&gt;</span> :<span class="nx">w</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span>:<span class="p">!</span><span class="nx">xelatex</span> <span class="p">-</span><span class="nx">shell</span><span class="p">-</span><span class="nx">escape</span> <span class="s2">&#34;%&#34;</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span>:<span class="p">!</span><span class="nx">xdg</span><span class="p">-</span><span class="nx">open</span> <span class="s2">&#34;%:r&#34;</span>.<span class="nx">pdf</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
-</span><span class="err"></span><span class="c">
-</span><span class="c">&#34; Disable arrowkeys</span><span class="err">
-</span><span class="err"></span><span class="nx">nnoremap</span> <span class="p">&lt;</span><span class="nx">Up</span><span class="p">&gt;</span> :<span class="nx">echo</span> <span class="s2">&#34;No up for you!&#34;</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
-</span><span class="err"></span><span class="nx">vnoremap</span> <span class="p">&lt;</span><span class="nx">Up</span><span class="p">&gt;</span> :<span class="p">&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">u</span><span class="p">&gt;</span><span class="nx">echo</span> <span class="s2">&#34;No up for you!&#34;</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
-</span><span class="err"></span><span class="nx">inoremap</span> <span class="p">&lt;</span><span class="nx">Up</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">o</span><span class="p">&gt;</span>:<span class="nx">echo</span> <span class="s2">&#34;No up for you!&#34;</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
-</span><span class="err"></span><span class="nx">nnoremap</span> <span class="p">&lt;</span><span class="nx">Down</span><span class="p">&gt;</span> :<span class="nx">echo</span> <span class="s2">&#34;No down for you!&#34;</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
-</span><span class="err"></span><span class="nx">vnoremap</span> <span class="p">&lt;</span><span class="nx">Down</span><span class="p">&gt;</span> :<span class="p">&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">u</span><span class="p">&gt;</span><span class="nx">echo</span> <span class="s2">&#34;No down for you!&#34;</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
-</span><span class="err"></span><span class="nx">inoremap</span> <span class="p">&lt;</span><span class="nx">Down</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">o</span><span class="p">&gt;</span>:<span class="nx">echo</span> <span class="s2">&#34;No down for you!&#34;</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
-</span><span class="err"></span><span class="nx">nnoremap</span> <span class="p">&lt;</span><span class="nx">Left</span><span class="p">&gt;</span> :<span class="nx">echo</span> <span class="s2">&#34;No left for you!&#34;</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
-</span><span class="err"></span><span class="nx">vnoremap</span> <span class="p">&lt;</span><span class="nx">Left</span><span class="p">&gt;</span> :<span class="p">&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">u</span><span class="p">&gt;</span><span class="nx">echo</span> <span class="s2">&#34;No left for you!&#34;</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
-</span><span class="err"></span><span class="nx">inoremap</span> <span class="p">&lt;</span><span class="nx">Left</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">o</span><span class="p">&gt;</span>:<span class="nx">echo</span> <span class="s2">&#34;No left for you!&#34;</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
-</span><span class="err"></span><span class="nx">nnoremap</span> <span class="p">&lt;</span><span class="nx">Right</span><span class="p">&gt;</span> :<span class="nx">echo</span> <span class="s2">&#34;No right for you!&#34;</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
-</span><span class="err"></span><span class="nx">vnoremap</span> <span class="p">&lt;</span><span class="nx">Right</span><span class="p">&gt;</span> :<span class="p">&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">u</span><span class="p">&gt;</span><span class="nx">echo</span> <span class="s2">&#34;No right for you!&#34;</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
-</span><span class="err"></span><span class="nx">inoremap</span> <span class="p">&lt;</span><span class="nx">Right</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">o</span><span class="p">&gt;</span>:<span class="nx">echo</span> <span class="s2">&#34;No right for you!&#34;</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
-</span><span class="err"></span><span class="c">
-</span><span class="c">&#34; For barbaric</span><span class="err">
-</span><span class="err"></span><span class="nx">set</span> <span class="nx">ttimeoutlen</span><span class="p">=</span><span class="m">0</span><span class="err">
-</span><span class="err"></span><span class="c">
-</span><span class="c">&#34; Clang-format settings</span><span class="err">
-</span><span class="err"></span><span class="k">let</span> <span class="nx">g</span>:<span class="nx">clang_format</span>#<span class="nx">style_options</span> <span class="p">=</span> {<span class="err">
-</span><span class="err"></span>						\ <span class="s2">&#34;IndentWidth&#34;</span>: <span class="m">2</span><span class="p">,</span><span class="err">
-</span><span class="err"></span>						\ <span class="s2">&#34;ColumnLimit&#34;</span>: <span class="m">80</span><span class="p">,</span><span class="err">
-</span><span class="err"></span>						\ <span class="s2">&#34;AlignTrailingComments&#34;</span>: <span class="s2">&#34;true&#34;</span><span class="p">,</span><span class="err">
-</span><span class="err"></span>            \ <span class="s2">&#34;AccessModifierOffset&#34;</span> : <span class="m">-4</span><span class="p">,</span><span class="err">
-</span><span class="err"></span>            \ <span class="s2">&#34;AllowShortIfStatementsOnASingleLine&#34;</span> : <span class="s2">&#34;true&#34;</span><span class="p">,</span><span class="err">
-</span><span class="err"></span>            \ <span class="s2">&#34;AlwaysBreakTemplateDeclarations&#34;</span> : <span class="s2">&#34;true&#34;</span><span class="p">,</span><span class="err">
-</span><span class="err"></span>            \ <span class="s2">&#34;Standard&#34;</span> : <span class="s2">&#34;C++11&#34;</span>}<span class="err">
-</span><span class="err"></span><span class="c">
-</span><span class="c">&#34; map to &lt;Leader&gt;kl in C++ code</span><span class="err">
-</span><span class="err"></span><span class="nx">autocmd</span> <span class="nx">FileType</span> <span class="nx">c</span><span class="p">,</span><span class="nx">cpp</span><span class="p">,</span><span class="nx">objc</span> <span class="nx">nnoremap</span> <span class="p">&lt;</span><span class="nx">buffer</span><span class="p">&gt;&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">K</span><span class="p">&gt;&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">L</span><span class="p">&gt;</span> :<span class="p">&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">u</span><span class="p">&gt;</span><span class="nx">ClangFormat</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
-</span><span class="err"></span><span class="nx">autocmd</span> <span class="nx">FileType</span> <span class="nx">c</span><span class="p">,</span><span class="nx">cpp</span><span class="p">,</span><span class="nx">objc</span> <span class="nx">vnoremap</span> <span class="p">&lt;</span><span class="nx">buffer</span><span class="p">&gt;&lt;</span><span class="nx">Leader</span><span class="p">&gt;</span><span class="nx">kl</span> :<span class="nx">ClangFormat</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
-</span><span class="err"></span><span class="c">&#34; if you install vim-operator-user</span><span class="err">
-</span><span class="err"></span><span class="nx">autocmd</span> <span class="nx">FileType</span> <span class="nx">c</span><span class="p">,</span><span class="nx">cpp</span><span class="p">,</span><span class="nx">objc</span> <span class="nx">map</span> <span class="p">&lt;</span><span class="nx">buffer</span><span class="p">&gt;&lt;</span><span class="nx">Leader</span><span class="p">&gt;</span><span class="nx">x</span> <span class="p">&lt;</span><span class="nx">Plug</span><span class="p">&gt;(</span><span class="nx">operator</span><span class="p">-</span><span class="nx">clang</span><span class="p">-</span><span class="nx">format</span><span class="p">)</span><span class="err">
-</span><span class="err"></span><span class="c">&#34; Toggle auto formatting:</span><span class="err">
-</span><span class="err"></span><span class="c">&#34; nmap &lt;Leader&gt;C :ClangFormatAutoToggle&lt;CR&gt;</span><span class="err">
-</span><span class="err"></span><span class="c">
-</span><span class="c">&#34; Toggle transparent background</span><span class="err">
-</span><span class="err"></span><span class="k">let</span> <span class="nx">t</span>:<span class="nx">is_transparent</span> <span class="p">=</span> <span class="m">0</span><span class="err">
-</span><span class="err"></span><span class="k">function</span><span class="p">!</span> <span class="nx">Toggle_transparent_background</span><span class="p">()</span><span class="err">
-</span><span class="err"></span>  <span class="k">if</span> <span class="nx">t</span>:<span class="nx">is_transparent</span> <span class="p">==</span> <span class="m">0</span><span class="err">
-</span><span class="err"></span>    <span class="nx">hi</span> <span class="nx">Normal</span> <span class="nx">guibg</span><span class="p">=</span><span class="nb">NONE</span> <span class="nx">ctermbg</span><span class="p">=</span><span class="nx">black</span><span class="err">
-</span><span class="err"></span>    <span class="k">let</span> <span class="nx">t</span>:<span class="nx">is_transparent</span> <span class="p">=</span> <span class="m">1</span><span class="err">
-</span><span class="err"></span>  <span class="k">else</span><span class="err">
-</span><span class="err"></span>    <span class="nx">hi</span> <span class="nx">Normal</span> <span class="nx">guibg</span><span class="p">=</span><span class="nb">NONE</span> <span class="nx">ctermbg</span><span class="p">=</span><span class="nb">NONE</span><span class="err">
-</span><span class="err"></span>    <span class="k">let</span> <span class="nx">t</span>:<span class="nx">is_transparent</span> <span class="p">=</span> <span class="m">0</span><span class="err">
-</span><span class="err"></span>  <span class="k">endif</span><span class="err">
-</span><span class="err"></span><span class="k">endfunction</span><span class="err">
-</span><span class="err"></span><span class="nx">nnoremap</span> <span class="p">&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">x</span><span class="p">&gt;&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">t</span><span class="p">&gt;</span> :<span class="nx">call</span> <span class="nx">Toggle_transparent_background</span><span class="p">()&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">source</span> <span class="p">~</span><span class="sr">/.vim/</span><span class="nx">options</span>.<span class="nx">vim</span><span class="err">
+</span><span class="err"></span><span class="nx">source</span> <span class="p">~</span><span class="sr">/.vim/</span><span class="nx">comment</span>.<span class="nx">vim</span><span class="err">
+</span><span class="err"></span><span class="nx">source</span> <span class="p">~</span><span class="sr">/.vim/</span><span class="nx">keymaps</span>.<span class="nx">vim</span><span class="err">
+</span><span class="err"></span><span class="nx">source</span> <span class="p">~</span><span class="sr">/.vim/</span><span class="nx">togglet</span>.<span class="nx">vim</span><span class="err">
+</span><span class="err"></span><span class="nx">source</span> <span class="p">~</span><span class="sr">/.vim/</span><span class="nx">plugins</span>.<span class="nx">vim</span><span class="err">
 </span></code></pre></td></tr></table>
 </div>
-</div><h2 id="模板">模板</h2>
-<p>再度更新。我現在越來越喜歡把東西寫的原汁原味清楚明瞭，所以拔掉了一些 <code>macro</code> 。
-壓過字元數的版本，整個才 20 行左右，debug 的部份也不到 1kB 真的超棒。</p>
+</div><p>我把正常會寫在 <code>.vimrc</code> 裡面的東西分裝到 <code>.vim</code> 底下各個檔案裡面了。所有檔案在 <a href="https://github.com/fhvirus/vimrc">這裡</a> 找的到，底下也會一一解說。
+如果有初學者想要用的話也不要害怕，把檔案貼一貼路徑改一改就對了 &gt;&lt;</p>
+<p>大概功能：</p>
+<ul>
+<li><code>options.vim</code> 裡面裝著普通的設定（ <code>set blablabla</code> ）。</li>
+<li><code>comment.vim</code> 是自製的註解工具。</li>
+<li><code>keymaps.vim</code> 是大部分的快捷鍵。</li>
+<li><code>togglet.vim</code> 是切換透明與不透明背景的工具。</li>
+<li><code>plugins.vim</code> 裝的 <code>vim-plug</code> 相關的東西以及針對插件的設定。</li>
+<li>對於特定檔案類型才有的快捷建放在 <code>ftplugin/&lt;lang&gt;.vim</code> 裡面。</li>
+</ul>
+<hr>
+<h3 id="optionsvim"><code>options.vim</code></h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -398,34 +180,277 @@
 </span><span class="lnt">21
 </span><span class="lnt">22
 </span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="c1">// Knapsack DP is harder than FFT.
-</span><span class="c1"></span><span class="cp">#include</span><span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
-</span><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
-<span class="k">typedef</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">ll</span><span class="p">;</span> <span class="k">typedef</span> <span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">pii</span><span class="p">;</span>
-<span class="cp">#define ff first
-</span><span class="cp">#define ss second
-</span><span class="cp">#define pb emplace_back
-</span><span class="cp">#define AI(x) begin(x),end(x)
-</span><span class="cp">#ifdef OWO
-</span><span class="cp">#define debug(args...) SDF(#args, args)
-</span><span class="cp">#define OIU(args...) ostream&amp; operator&lt;&lt;(ostream&amp;O,args)
-</span><span class="cp">#define LKJ(S,B,E,F) template&lt;class...T&gt;OIU(S&lt;T...&gt;s){O&lt;&lt;B;int c=0;for(auto i:s)O&lt;&lt;(c++?&#34;, &#34;:&#34;&#34;)&lt;&lt;F;return O&lt;&lt;E;}
-</span><span class="cp"></span><span class="n">LKJ</span><span class="p">(</span><span class="n">vector</span><span class="p">,</span><span class="sc">&#39;[&#39;</span><span class="p">,</span><span class="sc">&#39;]&#39;</span><span class="p">,</span><span class="n">i</span><span class="p">)</span><span class="n">LKJ</span><span class="p">(</span><span class="n">deque</span><span class="p">,</span><span class="sc">&#39;[&#39;</span><span class="p">,</span><span class="sc">&#39;]&#39;</span><span class="p">,</span><span class="n">i</span><span class="p">)</span><span class="n">LKJ</span><span class="p">(</span><span class="n">set</span><span class="p">,</span><span class="sc">&#39;{&#39;</span><span class="p">,</span><span class="sc">&#39;}&#39;</span><span class="p">,</span><span class="n">i</span><span class="p">)</span><span class="n">LKJ</span><span class="p">(</span><span class="n">multiset</span><span class="p">,</span><span class="sc">&#39;{&#39;</span><span class="p">,</span><span class="sc">&#39;}&#39;</span><span class="p">,</span><span class="n">i</span><span class="p">)</span><span class="n">LKJ</span><span class="p">(</span><span class="n">unordered_set</span><span class="p">,</span><span class="sc">&#39;{&#39;</span><span class="p">,</span><span class="sc">&#39;}&#39;</span><span class="p">,</span><span class="n">i</span><span class="p">)</span><span class="n">LKJ</span><span class="p">(</span><span class="n">map</span><span class="p">,</span><span class="sc">&#39;{&#39;</span><span class="p">,</span><span class="sc">&#39;}&#39;</span><span class="p">,</span><span class="n">i</span><span class="p">.</span><span class="n">ff</span><span class="o">&lt;&lt;</span><span class="sc">&#39;:&#39;</span><span class="o">&lt;&lt;</span><span class="n">i</span><span class="p">.</span><span class="n">ss</span><span class="p">)</span><span class="n">LKJ</span><span class="p">(</span><span class="n">unordered_map</span><span class="p">,</span><span class="sc">&#39;{&#39;</span><span class="p">,</span><span class="sc">&#39;}&#39;</span><span class="p">,</span><span class="n">i</span><span class="p">.</span><span class="n">ff</span><span class="o">&lt;&lt;</span><span class="sc">&#39;:&#39;</span><span class="o">&lt;&lt;</span><span class="n">i</span><span class="p">.</span><span class="n">ss</span><span class="p">)</span>
-<span class="k">template</span><span class="o">&lt;</span><span class="k">class</span><span class="err">...</span><span class="nc">T</span><span class="o">&gt;</span><span class="kt">void</span> <span class="n">SDF</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">s</span><span class="p">,</span><span class="n">T</span><span class="p">...</span><span class="n">a</span><span class="p">){</span><span class="kt">int</span> <span class="n">c</span><span class="o">=</span><span class="k">sizeof</span><span class="p">...(</span><span class="n">T</span><span class="p">);</span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">c</span><span class="p">){</span><span class="n">cerr</span><span class="o">&lt;&lt;</span><span class="s">&#34;</span><span class="se">\033</span><span class="s">[1;32mvoid</span><span class="se">\033</span><span class="s">[0m</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span><span class="k">return</span><span class="p">;}(</span><span class="n">cerr</span><span class="o">&lt;&lt;</span><span class="s">&#34;</span><span class="se">\033</span><span class="s">[1;32m(&#34;</span><span class="o">&lt;&lt;</span><span class="n">s</span><span class="o">&lt;&lt;</span><span class="s">&#34;) = (&#34;</span><span class="p">,...,(</span><span class="n">cerr</span><span class="o">&lt;&lt;</span><span class="n">a</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="o">--</span><span class="n">c</span><span class="o">?</span><span class="s">&#34;, &#34;</span><span class="o">:</span><span class="s">&#34;)</span><span class="se">\033</span><span class="s">[0m</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">)));}</span>
-<span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">T</span><span class="p">,</span><span class="n">size_t</span> <span class="n">N</span><span class="o">&gt;</span><span class="n">OIU</span><span class="p">(</span><span class="n">array</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="n">N</span><span class="o">&gt;</span><span class="n">a</span><span class="p">){</span><span class="k">return</span> <span class="n">O</span><span class="o">&lt;&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">AI</span><span class="p">(</span><span class="n">a</span><span class="p">));}</span><span class="k">template</span><span class="o">&lt;</span><span class="k">class</span><span class="err">...</span><span class="nc">T</span><span class="o">&gt;</span><span class="n">OIU</span><span class="p">(</span><span class="n">pair</span><span class="o">&lt;</span><span class="n">T</span><span class="p">...</span><span class="o">&gt;</span><span class="n">p</span><span class="p">){</span><span class="k">return</span> <span class="n">O</span><span class="o">&lt;&lt;</span><span class="sc">&#39;(&#39;</span><span class="o">&lt;&lt;</span><span class="n">p</span><span class="p">.</span><span class="n">ff</span><span class="o">&lt;&lt;</span><span class="sc">&#39;,&#39;</span><span class="o">&lt;&lt;</span><span class="n">p</span><span class="p">.</span><span class="n">ss</span><span class="o">&lt;&lt;</span><span class="sc">&#39;)&#39;</span><span class="p">;}</span><span class="k">template</span><span class="o">&lt;</span><span class="k">class</span><span class="err">...</span><span class="nc">T</span><span class="o">&gt;</span><span class="n">OIU</span><span class="p">(</span><span class="n">tuple</span><span class="o">&lt;</span><span class="n">T</span><span class="p">...</span><span class="o">&gt;</span><span class="n">t</span><span class="p">){</span><span class="k">return</span> <span class="n">O</span><span class="o">&lt;&lt;</span><span class="sc">&#39;(&#39;</span><span class="p">,</span><span class="n">apply</span><span class="p">([</span><span class="o">&amp;</span><span class="n">O</span><span class="p">](</span><span class="n">T</span><span class="p">...</span><span class="n">s</span><span class="p">){</span><span class="kt">int</span> <span class="n">c</span><span class="o">=</span><span class="mi">0</span><span class="p">;(...,(</span><span class="n">O</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">c</span><span class="o">++?</span><span class="s">&#34;, &#34;</span><span class="o">:</span><span class="s">&#34;&#34;</span><span class="p">)</span><span class="o">&lt;&lt;</span><span class="n">s</span><span class="p">));},</span><span class="n">t</span><span class="p">),</span><span class="n">O</span><span class="o">&lt;&lt;</span><span class="sc">&#39;)&#39;</span><span class="p">;}</span>
-<span class="cp">#else
-</span><span class="cp">#define debug(...) ((void)0)
-</span><span class="cp">#endif
-</span><span class="cp"></span>
-<span class="kt">signed</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
-	<span class="n">ios_base</span><span class="o">::</span><span class="n">sync_with_stdio</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span> <span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span> <span class="n">cout</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
-	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="c">&#34; se enc=utf-8 scripte=utf-8 fenc=utf-8</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">encoding</span><span class="p">=</span><span class="nx">utf</span><span class="m">-8</span><span class="err">
+</span><span class="err"></span><span class="nx">scriptencoding</span><span class="p">=</span><span class="nx">utf</span><span class="m">-8</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">fileencoding</span><span class="p">=</span><span class="nx">utf</span><span class="m">-8</span><span class="err">
+</span><span class="err"></span><span class="c">
+</span><span class="c">&#34; se t_Co=256 tgc | sy on | colo monokai</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">t_Co</span><span class="p">=</span><span class="m">256</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">termguicolors</span><span class="err">
+</span><span class="err"></span><span class="nx">syntax</span> <span class="nx">on</span><span class="err">
+</span><span class="err"></span><span class="nx">colorscheme</span> <span class="nx">monokai</span><span class="err">
+</span><span class="err"></span><span class="c">
+</span><span class="c">&#34; se nu ru rnu cin cul sc so=4 ts=2 sw=2 bs=2 ls=2 bo=a</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">number</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">ruler</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">relativenumber</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">cindent</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">cursorline</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">showcmd</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">scrolloff</span><span class="p">=</span><span class="m">4</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">tabstop</span><span class="p">=</span><span class="m">2</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">shiftwidth</span><span class="p">=</span><span class="m">2</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">backspace</span><span class="p">=</span><span class="m">2</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">laststatus</span><span class="p">=</span><span class="m">2</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">belloff</span><span class="p">=</span><span class="nx">all</span><span class="err">
+</span><span class="err"></span><span class="c">
+</span><span class="c">&#34; se hls is ic scs</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">hlsearch</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">incsearch</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">ignorecase</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">smartcase</span><span class="err">
+</span><span class="err"></span><span class="c">
+</span><span class="c">&#34; se nowrap | filet plugin indent on</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">nowrap</span><span class="err">
+</span><span class="err"></span><span class="nx">filetype</span> <span class="nx">plugin</span> <span class="nx">indent</span> <span class="nx">on</span><span class="err">
+</span></code></pre></td></tr></table>
 </div>
-</div><p>很令人傷心的，上面的 <code>class...T</code> 似乎被 Chroma 當成錯誤了。被分錯類的我也沒辦法救了，只好忍受他這樣醜醜的。</p>
+</div><h4 id="功能簡介">功能簡介</h4>
+<p>想知道每個在幹嘛的話請自己在 vim 裡面打 <code>:help &lt;option&gt;</code> 。</p>
+<ol>
+<li>基本的設定編碼。不確定是怎麼運作的所以不敢拿掉。</li>
+<li>顏色相關的東西。我自己是用 <a href="https://github.com/crusoexia/vim-monokai">這個</a> 然後把他的 <code>monokai.vim</code> 直接貼到 <code>~/.vim/colors</code> 底下。</li>
+<li>正常的輔助功能設定，比賽的時候會打上面縮減的那段。</li>
+<li>搜尋相關的東西，還蠻實用的，從 <a href="https://morioprog.github.io/2020/06/vim_memo/">這裡</a> 抄來的。</li>
+<li>雜項。要開著 <code>filetype plugin on</code> 才可以用 <code>~/.vim/ftplugin/</code> 裡面的東西。</li>
+</ol>
+<h4 id="精簡版">精簡版</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">sy</span> <span class="nx">on</span> <span class="p">|</span> <span class="nx">colo</span> <span class="nx">monokai</span> <span class="p">|</span> <span class="nx">filet</span> <span class="nx">plugin</span> <span class="nx">indent</span> <span class="nx">on</span><span class="err">
+</span><span class="err"></span><span class="nx">se</span> <span class="nx">enc</span><span class="p">=</span><span class="nx">utf</span><span class="m">-8</span> <span class="nx">scripte</span><span class="p">=</span><span class="nx">utf</span><span class="m">-8</span> <span class="nx">fenc</span><span class="p">=</span><span class="nx">utf</span><span class="m">-8</span> <span class="nx">t_Co</span><span class="p">=</span><span class="m">256</span> <span class="nx">tgc</span> <span class="nx">nu</span> <span class="nx">ru</span> <span class="nx">rnu</span> <span class="nx">cin</span> <span class="nx">cul</span> <span class="nx">sc</span> <span class="nx">so</span><span class="p">=</span><span class="m">4</span> <span class="nx">ts</span><span class="p">=</span><span class="m">2</span> <span class="nx">sw</span><span class="p">=</span><span class="m">2</span> <span class="nx">bs</span><span class="p">=</span><span class="m">2</span> <span class="nx">ls</span><span class="p">=</span><span class="m">2</span> <span class="nx">bo</span><span class="p">=</span><span class="nx">a</span> <span class="nx">hls</span> <span class="nx">is</span> <span class="nx">ic</span> <span class="nx">scs</span> <span class="nx">nowrap</span><span class="err">
+</span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h3 id="commentvim"><code>comment.vim</code></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="c">&#34; Commenting blocks of code.</span><span class="err">
+</span><span class="err"></span><span class="c">&#34; The following line can also be used for .cpp files:</span><span class="err">
+</span><span class="err"></span><span class="c">&#34; autocmd FileType cpp noremap &lt;buffer&gt; &lt;silent&gt; &lt;C-P&gt; :&lt;C-B&gt;silent! &lt;C-E&gt;s#^\(\s*\)#\1// &lt;CR&gt; :&lt;C-B&gt;silent! &lt;C-E&gt;s#^\(\s*\)// //\s*#\1&lt;CR&gt;</span><span class="err">
+</span><span class="err"></span><span class="nx">augroup</span> <span class="nx">commenting_blocks_of_code</span><span class="err">
+</span><span class="err"></span>  <span class="nx">autocmd</span><span class="p">!</span><span class="err">
+</span><span class="err"></span>  <span class="nx">autocmd</span> <span class="nx">FileType</span> <span class="nx">c</span><span class="p">,</span><span class="nx">cpp</span><span class="p">,</span><span class="nx">java</span><span class="p">,</span><span class="nx">scala</span> <span class="k">let</span> <span class="nx">b</span>:<span class="nx">comment_leader</span> <span class="p">=</span> <span class="s1">&#39;//&#39;</span><span class="err">
+</span><span class="err"></span>  <span class="nx">autocmd</span> <span class="nx">FileType</span> <span class="nx">sh</span><span class="p">,</span><span class="nx">ruby</span><span class="p">,</span><span class="nx">python</span>   <span class="k">let</span> <span class="nx">b</span>:<span class="nx">comment_leader</span> <span class="p">=</span> <span class="s1">&#39;#&#39;</span><span class="err">
+</span><span class="err"></span>  <span class="nx">autocmd</span> <span class="nx">FileType</span> <span class="nx">tex</span>              <span class="k">let</span> <span class="nx">b</span>:<span class="nx">comment_leader</span> <span class="p">=</span> <span class="s1">&#39;%&#39;</span><span class="err">
+</span><span class="err"></span>  <span class="nx">autocmd</span> <span class="nx">FileType</span> <span class="nx">vim</span>              <span class="k">let</span> <span class="nx">b</span>:<span class="nx">comment_leader</span> <span class="p">=</span> <span class="s1">&#39;&#34;&#39;</span><span class="err">
+</span><span class="err"></span><span class="nx">augroup</span> <span class="nx">END</span><span class="err">
+</span><span class="err"></span><span class="nx">nnoremap</span> <span class="p">&lt;</span><span class="nx">silent</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">P</span><span class="p">&gt;</span> :<span class="p">&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">B</span><span class="p">&gt;</span><span class="nx">silent</span> <span class="p">&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">E</span><span class="p">&gt;</span><span class="nx">s</span><span class="p">,</span>^\<span class="p">(</span>\<span class="nx">s</span>*\<span class="p">),</span>\<span class="m">1</span><span class="p">&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">R</span><span class="p">&gt;=</span><span class="nx">b</span>:<span class="nx">comment_leader</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span> <span class="p">,</span><span class="nx">e</span> <span class="p">&lt;</span><span class="nx">bar</span><span class="p">&gt;</span><span class="err">
+</span><span class="err"></span>		\<span class="nx">s</span><span class="p">,</span>^\<span class="p">(</span>\<span class="nx">s</span>*\<span class="p">)&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">R</span><span class="p">&gt;=</span><span class="nx">b</span>:<span class="nx">comment_leader</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">R</span><span class="p">&gt;=</span><span class="nx">b</span>:<span class="nx">comment_leader</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span>\<span class="nx">s</span>*<span class="p">,</span>\<span class="m">1</span><span class="p">,</span><span class="nx">e</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span>:<span class="nx">nohlsearch</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
+</span><span class="err"></span><span class="nx">vnoremap</span> <span class="p">&lt;</span><span class="nx">silent</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">P</span><span class="p">&gt;</span> :<span class="p">&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">B</span><span class="p">&gt;</span><span class="nx">silent</span> <span class="p">&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">E</span><span class="p">&gt;</span><span class="nx">g</span><span class="sr">/^/</span> <span class="nx">s</span><span class="p">,</span>\<span class="p">(</span>\<span class="nx">s</span>*\<span class="p">),</span>\<span class="m">1</span><span class="p">&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">R</span><span class="p">&gt;=</span><span class="nx">b</span>:<span class="nx">comment_leader</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span> <span class="p">,</span><span class="nx">e</span> <span class="p">&lt;</span><span class="nx">bar</span><span class="p">&gt;</span><span class="err">
+</span><span class="err"></span>		\<span class="nx">s</span><span class="p">,</span>\<span class="p">(</span>\<span class="nx">s</span>*\<span class="p">)&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">R</span><span class="p">&gt;=</span><span class="nx">b</span>:<span class="nx">comment_leader</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">R</span><span class="p">&gt;=</span><span class="nx">b</span>:<span class="nx">comment_leader</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span>\<span class="nx">s</span>*<span class="p">,</span>\<span class="m">1</span><span class="p">,</span><span class="nx">e</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span>:<span class="nx">nohlsearch</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
+</span></code></pre></td></tr></table>
+</div>
+</div><p>從 <a href="https://stackoverflow.com/a/1676672">這裡</a> 改的，基本上就是用 regex 來做取代而已，長的有點醜，不知道要怎麼讓他變漂亮。</p>
+<hr>
+<h3 id="keymapsvim"><code>keymaps.vim</code></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">inoremap</span> {<span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span> {<span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span>}<span class="p">&lt;</span><span class="nx">ESC</span><span class="p">&gt;</span><span class="nx">O</span><span class="err">
+</span><span class="err"></span><span class="nx">noremap</span> ; :<span class="err">
+</span><span class="err"></span><span class="nx">nmap</span> <span class="p">&lt;</span><span class="nx">F5</span><span class="p">&gt;</span> :%<span class="nx">d</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span>&#34;<span class="p">+</span><span class="nx">P</span>:<span class="nx">w</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
+</span><span class="err"></span><span class="nx">nmap</span> <span class="p">&lt;</span><span class="nx">F9</span><span class="p">&gt;</span> :%<span class="nx">y</span><span class="p">+&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
+</span><span class="err"></span><span class="nx">nnoremap</span> <span class="p">&lt;</span><span class="nx">silent</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nx">ESC</span><span class="p">&gt;&lt;</span><span class="nx">ESC</span><span class="p">&gt;</span> :<span class="p">&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">U</span><span class="p">&gt;</span><span class="nx">set</span> <span class="nx">nohlsearch</span><span class="p">!&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
+</span><span class="err"></span><span class="nx">nnoremap</span> ␛<span class="nx">r</span> :<span class="nx">so</span> <span class="p">~</span>/.<span class="nx">vimrc</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
+</span><span class="err"></span><span class="c">
+</span><span class="c">&#34; NERDTree mappings</span><span class="err">
+</span><span class="err"></span><span class="nx">nnoremap</span> ␛<span class="nx">n</span> :<span class="nx">NERDTreeFocus</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
+</span><span class="err"></span><span class="nx">nnoremap</span> ␛<span class="nx">t</span> :<span class="nx">NERDTreeToggle</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
+</span><span class="err"></span><span class="nx">nnoremap</span> ␛<span class="nx">f</span> :<span class="nx">NERDTreeFind</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
+</span></code></pre></td></tr></table>
+</div>
+</div><p>少少的，除了自動大括號和懶人冒號之外沒什麼特別的。
+上面的怪怪 <code>esc</code> 是因為 alt 鍵要用怪怪的方式 map （先按下 <code>CTRL-V</code> 然後再按需要的 keybind ）。</p>
+<hr>
+<h3 id="toggletvim"><code>togglet.vim</code></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="c">&#34; Toggle transparent background</span><span class="err">
+</span><span class="err"></span><span class="k">let</span> <span class="nx">g</span>:<span class="nx">is_transparent</span> <span class="p">=</span> <span class="m">1</span><span class="err">
+</span><span class="err"></span><span class="k">function</span><span class="p">!</span> <span class="nx">Toggle_transparent_background</span><span class="p">()</span><span class="err">
+</span><span class="err"></span>  <span class="k">if</span> <span class="nx">g</span>:<span class="nx">is_transparent</span> <span class="p">==</span> <span class="m">0</span><span class="err">
+</span><span class="err"></span><span class="c">    &#34; hi Normal guibg=NONE ctermbg=234</span><span class="err">
+</span><span class="err"></span>		<span class="nx">set</span> <span class="nx">tgc</span><span class="err">
+</span><span class="err"></span>		<span class="nx">colo</span> <span class="nx">monokai</span><span class="err">
+</span><span class="err"></span>    <span class="k">let</span> <span class="nx">g</span>:<span class="nx">is_transparent</span> <span class="p">=</span> <span class="m">1</span><span class="err">
+</span><span class="err"></span>  <span class="k">else</span><span class="err">
+</span><span class="err"></span><span class="c">    &#34; hi Normal guibg=NONE ctermbg=NONE</span><span class="err">
+</span><span class="err"></span>		<span class="nx">set</span> <span class="nx">tgc</span><span class="p">!</span><span class="err">
+</span><span class="err"></span>		<span class="nx">colo</span> <span class="nx">ron</span><span class="err">
+</span><span class="err"></span>    <span class="k">let</span> <span class="nx">g</span>:<span class="nx">is_transparent</span> <span class="p">=</span> <span class="m">0</span><span class="err">
+</span><span class="err"></span>  <span class="k">endif</span><span class="err">
+</span><span class="err"></span><span class="k">endfunction</span><span class="err">
+</span><span class="err"></span><span class="nx">nnoremap</span> ␛<span class="nx">k</span> :<span class="nx">call</span> <span class="nx">Toggle_transparent_background</span><span class="p">()&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
+</span></code></pre></td></tr></table>
+</div>
+</div><p>切換透明背景用的。不知道為什麼有 <code>tgc</code> 的時候就不能用透明背景了，反正可以用就好。
+註解掉的那兩行在沒有 <code>set tgc</code> 的情況下也是可以用的。</p>
+<hr>
+<h3 id="pluginsvim"><code>plugins.vim</code></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">call</span> <span class="nx">plug</span>#<span class="nx">begin</span><span class="p">(</span><span class="s1">&#39;~/.vim/plugged&#39;</span><span class="p">)</span><span class="err">
+</span><span class="err"></span><span class="nx">Plug</span> <span class="s1">&#39;cespare/vim-toml&#39;</span><span class="err">
+</span><span class="err"></span><span class="nx">Plug</span> <span class="s1">&#39;pangloss/vim-javascript&#39;</span><span class="err">
+</span><span class="err"></span><span class="nx">Plug</span> <span class="s1">&#39;joker1007/vim-markdown-quote-syntax&#39;</span><span class="err">
+</span><span class="err"></span><span class="nx">Plug</span> <span class="s1">&#39;vim-latex/vim-latex&#39;</span><span class="err">
+</span><span class="err"></span><span class="nx">Plug</span> <span class="s1">&#39;gi1242/vim-tex-syntax&#39;</span><span class="err">
+</span><span class="err"></span><span class="nx">Plug</span> <span class="s1">&#39;godlygeek/tabular&#39;</span><span class="err">
+</span><span class="err"></span><span class="nx">Plug</span> <span class="s1">&#39;rlue/vim-barbaric&#39;</span><span class="err">
+</span><span class="err"></span><span class="nx">Plug</span> <span class="s1">&#39;fhvirus/learn-hjkl&#39;</span><span class="err">
+</span><span class="err"></span><span class="nx">Plug</span> <span class="s1">&#39;preservim/nerdtree&#39;</span><span class="err">
+</span><span class="err"></span><span class="nx">call</span> <span class="nx">plug</span>#<span class="nx">end</span><span class="p">()</span><span class="err">
+</span><span class="err"></span><span class="c">
+</span><span class="c">&#34; for barbaric</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">ttimeoutlen</span><span class="p">=</span><span class="m">0</span><span class="err">
+</span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li><code>cespare/vim-toml</code>、<code>pangloss/vim-javascript</code>、<code>joker1007/vim-markdown-quote-syntax</code> 是一些擴充的 syntax highlight 。</li>
+<li><code>vim-latex/vim-latex</code>、<code>gi1242/vim-tex-syntax</code> 是 $\TeX$ 的輔助功能。</li>
+<li><code>godlygeek/tabular</code> 是自動對齊的東西，還蠻好用的。</li>
+<li><code>rlue/vim-barbaric</code> 在 normal/insert mode 切換的時候自動切換中英文，省的一直手動切。</li>
+<li><code>fhvirus/learn-hjkl</code> ZCK 提供的強迫學習 hjkl 用工具。</li>
+<li><code>preservim/nerdtree</code> 側邊檔案欄。我還不太會用。</li>
+</ul>
+<hr>
+<h3 id="ftplugincppvim"><code>ftplugin/cpp.vim</code></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">nmap</span> <span class="p">&lt;</span><span class="nx">buffer</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nx">F3</span><span class="p">&gt;</span> :%<span class="nx">d</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span>:<span class="nx">r</span> <span class="p">~</span><span class="sr">/OWO/</span><span class="nx">templates</span>/<span class="nx">template</span>.<span class="nx">cpp</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="nx">kJ18zF22G</span><span class="err">
+</span><span class="err"></span><span class="nx">nmap</span> <span class="p">&lt;</span><span class="nx">buffer</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nx">F4</span><span class="p">&gt;</span> :<span class="nx">tabe</span> <span class="p">~</span><span class="sr">/OWO/</span><span class="nx">in</span>.<span class="nx">in</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
+</span><span class="err"></span><span class="nx">nmap</span> <span class="p">&lt;</span><span class="nx">buffer</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nx">F6</span><span class="p">&gt;</span> :%<span class="nx">d</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span>:<span class="nx">r</span> <span class="p">~</span><span class="sr">/OWO/</span><span class="nx">templates</span>/<span class="nx">minimum</span>.<span class="nx">cpp</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="nx">kJ6G</span><span class="err">
+</span><span class="err"></span><span class="nx">nmap</span> <span class="p">&lt;</span><span class="nx">buffer</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nx">F7</span><span class="p">&gt;</span> :<span class="nx">w</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span>:<span class="p">!</span><span class="nx">g</span><span class="p">++</span> <span class="s2">&#34;%&#34;</span> <span class="p">-</span><span class="nx">o</span> <span class="p">~</span><span class="sr">/OWO/</span><span class="nx">run</span> <span class="p">-</span><span class="nx">std</span><span class="p">=</span><span class="nx">c</span><span class="p">++</span><span class="m">17</span> <span class="p">-</span><span class="nx">Wall</span> <span class="p">-</span><span class="nx">DOWO</span> <span class="p">-</span><span class="nx">fsanitize</span><span class="p">=</span><span class="nx">undefined</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
+</span><span class="err"></span><span class="nx">nmap</span> <span class="p">&lt;</span><span class="nx">buffer</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nx">F8</span><span class="p">&gt;</span> :<span class="nx">w</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span>:<span class="p">!</span><span class="nx">echo</span> <span class="s2">&#34;\t\tinput\n&#34;</span> &amp;&amp; <span class="nx">cat</span> <span class="p">~</span><span class="sr">/OWO/</span><span class="nx">in</span>.<span class="nx">in</span> &amp;&amp; <span class="nx">echo</span> <span class="s2">&#34;\n\t\toutput\n&#34;</span> &amp;&amp; <span class="p">~</span><span class="sr">/OWO/</span><span class="nx">run</span> <span class="p">&lt;</span> <span class="p">~</span><span class="sr">/OWO/</span><span class="nx">in</span>.<span class="nx">in</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
+</span><span class="err"></span><span class="c">
+</span><span class="c">&#34; clang-format mappings</span><span class="err">
+</span><span class="err"></span><span class="nx">map</span> <span class="p">&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">K</span><span class="p">&gt;</span> :<span class="nx">py3f</span> <span class="p">~</span><span class="sr">/.vim/</span><span class="nx">clang</span><span class="p">-</span><span class="nx">format</span>.<span class="nx">py</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
+</span><span class="err"></span><span class="nx">imap</span> <span class="p">&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">K</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">O</span><span class="p">&gt;</span>:<span class="nx">py3f</span> <span class="p">~</span><span class="sr">/.vim/</span><span class="nx">clang</span><span class="p">-</span><span class="nx">format</span>.<span class="nx">py</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
+</span><span class="err"></span><span class="c">
+</span><span class="c">&#34; Load template</span><span class="err">
+</span><span class="err"></span><span class="nx">command</span> <span class="p">-</span><span class="nx">buffer</span> <span class="p">-</span><span class="nx">nargs</span><span class="p">=</span><span class="m">1</span> <span class="nx">Load</span> :<span class="nx">r</span> <span class="p">~</span><span class="sr">/OWO/</span><span class="nx">templates</span>/<span class="p">&lt;</span><span class="nx">args</span><span class="p">&gt;</span>.<span class="nx">cpp</span><span class="err">
+</span><span class="err"></span><span class="c">
+</span><span class="c">&#34; Hash selected range (from kactl)</span><span class="err">
+</span><span class="err"></span><span class="nx">ca</span> <span class="nx">Hash</span> <span class="nx">w</span> <span class="p">!</span><span class="nx">cpp</span> <span class="p">-</span><span class="nx">dD</span> <span class="p">-</span><span class="nx">P</span> <span class="p">-</span><span class="nx">fpreprocessed</span> \<span class="p">|</span> <span class="nx">tr</span> <span class="p">-</span><span class="nx">d</span> <span class="s1">&#39;[:space:]&#39;</span> \<span class="p">|</span> <span class="nx">md5sum</span> \<span class="p">|</span> <span class="nx">cut</span> <span class="p">-</span><span class="nx">c</span><span class="m">-6</span><span class="err">
+</span></code></pre></td></tr></table>
+</div>
+</div><p>一些 <code>C++</code> 專用的快捷建。</p>
+<ol>
+<li>刷 default code ，快速執行、編譯。</li>
+<li><code>clang-format</code> 真的是個好東西。可以自動把醜醜的 code 變得很漂亮，強烈建議裝（說明在 <a href="https://clang.llvm.org/docs/ClangFormat.html#vim-integration">這裡</a> ）。</li>
+<li>讀模板。</li>
+<li>我不確定會不會用到但是先放著了。</li>
+</ol>
+<hr>
+<p>大概就這樣吧。</p>
 
 
                 </div>
@@ -462,6 +487,28 @@
     </div>
 </section>
 <footer></footer>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css" integrity="sha384-dbVIfZGuN1Yq7/1Ocstc1lUEm+AT+/rCkibIcC/OmWo5f0EA48Vf8CytHzGrSwbQ" crossorigin="anonymous">
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js" integrity="sha384-2BKqo+exmr9su6dir+qCw08N2ZKRucY4PrGQPPWU1A7FtlCGjmEGFqXCv5nyM5Ij" crossorigin="anonymous"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"></script>
+
+<script>
+renderMathInElement(
+	document.body,
+	{
+		delimiters: [
+			{left: "$$", right: "$$", display: true},
+			{left: "\\[", right: "\\]", display: true},
+			{left: "$", right: "$", display: false},
+			{left: "\\(", right: "\\)", display: false}
+		]
+	}
+);
+</script>
 
 <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script>
 

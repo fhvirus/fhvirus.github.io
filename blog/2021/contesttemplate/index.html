@@ -81,13 +81,6 @@
                 </li>
                 
                 <li class="nav-item">
-                    <a class="nav-link" href="https://www.youtube.com/channel/UCHJlyX44nyE_nYv5zMP4r4Q">
-                        
-                        Youtube
-                    </a>
-                </li>
-                
-                <li class="nav-item">
                     <a class="nav-link" href="/index.xml">
                         
                         RSS
@@ -146,13 +139,15 @@
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
+</span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">sy</span> <span class="nx">on</span><span class="err">
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">sy</span> <span class="nx">on</span> <span class="p">|</span> <span class="nx">im</span> <span class="nx">jk</span> <span class="p">&lt;</span><span class="nx">esc</span><span class="p">&gt;</span> <span class="p">|</span> <span class="nx">im</span> <span class="nx">kj</span> <span class="p">&lt;</span><span class="nx">esc</span><span class="p">&gt;</span> <span class="p">|</span> <span class="nx">no</span> ; :<span class="err">
 </span><span class="err"></span><span class="nx">se</span> <span class="nx">nu</span> <span class="nx">ru</span> <span class="nx">rnu</span> <span class="nx">cin</span> <span class="nx">cul</span> <span class="nx">sc</span> <span class="nx">so</span><span class="p">=</span><span class="m">4</span> <span class="nx">ls</span><span class="p">=</span><span class="m">2</span> <span class="nx">bs</span><span class="p">=</span><span class="m">2</span> <span class="nx">ts</span><span class="p">=</span><span class="m">2</span> <span class="nx">sw</span><span class="p">=</span><span class="m">2</span><span class="err">
-</span><span class="err"></span><span class="nx">inoremap</span> {<span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span> {<span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span>}<span class="p">&lt;</span><span class="nx">ESC</span><span class="p">&gt;</span><span class="nx">O</span><span class="err">
+</span><span class="err"></span><span class="nx">ino</span> {<span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span> {<span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span>}<span class="p">&lt;</span><span class="nx">ESC</span><span class="p">&gt;</span><span class="nx">O</span><span class="err">
 </span><span class="err"></span><span class="nx">map</span> <span class="p">&lt;</span><span class="nx">F7</span><span class="p">&gt;</span> :<span class="nx">w</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span>:<span class="p">!</span><span class="nx">g</span><span class="p">++</span> <span class="s2">&#34;%&#34;</span> <span class="p">-</span><span class="nx">o</span> <span class="nx">run</span> <span class="p">-</span><span class="nx">DOWO</span> <span class="p">-</span><span class="nx">fsanitize</span><span class="p">=</span><span class="nx">undefined</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
 </span><span class="err"></span><span class="nx">map</span> <span class="p">&lt;</span><span class="nx">F8</span><span class="p">&gt;</span> :<span class="p">!</span><span class="nx">cat</span> <span class="nx">in</span>.<span class="nx">in</span> &amp;&amp; <span class="nx">echo</span> <span class="p">------------</span> &amp;&amp; ./<span class="nx">run</span> <span class="p">&lt;</span> <span class="nx">in</span>.<span class="nx">in</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
+</span><span class="err"></span><span class="nx">map</span> <span class="p">&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">p</span><span class="p">&gt;</span> <span class="nx">I</span><span class="sr">//</span><span class="p">&lt;</span><span class="nx">ESC</span><span class="p">&gt;</span><span class="err">
 </span></code></pre></td></tr></table>
 </div>
 </div><p>想知道這些簡寫是啥，可以參考<a href="https://vimhelp.org/options.txt.html">這裡</a>。
@@ -191,7 +186,6 @@
 </span><span class="lnt">25
 </span><span class="lnt">26
 </span><span class="lnt">27
-</span><span class="lnt">28
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="c1">// Knapsack DP is harder than FFT.
@@ -202,10 +196,8 @@
 </span><span class="cp">#define pb emplace_back
 </span><span class="cp">#define ff first
 </span><span class="cp">#define ss second
-</span><span class="cp"></span><span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">I</span><span class="o">&gt;</span> <span class="kt">bool</span> <span class="n">chmax</span><span class="p">(</span><span class="n">I</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="n">I</span> <span class="n">b</span><span class="p">){</span> <span class="k">return</span> <span class="n">a</span><span class="o">&lt;</span><span class="n">b</span> <span class="o">?</span> <span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="n">b</span><span class="p">,</span> <span class="nb">true</span><span class="p">)</span> <span class="o">:</span> <span class="nb">false</span><span class="p">;</span> <span class="p">}</span>
-<span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">I</span><span class="o">&gt;</span> <span class="kt">bool</span> <span class="n">chmin</span><span class="p">(</span><span class="n">I</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="n">I</span> <span class="n">b</span><span class="p">){</span> <span class="k">return</span> <span class="n">a</span><span class="o">&gt;</span><span class="n">b</span> <span class="o">?</span> <span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="n">b</span><span class="p">,</span> <span class="nb">true</span><span class="p">)</span> <span class="o">:</span> <span class="nb">false</span><span class="p">;</span> <span class="p">}</span>
-<span class="cp">#ifdef OWO
-</span><span class="cp">#define debug(args...) LKJ(&#34;\033[1;32m[ &#34; + string(#args) + &#34; ]\033[0m&#34;, args)
+</span><span class="cp">#ifdef OWO
+</span><span class="cp">#define debug(args...) LKJ(&#34;\033[1;32m[ &#34; #args &#34; ]\033[0m&#34;, args)
 </span><span class="cp"></span><span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">I</span><span class="o">&gt;</span> <span class="kt">void</span> <span class="n">LKJ</span><span class="p">(</span><span class="n">I</span><span class="o">&amp;&amp;</span><span class="n">x</span><span class="p">){</span> <span class="n">cerr</span> <span class="o">&lt;&lt;</span> <span class="n">x</span> <span class="o">&lt;&lt;</span> <span class="sc">&#39;\n&#39;</span><span class="p">;</span> <span class="p">}</span>
 <span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">I</span><span class="p">,</span> <span class="k">class</span><span class="err">...</span><span class="nc">T</span><span class="o">&gt;</span> <span class="kt">void</span> <span class="n">LKJ</span><span class="p">(</span><span class="n">I</span><span class="o">&amp;&amp;</span><span class="n">x</span><span class="p">,</span> <span class="n">T</span><span class="o">&amp;&amp;</span><span class="p">...</span><span class="n">t</span><span class="p">){</span> <span class="n">cerr</span> <span class="o">&lt;&lt;</span> <span class="n">x</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;, &#34;</span><span class="p">,</span> <span class="n">LKJ</span><span class="p">(</span><span class="n">t</span><span class="p">...);</span> <span class="p">}</span>
 <span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">I</span><span class="o">&gt;</span> <span class="kt">void</span> <span class="n">OI</span><span class="p">(</span><span class="n">I</span> <span class="n">a</span><span class="p">,</span> <span class="n">I</span> <span class="n">b</span><span class="p">){</span> <span class="k">while</span><span class="p">(</span><span class="n">a</span> <span class="o">&lt;</span> <span class="n">b</span><span class="p">)</span> <span class="n">cerr</span> <span class="o">&lt;&lt;</span> <span class="o">*</span><span class="n">a</span> <span class="o">&lt;&lt;</span> <span class="s">&#34; </span><span class="se">\n</span><span class="s">&#34;</span><span class="p">[</span><span class="n">next</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">==</span> <span class="n">b</span><span class="p">],</span> <span class="o">++</span><span class="n">a</span><span class="p">;</span> <span class="p">}</span>
@@ -215,7 +207,8 @@
 </span><span class="cp">#endif
 </span><span class="cp"></span>
 <span class="kt">signed</span> <span class="nf">main</span><span class="p">(){</span>
-	<span class="n">ios_base</span><span class="o">::</span><span class="n">sync_with_stdio</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="n">cout</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+	<span class="n">ios</span><span class="o">::</span><span class="n">sync_with_stdio</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+	<span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span> <span class="n">cout</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
 	<span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">;</span>
 	<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">a</span> <span class="o">&gt;&gt;</span> <span class="n">b</span><span class="p">;</span>
 	<span class="n">debug</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span>
@@ -224,8 +217,7 @@
 <span class="p">}</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>主要就 <code>#define</code> 一些常用的關鍵字，debug 函式（有顏色喔！），還有 <code>ZCK</code> 最愛的 <code>chmin &amp; chmax</code>。
-那個 <code>ch</code> 就是唸作「取」沒錯喔 XD</p>
+</div><p>主要就 <code>#define</code> 一些常用的關鍵字，debug 函式（有顏色喔！）</p>
 <h3 id="一些給自己的注意事項">一些給自己的注意事項</h3>
 <ul>
 <li>早睡早起，健康破台</li>
