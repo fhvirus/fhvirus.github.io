@@ -1,5 +1,5 @@
 ---
-title: "Sq1 Render"
+title: "SQ-1 Render"
 date: 2021-05-18T13:03:37+08:00
 description: "This is a string description."
 tags: 
