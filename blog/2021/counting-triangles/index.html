@@ -44,7 +44,7 @@
         <div class="row justify-content-center">
             <div class="col-auto">
                 <a href="https://fhvirus.github.io/">
-                    <h1 class="name">FHVirus&#39; 隨筆</h1>
+                    <h1 class="site-name">FHVirus&#39; 隨筆</h1>
                 </a>
             </div>
         </div>
@@ -96,8 +96,8 @@
 <div class="content">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-sm-12 col-lg-8">
-                <h1 class="mx-0 mx-md-4 blog-post-title">Counting Triangles</h1>
+            <div class="col-11 col-lg-8">
+                <h1 class="mx-0 blog-post-title">Counting Triangles</h1>
 
                 <div class="mb-md-4 meta">
                     
@@ -453,7 +453,7 @@ Hand Shaking Lemma 真好用。<br>
     visible: 'hover',
     icon: '#'
   };
-  anchors.add('h1, h2, h3');
+  anchors.add('.content h1, .content h2, .content h3');
 </script>
 
 <section id="comments">
@@ -472,27 +472,24 @@ Hand Shaking Lemma 真好用。<br>
     </div>
 </section>
 <footer></footer>
-
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css" integrity="sha384-dbVIfZGuN1Yq7/1Ocstc1lUEm+AT+/rCkibIcC/OmWo5f0EA48Vf8CytHzGrSwbQ" crossorigin="anonymous">
-
-<script src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js" integrity="sha384-2BKqo+exmr9su6dir+qCw08N2ZKRucY4PrGQPPWU1A7FtlCGjmEGFqXCv5nyM5Ij" crossorigin="anonymous"></script>
-
-
-<script src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"></script>
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.css" integrity="sha384-ZPe7yZ91iWxYumsBEOn7ieg8q/o+qh/hQpSaPow8T6BwALcXSCS6C6fSRPIAnTQs" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.js" integrity="sha384-ljao5I1l+8KYFXG7LNEA7DyaFvuvSCmedUf6Y6JI7LJqiu8q5dEivP2nDdFH31V4" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
 <script>
-renderMathInElement(
-	document.body,
-	{
-		delimiters: [
-			{left: "$$", right: "$$", display: true},
-			{left: "\\[", right: "\\]", display: true},
-			{left: "$", right: "$", display: false},
-			{left: "\\(", right: "\\)", display: false}
-		]
-	}
-);
+	document.addEventListener("DOMContentLoaded", function() {
+			renderMathInElement(document.body, {
+					
+					
+					delimiters: [
+							{left: '$$', right: '$$', display: true},
+							{left: '$', right: '$', display: false},
+							{left: '\\(', right: '\\)', display: false},
+							{left: '\\[', right: '\\]', display: true}
+						],
+					
+					throwOnError : false
+				});
+		});
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script>

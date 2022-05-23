@@ -44,7 +44,7 @@
         <div class="row justify-content-center">
             <div class="col-auto">
                 <a href="https://fhvirus.github.io/">
-                    <h1 class="name">FHVirus&#39; 隨筆</h1>
+                    <h1 class="site-name">FHVirus&#39; 隨筆</h1>
                 </a>
             </div>
         </div>
@@ -96,8 +96,8 @@
 <div class="content">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-sm-12 col-lg-8">
-                <h1 class="mx-0 mx-md-4 blog-post-title">2022 臺大電資二階數學筆試簡易詳解</h1>
+            <div class="col-11 col-lg-8">
+                <h1 class="mx-0 blog-post-title">2022 臺大電資二階數學筆試簡易詳解</h1>
 
                 <div class="mb-md-4 meta">
                     
@@ -198,7 +198,7 @@ $y = f(x)$ , $y = c$ , $x = 0$ 三者所圍面積為 $B$，當 $A = B$ 時， $c
 <hr>
 <h2 id="詳解">詳解</h2>
 <h3 id="1-1">1</h3>
-<p>令 $P(n)$ 為 $(正面次數 - 反面次數) = n$ 時，最後在正面比反面多三次結束的機率。答案為 $\frac{\frac{1}{2} P(-1)}{P(0)}$ 。</p>
+<p>令 $P(n)$ 為 $($ 正面次數 $-$ 反面次數 $) = n$ 時，最後在正面比反面多三次結束的機率。答案為 $\frac{\frac{1}{2} P(-1)}{P(0)}$ 。</p>
 <p>顯然 $P(-3) = 0, P(3) = 1$ ，而 $|n| &gt; 3$ 不需要考慮。可以列出遞迴式</p>
 <p>$$P(x) = \frac{1}{2} P(x-1) + \frac{1}{2} P(x + 1)$$</p>
 <p>此後有兩種觀點：</p>
@@ -279,7 +279,7 @@ $$</p>
 <h3 id="11-1">11</h3>
 <p>$x, y, z$ 分開算，討論兩個狀況。 $x$ 顯然是 $0$ ， $y, z$ 就展開代 $\frac{-b}{2a}$ 。</p>
 <h3 id="12-1">12</h3>
-<p>可以證明此圓不會通過格子點，令圓上一點 $P(x, y), -n &lt; x, y &lt; n$ 。假設從左端出發經上半圓至右端，過程中必經過 $x = 1-n \sim x = n-1$ 共 $2n - 1$ 條垂直的格線，上下左右半圓加總共 $8n - 4$ 。而每經過一條格線就會進入一個新的格子，故格子數也是 $(8n - 4)$ 。</p>
+<p>可以證明此圓不會通過格子點，令圓上一點 $P(x, y), -n &lt; x, y &lt; n$ 。假設從左端出發經上半圓至右端，過程中必經過 $x = 1-n \sim x = n-1$ 共 $2n - 1$ 條垂直的格線，上下左右半圓加總共 $8n - 4$ 。而每經過一條格線就會進入一個新的格子，故格子數也是 $8n - 4$ 。</p>
 <p>感謝超強的 <code>8e7</code> 支援這題解答。</p>
 <h3 id="13-1">13</h3>
 <p>令答案 $a, b, c, 1 \le a &lt; b &lt; c \le 30$</p>
@@ -459,7 +459,7 @@ $$</p>
     visible: 'hover',
     icon: '#'
   };
-  anchors.add('h1, h2, h3');
+  anchors.add('.content h1, .content h2, .content h3');
 </script>
 
 <section id="comments">
@@ -478,27 +478,24 @@ $$</p>
     </div>
 </section>
 <footer></footer>
-
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css" integrity="sha384-dbVIfZGuN1Yq7/1Ocstc1lUEm+AT+/rCkibIcC/OmWo5f0EA48Vf8CytHzGrSwbQ" crossorigin="anonymous">
-
-<script src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js" integrity="sha384-2BKqo+exmr9su6dir+qCw08N2ZKRucY4PrGQPPWU1A7FtlCGjmEGFqXCv5nyM5Ij" crossorigin="anonymous"></script>
-
-
-<script src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"></script>
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.css" integrity="sha384-ZPe7yZ91iWxYumsBEOn7ieg8q/o+qh/hQpSaPow8T6BwALcXSCS6C6fSRPIAnTQs" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.js" integrity="sha384-ljao5I1l+8KYFXG7LNEA7DyaFvuvSCmedUf6Y6JI7LJqiu8q5dEivP2nDdFH31V4" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
 <script>
-renderMathInElement(
-	document.body,
-	{
-		delimiters: [
-			{left: "$$", right: "$$", display: true},
-			{left: "\\[", right: "\\]", display: true},
-			{left: "$", right: "$", display: false},
-			{left: "\\(", right: "\\)", display: false}
-		]
-	}
-);
+	document.addEventListener("DOMContentLoaded", function() {
+			renderMathInElement(document.body, {
+					
+					
+					delimiters: [
+							{left: '$$', right: '$$', display: true},
+							{left: '$', right: '$', display: false},
+							{left: '\\(', right: '\\)', display: false},
+							{left: '\\[', right: '\\]', display: true}
+						],
+					
+					throwOnError : false
+				});
+		});
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script>

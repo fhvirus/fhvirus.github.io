@@ -1,7 +1,7 @@
 /* Global styles */
 
 body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	font-family: "Noto Sans",  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 	font-feature-settings: "liga", "kern";
 	background-color: #fff;
 }
@@ -68,9 +68,9 @@ hr {
 	text-decoration: underline;
 }
 
-.header h1.name {
+.header h1.site-name {
 	font-weight: 600;
-	font-size: 2.1875rem;
+	font-size: 2rem;
 	color: #333333;
 }
 
@@ -79,7 +79,7 @@ hr {
 }
 
 .header ul.nav {
-	margin-bottom: 5rem;
+	margin-bottom: 1rem;
 }
 
 /* Partial: Content */
@@ -116,24 +116,26 @@ hr {
 
 .content .markdown {
 	font-weight: 400;
-	font-size: 1.125rem;
+	font-size: 1rem;
 	color: #333333;
 	line-height: 1.75rem;
 }
 
 .content .markdown li {
-	margin-top: 1rem;
-	margin-bottom: 1rem;
+	margin-top: 0rem;
+	margin-bottom: .8rem;
 }
 
 .content twitterwidget {
 	margin: auto;
 }
 
-.content .meta, .content .markdown h1, .content .markdown h2, .content .markdown h3, .content .markdown h4, .content .markdown h5, .content .markdown h6, .content .markdown p, .content .markdown ul, .content .markdown ol, .content .markdown dl, .content .markdown blockquote, div.alert, form, table, .gist-file {
+/*
+.content .meta, .content .markdown h1, .content .markdown h2, .content .markdown h3, .content .markdown h4, .content .markdown h5, .content .markdown h6, .content .markdown p, .content .markdown ul, .content .markdown ol, .content .markdown dl, .content .markdown blockquote, div.alert, form, table, .gist-file, .content details{
 	margin-left: 1.5rem;
 	margin-right: 1.5rem;
 }
+*/
 
 /* blog post typography */
 
@@ -143,7 +145,7 @@ hr {
 }
 
 .content .blog-post-content {
-	font-size: 1.0625rem;
+	font-size: 1rem;
 	line-height: 2rem;
 }
 
@@ -160,12 +162,12 @@ hr {
 /* CSS for code highlighting.  */
 /* Modified for using pygments/chroma instead of higlightjs */
 .content .markdown code, .content .markdown pre {
-	font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+	font-family: "Ubuntu Mono", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 .highlight{
 	overflow-x: auto;
-	margin: 1rem 1.5rem;
+	margin: 1rem 0rem;
 	border-radius: 4px;
 	/* background: #282923; */
 	/* background: #3e3d32; */
@@ -190,9 +192,11 @@ hr {
 	white-space: pre;
 	word-break: break-all;
 	word-wrap: break-word;
+	/*
 	margin-left: 1.5rem;
 	margin-right: 1.5rem;
-	border-radius: 6px;
+	*/
+	border: 0;
 	font-size: 1rem;
 }
 
@@ -206,11 +210,14 @@ hr {
 	border: none !important;
 	max-width: 100%;
 }
+.content .chroma table tr{
+	border: none !important;
+}
 .content .chroma table pre{
 	margin: 0;
 	display: block;
-	padding-top: 1rem;
-	padding-bottom: 1rem;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
 	line-height: 24px;
 	white-space: pre;
 	word-break: break-all;
@@ -243,6 +250,11 @@ hr {
 	border-left: 0.25rem solid #e5e5e5;
 }
 
+.content .markdown blockquote p {
+	margin-left: 1rem;
+	margin-right: 1rem;
+}
+
 .content .markdown blockquote p:last-child {
 	margin-bottom: 0;
 }
@@ -261,12 +273,12 @@ hr {
 }
 
 .content .meta-title {
-	font-size: 1.5625rem;
+	font-size: 1.5rem;
 	margin-bottom: 0.5rem;
 }
 
 .content .meta-title {
-	font-size: 1.5625rem;
+	font-size: 1.5rem;
 	font-weight: 600;
 }
 
@@ -327,9 +339,5 @@ hr {
 @media (max-width: 767.98px) {
 	html {
 		font-size: 0.9rem;
-	}
-	.content .meta, .content .markdown h1, .content .markdown h2, .content .markdown h3, .content .markdown h4, .content .markdown h5, .content .markdown h6, .content .markdown p, .content .markdown ul, .content .markdown ol, .content .markdown dl, .content .markdown blockquote, div.alert, form, table, .gist-file {
-		margin-left: 0;
-		margin-right: 0;
 	}
 }

@@ -6,7 +6,7 @@ pre.chroma {
 
 /* Background */ .chroma { color: #F8F8F1; background-color: #272822; padding: 0; }
 /* Other */ .chroma .x {  }
-/* Error */ .chroma .err { color: #F8F8F1; background-color: #F92472 }
+/* Error */ .chroma .err { color: #F8F8F1; /* background-color: #F92472 */ }
 /* LineTableTD */ .chroma .lntd { vertical-align: top; padding: 0; margin: 0; border: 0; }
 /* LineTable */ .chroma .lntable { border-spacing: 0; padding: 0; margin: 0; border: 0; width: auto; overflow: auto; display: block; }
 /* LineHighlight */ .chroma .hl { display: block; width: 100%;background-color: #ffffcc }
