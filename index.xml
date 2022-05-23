@@ -8,6 +8,15 @@
     <language>zh-TW</language>
     <lastBuildDate>Sun, 31 Jan 2021 21:56:05 +0800</lastBuildDate><atom:link href="https://fhvirus.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>2022 臺大電資二階數學筆試簡易詳解</title>
+      <link>https://fhvirus.github.io/blog/2022/ntucsie-math/</link>
+      <pubDate>Mon, 23 May 2022 11:39:47 +0800</pubDate>
+      
+      <guid>https://fhvirus.github.io/blog/2022/ntucsie-math/</guid>
+      <description>&lt;p&gt;感謝同學們把題目背出來。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>.vimrc</title>
       <link>https://fhvirus.github.io/blog/2022/vimrc/</link>
       <pubDate>Sun, 15 May 2022 17:08:49 +0800</pubDate>
@@ -93,11 +102,11 @@
     </item>
     
     <item>
-      <title>Sq1 Render</title>
-      <link>https://fhvirus.github.io/blog/2021/sq1-render/</link>
+      <title>SQ-1 Render</title>
+      <link>https://fhvirus.github.io/blog/2021/sq-1-render/</link>
       <pubDate>Tue, 18 May 2021 13:03:37 +0800</pubDate>
       
-      <guid>https://fhvirus.github.io/blog/2021/sq1-render/</guid>
+      <guid>https://fhvirus.github.io/blog/2021/sq-1-render/</guid>
       <description>測試一下可不可以放。</description>
     </item>
     
@@ -129,15 +138,6 @@
     </item>
     
     <item>
-      <title>Todo</title>
-      <link>https://fhvirus.github.io/blog/2021/todo/</link>
-      <pubDate>Tue, 02 Feb 2021 12:22:52 +0800</pubDate>
-      
-      <guid>https://fhvirus.github.io/blog/2021/todo/</guid>
-      <description>&lt;p&gt;來放一下這個 Hugo Theme 的工作進度好了。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
       <title>關於這個網站以及FHVirus</title>
       <link>https://fhvirus.github.io/about/</link>
       <pubDate>Mon, 01 Feb 2021 21:32:39 +0800</pubDate>
@@ -147,40 +147,12 @@
     </item>
     
     <item>
-      <title>Lorem Ipsum Jizz</title>
-      <link>https://fhvirus.github.io/blog/7122/lorem-ipsum/</link>
-      <pubDate>Mon, 01 Feb 2021 20:35:51 +0800</pubDate>
-      
-      <guid>https://fhvirus.github.io/blog/7122/lorem-ipsum/</guid>
-      <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur&amp;hellip;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Firust Post</title>
-      <link>https://fhvirus.github.io/blog/2021/firust-post/</link>
-      <pubDate>Sun, 31 Jan 2021 21:26:55 +0800</pubDate>
-      
-      <guid>https://fhvirus.github.io/blog/2021/firust-post/</guid>
-      <description>&lt;p&gt;Markdown tests.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
       <title>FHVirus&#39; Testcase Generator</title>
       <link>https://fhvirus.github.io/blog/2020/testcase-gen/</link>
       <pubDate>Mon, 16 Nov 2020 19:44:44 +0800</pubDate>
       
       <guid>https://fhvirus.github.io/blog/2020/testcase-gen/</guid>
       <description>&lt;p&gt;剛好要出模競題就順便寫了一個生測資的東東，希望有用&amp;gt;&amp;lt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Template</title>
-      <link>https://fhvirus.github.io/blog/2020/template/</link>
-      <pubDate>Mon, 26 Oct 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://fhvirus.github.io/blog/2020/template/</guid>
-      <description>&lt;p&gt;到目前為止（&lt;code&gt;2020/10/26&lt;/code&gt;）都在用 &lt;code&gt;8e7&lt;/code&gt; 的模板，想說自己也來寫一份好了。
-會盡量用 STL、寫一份乾淨易懂的模板。&lt;/p&gt;</description>
     </item>
     
     <item>

@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="zh-TW"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title> 2022 臺大電資二階數學筆試簡易詳解 - FHVirus&#39; 隨筆 </title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="referrer" content="no-referrer">
+    <meta name="description" content="寫了不虧" />
+    <meta property="og:site_name" content="FHVirus&#39; 隨筆" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://fhvirus.github.io/blog/2022/ntucsie-math/" />
+    <meta property="og:title" content="2022 臺大電資二階數學筆試簡易詳解" />
+    <meta property="og:image" content="https://fhvirus.github.io/" />
+    <meta property="og:description" content="寫了不虧" />
+
+		
+		<meta name="google-site-verification" content=OmeoCl3L8243BxuGCzij-BbCwBW3_bcDuT4df39yOds />
+		
+
+    <link rel="canonical" href="https://fhvirus.github.io/blog/2022/ntucsie-math/">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="https://fhvirus.github.io/css/custom.css" rel="stylesheet" type="text/css"/>
+    <link href="https://fhvirus.github.io/css/syntax.css" rel="stylesheet" type="text/css"/>
+    <link href="https://fhvirus.github.io/css/anchor.css" rel="stylesheet" type="text/css"/>
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/progressively/1.2.5/progressively.min.css" integrity="sha512-TdJkMXwjtS9Gb8rN919K1JVdUv2+q5YHsKXPtJGDP79t1Nd5oCZy5mFA6Nr85Dsp6wJ1SUQgOyHPDulLzTjDcQ==" crossorigin="anonymous" />
+    
+
+    <link rel="shortcut icon"
+        href="https://fhvirus.github.io/images/favicon.png">
+
+    
+    <link href="https://fhvirus.github.io/index.xml" rel="alternate" type="application/rss+xml" title="FHVirus&#39; 隨筆" />
+    
+</head>
+<body>
+    
+<div class="mt-xl header">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-auto">
+                <a href="https://fhvirus.github.io/">
+                    <h1 class="name">FHVirus&#39; 隨筆</h1>
+                </a>
+            </div>
+        </div>
+
+        <div class="row">
+            <ul class="nav nav-primary justify-content-center">
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="/">
+                        
+                        Home
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="/about/">
+                        
+                        About
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/FHVirus">
+                        
+                        GitHub
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.instagram.com/fh.virus/">
+                        
+                        IG
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="/index.xml">
+                        
+                        RSS
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<div class="content">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-lg-8">
+                <h1 class="mx-0 mx-md-4 blog-post-title">2022 臺大電資二階數學筆試簡易詳解</h1>
+
+                <div class="mb-md-4 meta">
+                    
+                    
+                    <span class="author" title="FHVirus">
+                        FHVirus
+                    </span>
+                    
+                    
+
+                    <span class="date middot" title='Mon May 23 2022 11:39:47 CST'>
+                        2022-05-23
+                    </span>
+
+                    <div class="d-none d-md-inline tags">
+                        <ul class="list-unstyled d-inline">
+                            
+                            <li class="d-inline middot">
+                                <a href="/tags/%E9%9A%A8%E7%AD%86">隨筆</a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="markdown blog-post-content">
+                    
+    
+    <p>感謝同學們把題目背出來。</p>
+<h2 id="題目">題目</h2>
+<p>考試時間：$13:30 \sim 15:10$ 共 $100$ 分鐘。
+試卷共 $16$ 題，前 $12$ 題 $6$ 分，後 $4$ 題 $7$ 分。</p>
+<h3 id="1">1</h3>
+<p>投一枚公正的硬幣，當累計擲出正面與背面的次數相差為 $3$ 時結束。
+若已知一次試驗是以正面次數多於背面次數三次結束，則第一次是背面的機率為何?</p>
+<h3 id="2">2</h3>
+<p>一矩形區域如下圖，各邊長如圖所示，今從左上角走到右下角，但灰色區域只能水平或鉛直走（如下圖虛線），已知最短路徑長度為 $a + b \sqrt{c}$ ，其中 $\sqrt{c}$ 為最簡根式，求 $(a, b, c) = ?$</p>
+<p><img src="https://i.imgur.com/t2HQF3T.png" alt=""></p>
+<h3 id="3">3</h3>
+<p>有一數列 $S = 1, 2, 2, 3, 3, 3, 4, 4, 4, 4, &hellip;$，求第 $2022$ 項為何？</p>
+<h2 id="4">4</h2>
+<p>在座標空間中，有 $A(0, 0, 6)$ 、 $B(0, 0, 20)$ ，且點 $P(x, y, 0)$ 符合 $0 \le x, y \le 15, \angle APB \ge 30 ^ \circ$，已知 $P$ 的軌跡形成之面積為 $a + b \sqrt{c}$，其中 $\sqrt{c}$ 為最簡根式，求 $(a,b,c)$。</p>
+<h3 id="5">5</h3>
+<p>令 $S_n$ 為一等比數列前 $n$ 項之和，且 $S_8 = 10 S_4$ ，求此等比數列之公比。（共有三解，皆需列出）</p>
+<h3 id="6">6</h3>
+<p>$f(x, y) = x^2y + 4x^2 + xy + 11x + 1$
+$h(x, y) = 2x^5y + 10x^5 - x^4y - 5x^4 + 9x^3 + 2x^2y + 15x^2 + xy + 17x + 2$
+已知 $k$ 是整數常數，$h(x, k) = q(x) f(x, k)$ 且 $q(x)$ 為 $x$ 的整係數多項式，求 $k$ 之值。</p>
+<h3 id="7">7</h3>
+<p>一隨機變數輸出為 $0 \sim 10$，求變異數最大值。</p>
+<h3 id="8">8</h3>
+<p>$0 \le t \le \pi$，平面上有一點 $P(2 \cos (t - \frac{\pi}{6}), \cos (t + \frac{\pi}{3}))$。已知 $P$ 點到原點的距離最大值為 $M$ ，最小值為 $m$，求 $(M, m) = ?$</p>
+<h3 id="9">9</h3>
+<p>有一平面包含直線 $2x-8 = -2y+4 = z-4$ ，且此平面與 $(x-2)^2 + (y-2)^2 + (z-2)^2 = 2$ 相切，求此平面。</p>
+<h3 id="10">10</h3>
+<p>六個半徑為 $r$ 的圓，圓心共線，相切如下圖。直線 $\overline{AB}$ 為第一個圓及第六個圓的內公切線，交第五個圓於 $C$、$D$ 兩點。求 $\overline{CD}$。
+<img src="https://i.imgur.com/GkxKX5W.png" alt=""></p>
+<h3 id="11">11</h3>
+<p>$f(x, y, z) = x^2 + (y-2)^2 + (z+4)^2 + |x| + |y| + |z|$ ，求最小值發生在 $(x, y, z) = ?$</p>
+<h3 id="12">12</h3>
+<p>在座標平面上，當 $a, b$ 為整數時，定義 $P{(x,y)| x=a, b \le y\le b+1}$ 與 $P{(x,y)|a \le x \le a+1, y=b}$ 為格線，$P{(x,y)|a \le x \le a+1, b \le y \le b+1}$ 為格子，今有一以原點為圓心，直徑為 $2n-1$ 的圓，與 $h$ 條格線相交，與 $k$ 個格子相交，求 $(h, k) = ?$</p>
+<h3 id="13">13</h3>
+<p>從 $1$ 到 $30$（含 $1$ 及 $30$） 挑三個相異正整數。求有多少種組合使得三數和是 $30$ 的倍數。</p>
+<h3 id="14">14</h3>
+<p>在數線上行走，每次移動時有 $\frac{1}{3}$ 的機率往左走 $1$ 單位，$\frac{2}{3}$ 的機率往右走 $1$ 單位，走到 $0$ 或 $N$ 時結束，定義 $P_N(x)$ 為從 $x$ 開始行走時，最終走到 $N$ 的機率，定義 $P_N(0)=0$ ，$P_N(N)=1$ ，試求 $lim_{N\to \infty}P_N(2)$ 之值。</p>
+<h3 id="15">15</h3>
+<p>$f(x) = 2x-3x^3$ ，$c$為正實數，$y$ = $f(x)$與 $y = c$ 所圍面積為 $A$ ，
+$y = f(x)$ , $y = c$ , $x = 0$ 三者所圍面積為 $B$，當 $A = B$ 時， $c = ?$</p>
+<blockquote>
+<p>這題好像有點問題</p>
+</blockquote>
+<h3 id="16">16</h3>
+<p>$n$ 為整數，請問有多少個 $n$ 使得 $n^3-7n+9$ 為質數？</p>
+<hr>
+<p>以下為解答，墊個防雷可愛仙人掌。</p>
+<p><img src="a.jpeg" alt=""></p>
+<hr>
+<h2 id="解答">解答</h2>
+<p>我們自己算的，不保證是正解。</p>
+<ol>
+<li>$\frac{1}{3}$</li>
+<li>$(5, 3, 5)$</li>
+<li>$64$</li>
+<li>$(13 \pi, 75, 3)$</li>
+<li>$-1, \pm \sqrt 3$</li>
+<li>$-6$</li>
+<li>$25$</li>
+<li>$(2, 1)$</li>
+<li>$x+y=6$</li>
+<li>$\frac{8}{5}r$</li>
+<li>$(0, \frac{3}{2}, \frac{-7}{2})$</li>
+<li>$(8n-4, 8n-4)$</li>
+<li>$136$</li>
+<li>$\frac{3}{4}$</li>
+<li>題意不清</li>
+<li>$3$</li>
+</ol>
+<hr>
+<h2 id="詳解">詳解</h2>
+<h3 id="1-1">1</h3>
+<p>令 $P(n)$ 為 $(正面次數 - 反面次數) = n$ 時，最後在正面比反面多三次結束的機率。答案為 $\frac{\frac{1}{2} P(-1)}{P(0)}$ 。</p>
+<p>顯然 $P(-3) = 0, P(3) = 1$ ，而 $|n| &gt; 3$ 不需要考慮。可以列出遞迴式</p>
+<p>$$P(x) = \frac{1}{2} P(x-1) + \frac{1}{2} P(x + 1)$$</p>
+<p>此後有兩種觀點：</p>
+<ol>
+<li>在數線上做一些點 $p_k = P(k)$ ，遞迴式可看做取線段等分點，故 $P(-3) \sim P(3)$ 是在線段 $[0, 1]$ 上的一些等分點，故知 $P(k) = \frac{k - (-3)}{6}$。</li>
+<li>整理得 $P(x) - P(x-1) = P(x + 1) - P(x)$ 令 $ = d$ ，加總得 $6d = 1, d = \frac{1}{6}, P(k) = P(-3) + (k+3) d = \frac{k+3}{6}$</li>
+</ol>
+<p>故答案為 $\frac{1}{3}$ 。</p>
+<h3 id="2-1">2</h3>
+<p>可以知道在灰色區域走越多越虧，而且至少要走 $5$ ，接著忽略灰色區域得到一個 $3 \times 6$ 的矩形，知走對角線最短距離為 $3 \sqrt 5$ ，故答案為 $5 + 3 \sqrt 5$ 。我不會證。</p>
+<h3 id="3-1">3</h3>
+<p>求 $x$ 使得 $(x-1) x &lt; 2022 \le x (x + 1)$ ，得 $x = 64$。</p>
+<h3 id="4-1">4</h3>
+<p><img src="b.png" alt=""></p>
+<p>設 $\overline {OP} = x$ ，可得：</p>
+<p>$$
+\begin{aligned}
+&amp; \cos \angle APB
+= \frac{\overline {AP} ^ 2 + \overline {BP} ^ 2 - \overline {AB} ^ 2}{2 \cdot \overline {AP} \cdot \overline {BP}} \\
+= &amp; \frac{(x^2 + 36) + (x^2 + 400) - 196}{2 \sqrt{(x^2 + 36)(x^2 + 400)}} \le \frac{\sqrt 3}{2} \\
+\Rightarrow &amp; (2x^2 + 240) ^ 2 = 3x^4 + 1308x^2 + 400 \cdot 108\\
+\Rightarrow &amp; x^4 - 348x^2 + 14400 = 0 \\
+\Rightarrow &amp; (x^2 - 48)(x^2 - 300) = 0 \\
+\Rightarrow &amp; x = 4 \sqrt 3 \cup 10 \sqrt 3
+\end{aligned}
+$$</p>
+<p>以半徑為 $4 \sqrt 3$ 及 $10 \sqrt 3$ 在 $15 \times 15$ 的方形上畫扇型取面積，會發現某個角度成 $30 ^ \circ$ ，最後算出來是 $225 - 12 \pi - (225 - 75 \ sqrt 3 - 25 \pi) = 13 \pi + 75 \sqrt 3$ 。</p>
+<h3 id="5-1">5</h3>
+<p>先驗公比為 $1$ 時不成立，得</p>
+<p>$$
+\begin{aligned}
+&amp; \frac{a(1 - r ^ 8)}{1 - r} = 10 \frac{a(1 - r ^ 4)}{1 - r} \\
+\Rightarrow &amp; r ^ 8 - 10 r ^ 4 + 9 = 0 \\
+\Rightarrow &amp; (r ^ 4 - 9)(r ^ 4 - 1) = 0 \\
+\Rightarrow &amp; r = \pm \sqrt(3), \pm 1
+\end{aligned}
+$$</p>
+<p>記得把 $1$ 去掉。這題的問題在題目沒有說公比可不可以是複數，如果可以的話會再多 $\pm \sqrt 3 i, \pm i$ 四組解。</p>
+<h3 id="6-1">6</h3>
+<ol>
+<li>
+<p>先集項，看首項係數要有因倍數關係。特別注意 $k = 4$ 時不是答案。
+$$
+\begin{aligned}
+f(x, k) = &amp; (4 + k) x^2 + (11 + k) x + 1 \\
+h(x, k) = &amp; (10 + 2k) x^5 + (-5 - k) x^4 + 9x^3 + (15 + 2k) x^2 + (17 + k) x + 2 \\
+\Rightarrow &amp; \frac{10 + 2k}{4 + k} \in \mathbb{Z} \\
+\Rightarrow &amp; \frac{2}{4 + k} \in \mathbb{Z} \\
+\Rightarrow &amp; k = -2, -3, -5, -6
+\end{aligned}
+$$</p>
+</li>
+<li>
+<p>$h(1, k)$ 是 $f(1, k)$ 的倍數。
+$$
+\begin{aligned}
+f(1, k) = &amp; 16 + 2k \\
+h(1, k) = &amp; 48 + 4k \\
+\Rightarrow &amp; \frac{48 + 4k}{16 + 2k} \in \mathbb{Z} \\
+\Rightarrow &amp; \frac{8}{8 + k} \in \mathbb{Z} \\
+\Rightarrow &amp; k = -4, -6, -7, \cdots
+\end{aligned}
+$$</p>
+</li>
+<li>
+<p>取聯集，$k = -6$ 。</p>
+</li>
+</ol>
+<h3 id="7-1">7</h3>
+<p>$0, 10$ 各有一半的機率被輸出，變異數 = $25$。</p>
+<p>變異數的定義請參照 <a href="https://zh.wikipedia.org/zh-tw/%E6%96%B9%E5%B7%AE">這裡</a> 。</p>
+<h3 id="8-1">8</h3>
+<p>換成 $\frac{- \pi}{6} \le t \le \frac{5 \pi}{6}, P(2 \cos t, sin(t))$ 。距離展開之後就很單純只是找極值而已。</p>
+<h3 id="9-1">9</h3>
+<p>梗是那條線切那顆球，求出切點後就知道平面法向量，帶回去就知道平面方程式了。</p>
+<h3 id="10-1">10</h3>
+<p><img src="c.png" alt=""></p>
+<h3 id="11-1">11</h3>
+<p>$x, y, z$ 分開算，討論兩個狀況。 $x$ 顯然是 $0$ ， $y, z$ 就展開代 $\frac{-b}{2a}$ 。</p>
+<h3 id="12-1">12</h3>
+<p>可以證明此圓不會通過格子點，令圓上一點 $P(x, y), -n &lt; x, y &lt; n$ 。假設從左端出發經上半圓至右端，過程中必經過 $x = 1-n \sim x = n-1$ 共 $2n - 1$ 條垂直的格線，上下左右半圓加總共 $8n - 4$ 。而每經過一條格線就會進入一個新的格子，故格子數也是 $(8n - 4)$ 。</p>
+<p>感謝超強的 <code>8e7</code> 支援這題解答。</p>
+<h3 id="13-1">13</h3>
+<p>令答案 $a, b, c, 1 \le a &lt; b &lt; c \le 30$</p>
+<table>
+<thead>
+<tr>
+<th>$a$</th>
+<th>$\min b$</th>
+<th>$\max b$</th>
+<th>$\#$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$1$</td>
+<td>$b = 2, c = 27$</td>
+<td>$b = 14, c = 15$</td>
+<td>$13$</td>
+</tr>
+<tr>
+<td>$2$</td>
+<td>$b = 3, c = 25$</td>
+<td>$b = 13, c = 15$</td>
+<td>$11$</td>
+</tr>
+<tr>
+<td>$3$</td>
+<td>$b = 4, c = 23$</td>
+<td>$b = 13, c = 14$</td>
+<td>$10$</td>
+</tr>
+<tr>
+<td>$\vdots$</td>
+<td>$\vdots$</td>
+<td>$\vdots$</td>
+<td>$\vdots$</td>
+</tr>
+<tr>
+<td>$9$</td>
+<td>$b = 10, c = 11$</td>
+<td>$b = 10, c = 11$</td>
+<td>$1$</td>
+</tr>
+</tbody>
+</table>
+<p>規律：$n, n-2, (n-2) - 1, \cdots \Rightarrow 13 + 11 + 10 + 8 + 7 + 5 + 4 + 2 + 1 = 61$</p>
+<table>
+<thead>
+<tr>
+<th>$a$</th>
+<th>$\min b$</th>
+<th>$\max b$</th>
+<th>$\#$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$1$</td>
+<td>$b = 29, c = 30$</td>
+<td>$b = 29, c = 30$</td>
+<td>$1$</td>
+</tr>
+<tr>
+<td>$2$</td>
+<td>$b = 28, c = 30$</td>
+<td>$b = 28, c = 30$</td>
+<td>$1$</td>
+</tr>
+<tr>
+<td>$3$</td>
+<td>$b = 27, c = 30$</td>
+<td>$b = 28, c = 29$</td>
+<td>$2$</td>
+</tr>
+<tr>
+<td>$\vdots$</td>
+<td>$\vdots$</td>
+<td>$\vdots$</td>
+<td>$\vdots$</td>
+</tr>
+<tr>
+<td>$14$</td>
+<td>$b = 16, c = 30$</td>
+<td>$b = 22, c = 24$</td>
+<td>$7$</td>
+</tr>
+</tbody>
+</table>
+<p>規律：$1, 1, 2, 2, 3, 3, \cdots \Rightarrow (1 + 7) \cdot 7 = 56$</p>
+<table>
+<thead>
+<tr>
+<th>$a$</th>
+<th>$\min b$</th>
+<th>$\max b$</th>
+<th>$\#$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$15$</td>
+<td>$b = 16, c = 29$</td>
+<td>$b = 22, c = 23$</td>
+<td>$7$</td>
+</tr>
+<tr>
+<td>$16$</td>
+<td>$b = 17, c = 27$</td>
+<td>$b = 21, c = 23$</td>
+<td>$5$</td>
+</tr>
+<tr>
+<td>$\vdots$</td>
+<td>$\vdots$</td>
+<td>$\vdots$</td>
+<td>$\vdots$</td>
+</tr>
+<tr>
+<td>$19$</td>
+<td>$b = 20, c = 21$</td>
+<td>$b = 20, c = 21$</td>
+<td>$1$</td>
+</tr>
+</tbody>
+</table>
+<p>規律：$n, n-2, (n-2) - 1, \cdots \Rightarrow 7 + 5 + 4 + 2 + 1 = 19$</p>
+<p>$61 + 56 + 19 = 136$</p>
+<h3 id="14-1">14</h3>
+<p>和第一題差不多的技巧。</p>
+<p>$$
+\begin{aligned}
+&amp; P(x) = \frac{1}{3} P(x - 1) + \frac{2}{3} P(x + 1) \\
+\Rightarrow &amp; P(x) - P(x - 1) = 2 ( P(x + 1) - P(x) ) \\
+\Rightarrow &amp; P(1) - P(0) = d, P(k) - P(k - 1) = d \cdot 2 ^ {1 - k} \\
+\Rightarrow &amp; \lim _ {N \rightarrow \infty} \sum _ {k = 1} ^ {N} d \cdot 2 ^ {1 - k} = 1 \\
+\Rightarrow &amp; d = \frac{1}{2}, P(2) = \frac{1}{2} + \frac{1}{4} = \frac{3}{4}
+\end{aligned}
+$$</p>
+<h3 id="15-1">15</h3>
+<p>問題在圍成面積不只有第一象限的，但那就會變成求極值，不懂這樣考意義在哪。下面提供只求第一象限的作法。</p>
+<p><img src="d.png" alt=""></p>
+<p>令較右邊的交點為 $(k, c)$。</p>
+<p>$$
+\begin{cases}
+2k - 3k^3 = c \\
+\int _ {0} ^ {k} (2x - 3x^3 - c) dx = 0
+\end{cases}
+\Rightarrow k^2 - \frac{3}{4} k^4 - ck = 0
+$$</p>
+<p>把第一式代入第二式的 $c$ ：</p>
+<p>$$
+\begin{aligned}
+&amp; k^2 - \frac{3}{4} k^4 - (2k - 3k^3) k = 0\\
+\Rightarrow &amp; \frac{9}{4}k^4 - k^2 = 0\\
+\Rightarrow &amp; k^2 (3k + 2) (3k - 2) = 0\\
+\Rightarrow &amp; k = \frac{2}{3}, c = \frac{4}{9}
+\end{aligned}
+$$</p>
+<h3 id="16-1">16</h3>
+<p>令 $f(n) = n^3 - 7n + 9, f(n + 1) - f(n) = 3n^2 + 3n - 6, f(0) = 9$ ，故 $f(n)$ 皆為 $3$ 的倍數，所以只要求 $f(n) = 3$ 有幾組解。答案是 $-3, 1, 2$ 三組。</p>
+<hr>
+<p>如果上面有錯請留言告知 &gt;&lt;</p>
+
+
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+<script>
+  anchors.options = {
+    placement: 'left',
+    visible: 'hover',
+    icon: '#'
+  };
+  anchors.add('h1, h2, h3');
+</script>
+
+<section id="comments">
+    <div class="py-3 content">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-sm-12 col-lg-8">
+                    <div class="comments">
+                        <script src="https://utteranc.es/client.js" repo="fhvirus/fhvirus.github.io"
+                            issue-term="pathname" label="comment" theme="github-light" crossorigin="anonymous" async>
+                            </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer></footer>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css" integrity="sha384-dbVIfZGuN1Yq7/1Ocstc1lUEm+AT+/rCkibIcC/OmWo5f0EA48Vf8CytHzGrSwbQ" crossorigin="anonymous">
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js" integrity="sha384-2BKqo+exmr9su6dir+qCw08N2ZKRucY4PrGQPPWU1A7FtlCGjmEGFqXCv5nyM5Ij" crossorigin="anonymous"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"></script>
+
+<script>
+renderMathInElement(
+	document.body,
+	{
+		delimiters: [
+			{left: "$$", right: "$$", display: true},
+			{left: "\\[", right: "\\]", display: true},
+			{left: "$", right: "$", display: false},
+			{left: "\\(", right: "\\)", display: false}
+		]
+	}
+);
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script>
+
+
+
+    
+        <script src="https://cdn.jsdelivr.net/npm/progressively/dist/progressively.min.js"></script>
+        <script>
+            window.addEventListener('load', function() {
+                progressively.init({delay: 30, throttle: 50});
+            }, true);
+        </script>
+    
+</body>
+
+</html>

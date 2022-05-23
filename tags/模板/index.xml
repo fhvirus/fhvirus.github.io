@@ -45,16 +45,6 @@
     </item>
     
     <item>
-      <title>Template</title>
-      <link>https://fhvirus.github.io/blog/2020/template/</link>
-      <pubDate>Mon, 26 Oct 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://fhvirus.github.io/blog/2020/template/</guid>
-      <description>&lt;p&gt;到目前為止（&lt;code&gt;2020/10/26&lt;/code&gt;）都在用 &lt;code&gt;8e7&lt;/code&gt; 的模板，想說自己也來寫一份好了。
-會盡量用 STL、寫一份乾淨易懂的模板。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
       <title>FHVirus IO</title>
       <link>https://fhvirus.github.io/blog/2020/fhvirus-io/</link>
       <pubDate>Sun, 18 Oct 2020 00:00:00 +0000</pubDate>
