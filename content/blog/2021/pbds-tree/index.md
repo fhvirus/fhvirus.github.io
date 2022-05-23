@@ -2,8 +2,6 @@
 title: "pb_ds tree"
 date: 2021-02-07T17:58:21+08:00
 description: "一篇關於平板電視樹的教學"
-images:
-  - cover.jpg
 tags: 
   - 隨筆
   - 模板

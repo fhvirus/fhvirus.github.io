@@ -4,8 +4,6 @@ date: 2021-02-06T22:16:44+08:00
 description: "FHVirus 的 .vimrc 跟模板"
 tags: 
   - 模板
-images:
-  - cover.jpg
 katex: false
 draft: true
 ---
