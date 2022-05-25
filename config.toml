@@ -20,10 +20,10 @@ ignoreFiles = []
   priority = 0.5
 
 [params]
-  progressively = true
   commentsrepo = "fhvirus/fhvirus.github.io"
   faviconfile = "images/favicon.png"
 	searchconsoleid = "OmeoCl3L8243BxuGCzij-BbCwBW3_bcDuT4df39yOds"
+	post_navigation = false
 
 [markup]
   # defaultMarkdownHandler = "blackfriday"

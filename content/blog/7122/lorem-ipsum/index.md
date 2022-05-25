@@ -13,6 +13,8 @@ Lorem ipsum dolor sit amet, consectetur...
 
 <!--more-->
 
+![](a.jpeg)
+
 {{< spoiler text="我會暴雷" >}}
 我是暴雷。
 {{< /spoiler >}}
