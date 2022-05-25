@@ -1,132 +1,147 @@
 <!DOCTYPE html>
 <html lang="zh-TW"><head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title> IOI 2012 Day 2 Virtual 心得 - FHVirus&#39; 隨筆 </title>
-    <meta name="HandheldFriendly" content="True">
-    <meta name="MobileOptimized" content="320">
-    <meta name="referrer" content="no-referrer">
-    <meta name="description" content="FHVirus Virtual IOI 2012 Day 2 被打爆的心得" />
-    <meta property="og:site_name" content="FHVirus&#39; 隨筆" />
-    <meta property="og:locale" content="en_US" />
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://fhvirus.github.io/blog/2021/virtual_ioi2012d2/" />
-    <meta property="og:title" content="IOI 2012 Day 2 Virtual 心得" />
-    <meta property="og:image" content="https://fhvirus.github.io/" />
-    <meta property="og:description" content="FHVirus Virtual IOI 2012 Day 2 被打爆的心得" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title> IOI 2012 Day 2 Virtual 心得 - FHVirus&#39; 隨筆 </title>
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="referrer" content="no-referrer">
+	<meta name="description" content="FHVirus Virtual IOI 2012 Day 2 被打爆的心得" />
 
-		
-		<meta name="google-site-verification" content=OmeoCl3L8243BxuGCzij-BbCwBW3_bcDuT4df39yOds />
-		
+	<meta property="og:site_name" content="FHVirus&#39; 隨筆" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:url" content="https://fhvirus.github.io/blog/2021/virtual_ioi2012d2/" />
+	<meta property="og:title" content="IOI 2012 Day 2 Virtual 心得" />
+	<meta property="og:image" content="https://fhvirus.github.io/" />
+	<meta property="og:description" content="FHVirus Virtual IOI 2012 Day 2 被打爆的心得" />
 
-    <link rel="canonical" href="https://fhvirus.github.io/blog/2021/virtual_ioi2012d2/">
+	
+	<meta name="google-site-verification" content=OmeoCl3L8243BxuGCzij-BbCwBW3_bcDuT4df39yOds />
+	
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <link href="https://fhvirus.github.io/css/custom.css" rel="stylesheet" type="text/css"/>
-    <link href="https://fhvirus.github.io/css/syntax.css" rel="stylesheet" type="text/css"/>
-    <link href="https://fhvirus.github.io/css/anchor.css" rel="stylesheet" type="text/css"/>
+	<link rel="canonical" href="https://fhvirus.github.io/blog/2021/virtual_ioi2012d2/">
 
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/progressively/1.2.5/progressively.min.css" integrity="sha512-TdJkMXwjtS9Gb8rN919K1JVdUv2+q5YHsKXPtJGDP79t1Nd5oCZy5mFA6Nr85Dsp6wJ1SUQgOyHPDulLzTjDcQ==" crossorigin="anonymous" />
-    
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+	<link href="https://fhvirus.github.io/css/custom.css" rel="stylesheet" type="text/css"/>
+	<link href="https://fhvirus.github.io/css/syntax.css" rel="stylesheet" type="text/css"/>
+	<link href="https://fhvirus.github.io/css/anchor.css" rel="stylesheet" type="text/css"/>
 
-    <link rel="shortcut icon"
-        href="https://fhvirus.github.io/images/favicon.png">
+	
+	<link rel="shortcut icon" href="https://fhvirus.github.io/images/favicon.png">
+	
 
-    
-    <link href="https://fhvirus.github.io/index.xml" rel="alternate" type="application/rss+xml" title="FHVirus&#39; 隨筆" />
-    
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.css" integrity="sha384-ZPe7yZ91iWxYumsBEOn7ieg8q/o+qh/hQpSaPow8T6BwALcXSCS6C6fSRPIAnTQs" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.js" integrity="sha384-ljao5I1l+8KYFXG7LNEA7DyaFvuvSCmedUf6Y6JI7LJqiu8q5dEivP2nDdFH31V4" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
+<script>
+	document.addEventListener("DOMContentLoaded", function() {
+		renderMathInElement(document.body, {
+			delimiters: [
+				{left: '$$', right: '$$', display: true},
+				{left: '$', right: '$', display: false},
+				{left: '\\(', right: '\\)', display: false},
+				{left: '\\[', right: '\\]', display: true}
+			],
+			throwOnError : false
+		});
+	});
+</script>
+
+	<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.10/dist/clipboard.min.js"></script>
+
+	
+	<link href="https://fhvirus.github.io/index.xml" rel="alternate" type="application/rss+xml" title="FHVirus&#39; 隨筆" />
+	
 </head>
 <body>
-    
+		
 <div class="mt-xl header">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-auto">
-                <a href="https://fhvirus.github.io/">
-                    <h1 class="site-name">FHVirus&#39; 隨筆</h1>
-                </a>
-            </div>
-        </div>
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-auto">
+				<a href="https://fhvirus.github.io/">
+					<h1 class="site-name">FHVirus&#39; 隨筆</h1>
+				</a>
+			</div>
+		</div>
 
-        <div class="row">
-            <ul class="nav nav-primary justify-content-center">
-                
-                <li class="nav-item">
-                    <a class="nav-link" href="/">
-                        
-                        Home
-                    </a>
-                </li>
-                
-                <li class="nav-item">
-                    <a class="nav-link" href="/about/">
-                        
-                        About
-                    </a>
-                </li>
-                
-                <li class="nav-item">
-                    <a class="nav-link" href="https://github.com/FHVirus">
-                        
-                        GitHub
-                    </a>
-                </li>
-                
-                <li class="nav-item">
-                    <a class="nav-link" href="https://www.instagram.com/fh.virus/">
-                        
-                        IG
-                    </a>
-                </li>
-                
-                <li class="nav-item">
-                    <a class="nav-link" href="/index.xml">
-                        
-                        RSS
-                    </a>
-                </li>
-                
-            </ul>
-        </div>
-    </div>
+		<div class="row">
+			<ul class="nav nav-primary justify-content-center">
+				
+				<li class="nav-item">
+					<a class="nav-link" href="/">
+						
+						Home
+					</a>
+				</li>
+				
+				<li class="nav-item">
+					<a class="nav-link" href="/about/">
+						
+						About
+					</a>
+				</li>
+				
+				<li class="nav-item">
+					<a class="nav-link" href="https://github.com/FHVirus">
+						
+						GitHub
+					</a>
+				</li>
+				
+				<li class="nav-item">
+					<a class="nav-link" href="https://www.instagram.com/fh.virus/">
+						
+						IG
+					</a>
+				</li>
+				
+				<li class="nav-item">
+					<a class="nav-link" href="/index.xml">
+						
+						RSS
+					</a>
+				</li>
+				
+			</ul>
+		</div>
+	</div>
 </div>
 
 
 <div class="content">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-11 col-lg-8">
-                <h1 class="mx-0 blog-post-title">IOI 2012 Day 2 Virtual 心得</h1>
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-10 col-lg-8">
+				<h1 class="mx-0 blog-post-title">IOI 2012 Day 2 Virtual 心得</h1>
 
-                <div class="mb-md-4 meta">
-                    
-                    
-                    
+				<div class="mb-md-4 meta">
+					
+					
+					
 
-                    <span class="date middot" title='Fri Feb 5 2021 17:17:45 CST'>
-                        2021-02-05
-                    </span>
+					<span class="date middot" title='Fri Feb 5 2021 17:17:45 CST'>
+						2021-02-05
+					</span>
 
-                    <div class="d-none d-md-inline tags">
-                        <ul class="list-unstyled d-inline">
-                            
-                            <li class="d-inline middot">
-                                <a href="/tags/viroi">VirOI</a>
-                            </li>
-                            
-                            <li class="d-inline middot">
-                                <a href="/tags/%E5%BF%83%E5%BE%97">心得</a>
-                            </li>
-                            
-                        </ul>
-                    </div>
-                </div>
+					<div class="d-none d-md-inline tags">
+						<ul class="list-unstyled d-inline">
+							
+							<li class="d-inline middot">
+								<a href="/tags/viroi">VirOI</a>
+							</li>
+							
+							<li class="d-inline middot">
+								<a href="/tags/%E5%BF%83%E5%BE%97">心得</a>
+							</li>
+							
+						</ul>
+					</div>
+				</div>
 
-                <div class="markdown blog-post-content">
-                    
-    
-    <p>總之 Vir 的蠻糟的。</p>
+				<div class="markdown blog-post-content">
+					<p>總之 Vir 的蠻糟的。</p>
 <p>分數 11/41/17 = 69 ，但是看了解之後覺得應該至少要到 55/41/49 = 145 。</p>
 <h2 id="過程">過程</h2>
 <p>首先一開始不是太順利，但不太確定是誰的鍋 XD 。沒 Vir 過所以直接戳了 OI Checklist 的連結但是聽學長說用 oj.uz 比較好就轉過去了，沒想到題目一直開不出來（ Statement 那塊一直灰灰的），變成看 Yandex 的 PDF Statement 然後丟 oj.uz 。過了很久才發現是 Safari 的問題，Chrome 開就好好的。然後還邊 Vir 邊吃早餐之類的，總之環境不是很理想，下次要再調整。</p>
@@ -183,73 +198,32 @@
 <p>總結：多練題，要有 SOP ，開水很好喝。</p>
 <p>也許之後會有題解來著。</p>
 
+				</div>
 
-                </div>
+				
 
-                
-            </div>
-        </div>
-    </div>
+			</div>
+		</div>
+	</div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
 <script>
-  anchors.options = {
-    placement: 'left',
-    visible: 'hover',
-    icon: '#'
-  };
-  anchors.add('.content h1, .content h2, .content h3');
+	anchors.options = {
+		placement: 'left',
+		visible: 'touch',
+		icon: '#'
+	};
+	anchors.add('.content h1, .content h2, .content h3');
 </script>
 
-<section id="comments">
-    <div class="py-3 content">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-sm-12 col-lg-8">
-                    <div class="comments">
-                        <script src="https://utteranc.es/client.js" repo="fhvirus/fhvirus.github.io"
-                            issue-term="pathname" label="comment" theme="github-light" crossorigin="anonymous" async>
-                            </script>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<section class="comments">
+	<script src="https://utteranc.es/client.js" repo="fhvirus/fhvirus.github.io" issue-term="pathname" label="comment" theme="github-light" crossorigin="anonymous" async></script>
 </section>
+
 <footer></footer>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.css" integrity="sha384-ZPe7yZ91iWxYumsBEOn7ieg8q/o+qh/hQpSaPow8T6BwALcXSCS6C6fSRPIAnTQs" crossorigin="anonymous">
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.js" integrity="sha384-ljao5I1l+8KYFXG7LNEA7DyaFvuvSCmedUf6Y6JI7LJqiu8q5dEivP2nDdFH31V4" crossorigin="anonymous"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
-<script>
-	document.addEventListener("DOMContentLoaded", function() {
-			renderMathInElement(document.body, {
-					
-					
-					delimiters: [
-							{left: '$$', right: '$$', display: true},
-							{left: '$', right: '$', display: false},
-							{left: '\\(', right: '\\)', display: false},
-							{left: '\\[', right: '\\]', display: true}
-						],
-					
-					throwOnError : false
-				});
-		});
-</script>
-
-<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script>
 
 
-
-    
-        <script src="https://cdn.jsdelivr.net/npm/progressively/dist/progressively.min.js"></script>
-        <script>
-            window.addEventListener('load', function() {
-                progressively.init({delay: 30, throttle: 50});
-            }, true);
-        </script>
-    
-</body>
+	</body>
 
 </html>
